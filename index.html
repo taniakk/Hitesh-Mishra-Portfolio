@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Hitesh Mishra · Full Stack Developer & AI Architect</title>
+    <!-- Tailwind + Font Awesome + Google Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <!-- Custom config override for professional AI tone -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        'ai-accent': '#3b82f6',
+                        'ai-dark': '#0f172a',
+                        'ai-slate': '#1e293b',
+                        'ai-glow': '#2563eb',
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { scroll-behavior: smooth; }
+        .glass-card { background: rgba(255, 255, 255, 0.96); backdrop-filter: blur(2px); border: 1px solid rgba(0,0,0,0.05); }
+        .ai-gradient-text { background: linear-gradient(135deg, #2563eb 0%, #38bdf8 100%); background-clip: text; -webkit-background-clip: text; color: transparent; }
+        .hover-lift { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .hover-lift:hover { transform: translateY(-4px); box-shadow: 0 20px 25px -12px rgba(0,0,0,0.1); }
+        .testimonial-card { transition: all 0.2s; }
+        .blog-card { border-left: 3px solid #3b82f6; }
+        .section-padding { padding: 5rem 1.5rem; }
+        @media (max-width: 768px) { .section-padding { padding: 3rem 1rem; } }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans text-gray-800 antialiased">
+
+    <!-- ==================== NAVIGATION ==================== -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-3 flex flex-wrap items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <div class="w-9 h-9 rounded-full bg-gradient-to-br from-blue-600 to-cyan-400 flex items-center justify-center shadow-md">
+                    <span class="text-white font-bold text-sm">HM</span>
+                </div>
+                <span class="font-bold text-xl tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-gray-800 to-gray-600">Hitesh Mishra</span>
+                <!-- <span class="ml-2 text-xs font-mono bg-blue-50 text-blue-700 px-2 py-0.5 rounded-full border border-blue-200">AI · Full Stack</span> -->
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#about" class="hover:text-blue-600 transition">About</a>
+                <a href="#skills" class="hover:text-blue-600 transition">Skills</a>
+                <a href="#experience" class="hover:text-blue-600 transition">Experience</a>
+                <a href="#blogs" class="hover:text-blue-600 transition">Insights</a>
+                <a href="#testimonials" class="hover:text-blue-600 transition">Testimonials</a>
+                <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
+            </div>
+            <a href="#contact" class="hidden md:inline-block bg-gray-900 hover:bg-blue-700 text-white px-5 py-2 rounded-full text-sm font-semibold transition shadow-md">Let's Talk <i class="fas fa-arrow-right ml-1 text-xs"></i></a>
+            <div class="md:hidden">
+                <button id="mobile-menu-btn" class="text-gray-700 focus:outline-none"><i class="fas fa-bars text-xl"></i></button>
+            </div>
+        </div>
+        <!-- mobile menu (hidden by default) -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-100 px-4 pb-4 flex flex-col space-y-3 text-sm font-medium">
+            <a href="#about" class="py-2 hover:text-blue-600">About</a>
+            <a href="#skills" class="py-2 hover:text-blue-600">Skills</a>
+            <a href="#experience" class="py-2 hover:text-blue-600">Experience</a>
+            <a href="#blogs" class="py-2 hover:text-blue-600">Insights</a>
+            <a href="#testimonials" class="py-2 hover:text-blue-600">Testimonials</a>
+            <a href="#contact" class="py-2 text-blue-600 font-semibold">Contact</a>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO SECTION (AI First) ==================== -->
+    <section class="relative overflow-hidden bg-white">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-50/40 via-white to-cyan-50/30 z-0"></div>
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16 md:py-24 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+                <div class="flex-1 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-blue-100/80 backdrop-blur-sm rounded-full px-4 py-1.5 mb-6 text-sm font-medium text-blue-800 border border-blue-200">
+                        <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-500 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-blue-600"></span></span>
+                        AI-Integrated Full Stack Developer
+                    </div>
+                    <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-gray-900 leading-tight">Building <span class="ai-gradient-text">Intelligent</span> Products<br>for the Next Era</h1>
+                    <p class="mt-6 text-xl text-gray-600 max-w-2xl mx-auto lg:mx-0">Hitesh Mishra — Full Stack Architect with 9+ years of experience crafting scalable web apps, cloud-native systems, and AI-powered experiences. Python • Next.js • AWS • Agentic AI.</p>
+                    <div class="mt-8 flex flex-wrap gap-4 justify-center lg:justify-start">
+                        <a href="#contact" class="bg-gray-900 hover:bg-blue-700 text-white px-7 py-3 rounded-full font-semibold transition shadow-lg flex items-center gap-2"><i class="fab fa-linkedin"></i> Connect on LinkedIn</a>
+                        <a href="#blogs" class="border border-gray-300 bg-white hover:bg-gray-50 px-7 py-3 rounded-full font-medium transition shadow-sm flex items-center gap-2"><i class="fab fa-medium"></i> Read Blog</a>
+                    </div>
+                    <div class="mt-8 flex flex-wrap gap-5 justify-center lg:justify-start text-sm text-gray-500">
+                        <span> Mumbai</span>
+                        <span><i class="fas fa-graduation-cap text-blue-500 mr-1"></i> MCA, IGNOU</span>
+                        <span><i class="fas fa-code text-blue-500 mr-1"></i> Open Source Contributor</span>
+                    </div>
+                </div>
+                <div class="flex-1 flex justify-center">
+                    <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-tr from-blue-400/20 to-cyan-300/20 p-1 shadow-xl animate-float">
+                        <div class="w-full h-full rounded-full bg-white overflow-hidden border-4 border-white shadow-2xl">
+                            <!-- profile image from LinkedIn context simulation (high quality placeholde but using avatar style with initials, reflecting professional tone) -->
+                            <img src="https://ui-avatars.com/api/?background=1E293B&color=ffffff&rounded=true&bold=true&size=280&fontsize=0.33&name=Hitesh+Mishra" alt="Hitesh Mishra profile" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ==================== ABOUT & FACTS ==================== -->
+    <section id="about" class="section-padding max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-3 gap-10">
+            <div class="md:col-span-2 space-y-6">
+                <h2 class="text-3xl font-bold tracking-tight">From Code to <span class="ai-gradient-text">Cognitive Systems</span></h2>
+                <p class="text-gray-600 leading-relaxed">I'm Hitesh Mishra, a passionate Full Stack Developer who architects end-to-end digital products with a modern AI-first mindset. With deep expertise in Python, Django, Next.js, and cloud platforms, I blend robust engineering with the latest AI capabilities — building intelligent solutions that go beyond traditional CRUD. I've led teams, built micro ecommerce PWAs, automated workflows, and currently architect cloud-native systems as Senior Consultant. My mission: design behavior, not just features.</p>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-3">
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 text-center"><i class="fas fa-layer-group text-2xl text-blue-500 mb-1"></i><p class="font-bold text-xl mt-1">12+</p><p class="text-xs text-gray-500">Full Stack Projects</p></div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 text-center"><i class="fas fa-cloud-upload-alt text-2xl text-blue-500 mb-1"></i><p class="font-bold text-xl mt-1">5+</p><p class="text-xs text-gray-500">Cloud Deployments</p></div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 text-center"><i class="fas fa-robot text-2xl text-blue-500 mb-1"></i><p class="font-bold text-xl mt-1">AI</p><p class="text-xs text-gray-500">Intelligent Integrations</p></div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 text-center"><i class="fas fa-users text-2xl text-blue-500 mb-1"></i><p class="font-bold text-xl mt-1">100%</p><p class="text-xs text-gray-500">Client Satisfaction</p></div>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl shadow-md p-6 border border-gray-100">
+                <h3 class="font-semibold text-xl flex items-center gap-2"><i class="fas fa-id-card text-blue-500"></i> Profile Snapshot</h3>
+                <ul class="mt-4 space-y-3 text-sm">
+                    <li class="flex justify-between border-b pb-2"><span class="text-gray-500"><i class="far fa-calendar-alt w-5"></i> Birthday</span><span class="font-medium">1998</span></li>
+                    <li class="flex justify-between border-b pb-2"><span class="text-gray-500"><i class="fas fa-phone-alt w-5"></i> Phone</span><span class="font-medium">+91 8286651155</span></li>
+                    <li class="flex justify-between border-b pb-2"><span class="text-gray-500"><i class="fas fa-envelope w-5"></i> Email</span><span class="font-medium">
+    <a href="mailto:hiteshmishra708@gmail.com" class="hover:text-blue-600 transition-colors duration-200">
+        hiteshmishra708@gmail.com
+    </a>
+</span></li>
+                    <li class="flex justify-between border-b pb-2"><span class="text-gray-500"><i class="fab fa-linkedin w-5"></i> LinkedIn</span><span class="font-medium text-blue-600">
+    <a href="https://linkedin.com/in/hiteshmishra708" target="_blank" rel="noopener noreferrer" class="hover:underline">
+        /hiteshmishra708
+    </a>
+</span></li>
+                    <li class="flex justify-between"><span class="text-gray-500"><i class="fas fa-map-marker-alt w-5"></i> City</span><span class="font-medium">Mumbai, India</span></li>
+                </ul>
+                <div class="mt-5 pt-2"><a href="tel:+918286651155" class="inline-block w-full text-center bg-gray-100 hover:bg-blue-50 rounded-lg py-2 text-sm font-medium transition">
+    📞 Call me: +91 82866 51155
+</a></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SKILLS (Highlight AI & Modern Stack) ==================== -->
+    <section id="skills" class="bg-white section-padding">
+    <div class="max-w-7xl mx-auto">
+        <!-- Section Header -->
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <h2 class="text-3xl font-bold mb-4">Tech Arsenal <span class="ai-gradient-text">+ AI Intelligence</span></h2>
+            <p class="text-gray-600 text-lg">Mastering modern full stack while integrating LLMs, agents, and cloud AI services.</p>
+            <!-- Decorative line -->
+            <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-400 mx-auto mt-6 rounded-full"></div>
+        </div>
+
+        <!-- Skills Grid - Modern Card Based Design without percentages -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Python / Django Card -->
+            <div class="group bg-gray-50 hover:bg-white rounded-2xl p-6 transition-all duration-300 hover:shadow-xl hover:shadow-blue-100/50 border border-gray-100 hover:border-blue-200">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                        </svg>
+                    </div>
+                    <span class="text-xs font-semibold px-3 py-1 bg-blue-100 text-blue-700 rounded-full">Expert</span>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Python Ecosystem</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Django, FastAPI, Celery — building robust backends with async support and task queues.</p>
+                <div class="flex flex-wrap gap-2 mt-4">
+                    <span class="text-xs bg-white px-2 py-1 rounded-lg text-gray-600 border">Django REST</span>
+                    <span class="text-xs bg-white px-2 py-1 rounded-lg text-gray-600 border">FastAPI</span>
+                    <span class="text-xs bg-white px-2 py-1 rounded-lg text-gray-600 border">Celery</span>
+                </div>
+            </div>
+
+            <!-- React / NextJS Card -->
+            <div class="group bg-gray-50 hover:bg-white rounded-2xl p-6 transition-all duration-300 hover:shadow-xl hover:shadow-blue-100/50 border border-gray-100 hover:border-blue-200">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path>
+                        </svg>
+                    </div>
+                    <span class="text-xs font-semibold px-3 py-1 bg-blue-100 text-blue-700 rounded-full">Expert</span>
+                </div>
+                <h3 class="text-xl font-bold mb-2">React & Next.js</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Modern component architecture, SSR, and optimized frontend performance.</p>
+                <div class="flex flex-wrap gap-2 mt-4">
+                    <span class="text-xs bg-white px-2 py-1 rounded-lg text-gray-600 border">Next.js 14</span>
+                    <span class="text-xs bg-white px-2 py-1 rounded-lg text-gray-600 border">React Query</span>
+                    <span class="text-xs bg-white px-2 py-1 rounded-lg text-gray-600 border">Redux</span>
+                </div>
+            </div>
+
+            <!-- TypeScript Card -->
+            <div class="group bg-gray-50 hover:bg-white rounded-2xl p-6 transition-all duration-300 hover:shadow-xl hover:shadow-blue-100/50 border border-gray-100 hover:border-blue-200">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <span class="text-xs font-semibold px-3 py-1 bg-blue-100 text-blue-700 rounded-full">Expert</span>
+                </div>
+                <h3 class="text-xl font-bold mb-2">TypeScript</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Type-safe development, interfaces, generics — scalable and maintainable code.</p>
+                <div class="flex flex-wrap gap-2 mt-4">
+                    <span class="text-xs bg-white px-2 py-1 rounded-lg text-gray-600 border">Strict mode</span>
+                    <span class="text-xs bg-white px-2 py-1 rounded-lg text-gray-600 border">Generics</span>
+                    <span class="text-xs bg-white px-2 py-1 rounded-lg text-gray-600 border">Utility types</span>
+                </div>
+            </div>
+
+            <!-- AI Integration Card -->
+            <div class="group bg-gray-50 hover:bg-white rounded-2xl p-6 transition-all duration-300 hover:shadow-xl hover:shadow-indigo-100/50 border border-gray-100 hover:border-indigo-200">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                        </svg>
+                    </div>
+                    <span class="text-xs font-semibold px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full">Advanced</span>
+                </div>
+                <h3 class="text-xl font-bold mb-2">AI & LLM Integration</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">OpenAI, LangChain, agent workflows — intelligent features and automation.</p>
+                <div class="flex flex-wrap gap-2 mt-4">
+                    <span class="text-xs bg-white px-2 py-1 rounded-lg text-gray-600 border">LangChain</span>
+                    <span class="text-xs bg-white px-2 py-1 rounded-lg text-gray-600 border">RAG pipelines</span>
+                    <span class="text-xs bg-white px-2 py-1 rounded-lg text-gray-600 border">Function calling</span>
+                </div>
+            </div>
+
+            <!-- Cloud Services Card -->
+            <div class="group bg-gray-50 hover:bg-white rounded-2xl p-6 transition-all duration-300 hover:shadow-xl hover:shadow-blue-100/50 border border-gray-100 hover:border-blue-200">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-500 rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
+                        </svg>
+                    </div>
+                    <span class="text-xs font-semibold px-3 py-1 bg-blue-100 text-blue-700 rounded-full">Proficient</span>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Cloud Platforms</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">AWS (EC2, S3, CloudFront) and GCP — scalable cloud infrastructure.</p>
+                <div class="flex flex-wrap gap-2 mt-4">
+                    <span class="text-xs bg-white px-2 py-1 rounded-lg text-gray-600 border">EC2 / S3</span>
+                    <span class="text-xs bg-white px-2 py-1 rounded-lg text-gray-600 border">CloudFront</span>
+                    <span class="text-xs bg-white px-2 py-1 rounded-lg text-gray-600 border">GCP</span>
+                </div>
+            </div>
+
+            <!-- Databases Card -->
+            <div class="group bg-gray-50 hover:bg-white rounded-2xl p-6 transition-all duration-300 hover:shadow-xl hover:shadow-blue-100/50 border border-gray-100 hover:border-blue-200">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
+                        </svg>
+                    </div>
+                    <span class="text-xs font-semibold px-3 py-1 bg-blue-100 text-blue-700 rounded-full">Proficient</span>
+                </div>
+                <h3 class="text-xl font-bold mb-2">SQL & NoSQL</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">PostgreSQL, MongoDB, Elasticsearch — data persistence and search.</p>
+                <div class="flex flex-wrap gap-2 mt-4">
+                    <span class="text-xs bg-white px-2 py-1 rounded-lg text-gray-600 border">PostgreSQL</span>
+                    <span class="text-xs bg-white px-2 py-1 rounded-lg text-gray-600 border">MongoDB</span>
+                    <span class="text-xs bg-white px-2 py-1 rounded-lg text-gray-600 border">Elasticsearch</span>
+                </div>
+            </div>
+        </div>
+
+      
+    </div>
+</section>
+
+<style>
+    /* Smooth gradient text utility */
+    .ai-gradient-text {
+        background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+    
+    /* Optional: Add subtle animation on hover for cards */
+    .group:hover .shadow-md {
+        transform: scale(1.05);
+    }
+</style>
+    
+
+    <!-- ==================== EXPERIENCE & RESUME ==================== -->
+ <section id="experience" class="section-padding max-w-7xl mx-auto">
+    <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-3 tracking-tight">Professional Journey</h2>
+        <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-cyan-400 mx-auto rounded-full mb-4"></div>
+        <p class="text-gray-600 text-lg max-w-2xl mx-auto">9+ years of scale, resilience & innovation — architecting future-ready digital solutions across industries.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-10">
+        <!-- LEFT: Experience Timeline -->
+        <div class="space-y-8">
+            <!-- Sr Software Engineer - eClerx -->
+            <div class="border-l-4 border-blue-500 pl-5 pb-1 transition-all hover:translate-y-[-2px] duration-200">
+                <div class="flex items-center gap-2 flex-wrap">
+                    <h3 class="text-xl font-bold tracking-tight">Sr Software Engineer</h3>
+                    <span class="inline-flex items-center rounded-full bg-blue-50 px-2.5 py-0.5 text-xs font-medium text-blue-700">Elasticsearch · High traffic</span>
+                </div>
+                <p class="text-blue-600 text-sm font-medium mt-1 flex items-center gap-1">
+                    <i class="far fa-calendar-alt text-xs"></i> Oct 2023 – Present
+                </p>
+                <p class="mt-2 text-gray-600 leading-relaxed text-[0.95rem]">
+                    Designed and optimized Elasticsearch-based search systems for high-traffic platforms. Improved query performance and relevance tuning, managed deployments and system reliability on AWS infrastructure. Optimized Elasticsearch queries reducing search latency and improving relevance.
+                </p>
+            </div>
+
+            <!-- Full Stack Developer - Medikabazaar -->
+            <div class="border-l-4 border-blue-500 pl-5 pb-1 transition-all hover:translate-y-[-2px] duration-200">
+                <div class="flex items-center gap-2 flex-wrap">
+                    <h3 class="text-xl font-bold tracking-tight">Full Stack Developer</h3>
+                    <span class="inline-flex items-center rounded-full bg-blue-50 px-2.5 py-0.5 text-xs font-medium text-blue-700">1M+ catalog · Migration</span>
+                </div>
+                <p class="text-blue-600 text-sm font-medium mt-1 flex items-center gap-1">
+                    <i class="far fa-calendar-alt text-xs"></i> Apr 2021 – Jul 2023
+                </p>
+                <p class="mt-2 text-gray-600 leading-relaxed text-[0.95rem]">
+                    Built and scaled a full-stack platform managing 1M+ product catalog with multi-seller onboarding. Led migration of legacy Magento platform to Next.js + Python architecture, improving scalability and performance. Implemented Elasticsearch-based search system significantly enhancing search speed and relevance. Designed backend systems using Django, Celery, RabbitMQ, Redis for async processing and high throughput.
+                </p>
+            </div>
+
+            <!-- Software Engineer - CitiusTech -->
+            <div class="border-l-4 border-blue-500 pl-5 pb-1 transition-all hover:translate-y-[-2px] duration-200">
+                <div class="flex items-center gap-2 flex-wrap">
+                    <h3 class="text-xl font-bold tracking-tight">Software Engineer</h3>
+                    <span class="inline-flex items-center rounded-full bg-blue-50 px-2.5 py-0.5 text-xs font-medium text-blue-700">Healthcare · SonarQube</span>
+                </div>
+                <p class="text-blue-600 text-sm font-medium mt-1 flex items-center gap-1">
+                    <i class="far fa-calendar-alt text-xs"></i> Oct 2019 – Apr 2021
+                </p>
+                <p class="mt-2 text-gray-600 leading-relaxed text-[0.95rem]">
+                    Contributed to large-scale healthcare platforms (H-Scale, IBC Migration). Improved code quality and maintainability using SonarQube integration. Built scalable frontend components using Angular and Node.js.
+                </p>
+            </div>
+
+            <!-- Software Engineer (Early) - AvenDATA GmbH -->
+            <div class="border-l-4 border-blue-500 pl-5 pb-1 transition-all hover:translate-y-[-2px] duration-200">
+                <div class="flex items-center gap-2 flex-wrap">
+                    <h3 class="text-xl font-bold tracking-tight">Software Engineer</h3>
+                    <span class="inline-flex items-center rounded-full bg-blue-50 px-2.5 py-0.5 text-xs font-medium text-blue-700">Legacy migration · Team lead</span>
+                </div>
+                <p class="text-blue-600 text-sm font-medium mt-1 flex items-center gap-1">
+                    <i class="far fa-calendar-alt text-xs"></i> Sep 2017 – Oct 2019
+                </p>
+                <p class="mt-2 text-gray-600 leading-relaxed text-[0.95rem]">
+                    Progressed to Team Lead, managing development and delivery of multiple projects. Led full-stack development across Python, Django, React, Node.js. Migrated legacy Python 2 systems to modern architecture, improving maintainability. Developed NFC-based mobile applications using Ionic framework. Delivered projects including Digiprax, Baulogi, PhoneBoost, and BetHai.
+                </p>
+            </div>
+        </div>
+
+        <!-- RIGHT: Education & Recognition + Quote + Contact highlight -->
+        <div class="bg-gray-50 p-6 rounded-2xl shadow-sm recognition-block transition-all duration-200">
+            <h3 class="text-xl font-bold flex items-center gap-2">
+                <i class="fas fa-graduation-cap text-blue-500"></i> Education & Recognition
+            </h3>
+            <ul class="space-y-4 mt-4">
+                <li class="flex gap-2">
+                    <i class="fas fa-university text-blue-400 mt-1 text-sm"></i>
+                    <div><span class="font-semibold">MCA, IGNOU University</span> (2018-2022) — Built <span class="text-blue-600">alumni.ignou.ac.in</span> serving 5.2M+ users; created chatbot for IGNOU study center; received Potential Innovator award twice.</div>
+                </li>
+                <li class="flex gap-2">
+                    <i class="fas fa-laptop-code text-blue-400 mt-1 text-sm"></i>
+                    <div><span class="font-semibold">BSC-IT, Bhavans College, Mumbai University</span> (2014-2017) — Student of the Year, Received Kulpati Award for academic excellence.</div>
+                </li>
+                <li class="flex gap-2">
+                    <i class="fas fa-school text-blue-400 mt-1 text-sm"></i>
+                    <div><span class="font-semibold">HSC & SSC</span> – Maharashtra State Board with distinction.</div>
+                </li>
+            </ul>
+
+            <!-- leadership + impact snippet -->
+            <div class="mt-6 p-4 bg-white rounded-xl border border-gray-200 quote-bubble">
+                <i class="fas fa-quote-left text-blue-300 mr-2"></i>
+                <span class="text-sm font-medium text-gray-700">Hands-on Senior Full-Stack Engineer & Tech Lead with 9+ years building scalable e-commerce and enterprise platforms. Specialize in Elasticsearch optimization, legacy-to-modern migrations, and high-traffic system design — delivering across 1M+ product catalogs and multi-seller platforms.</span>
+            </div>
+
+            <!-- extra: contact micro card (professional) -->
+            <div class="mt-6 flex flex-wrap gap-4 justify-between items-center bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
+                <div class="flex items-center gap-2 text-sm text-gray-600">
+                    <i class="fas fa-map-marker-alt text-blue-400"></i>
+                    <span>Mumbai, Maharashtra</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <a href="https://linkedin.com/in/hiteshmishra708" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 transition">
+                        <i class="fab fa-linkedin text-lg"></i>
+                    </a>
+                    <a href="https://github.com/hiteshmishra708" target="_blank" rel="noopener noreferrer" class="text-gray-700 hover:text-blue-600 transition">
+                        <i class="fab fa-github text-lg"></i>
+                    </a>
+                    <a href="mailto:hiteshmishra708@gmail.com" class="text-gray-600 hover:text-blue-500 text-sm">
+                        <i class="far fa-envelope"></i> Email
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- ==================== BLOGS FROM MEDIUM (Linked ES6 & AI themed) ==================== -->
+    <section id="blogs" class="bg-gray-100 section-padding">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-10"><h2 class="text-3xl font-bold">Latest Tech <span class="ai-gradient-text">Insights</span></h2><p class="text-gray-600">From ES6 to AI Agents — exploring the future of development on Medium</p></div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- blog 1 from medium content -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover-lift blog-card border-l-4 border-blue-500"><div class="p-6"><div class="flex items-center gap-3 text-sm text-blue-600 mb-2"><i class="fab fa-medium"></i><span>medium.com</span></div><h3 class="text-xl font-bold mb-2">What are the features of ES6?</h3><p class="text-gray-600 mb-4">ES6 introduced const, let, arrow functions, template literals, destructuring, modules, and powerful enhancements that shaped modern JavaScript.</p><a href="https://hiteshmishra708.medium.com/" target="_blank" class="inline-flex items-center text-blue-600 font-medium">Read full story <i class="fas fa-arrow-right ml-1"></i></a></div></div>
+                <!-- additional AI blog generated from LinkedIn's post about Full Stack + AI -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover-lift blog-card border-l-4 border-indigo-400"><div class="p-6"><div class="flex items-center gap-3 text-sm text-indigo-600 mb-2"><i class="fas fa-brain"></i><span>Future Full Stack</span></div><h3 class="text-xl font-bold mb-2">The Rise of Intelligent Apps: AI is Now Full Stack</h3><p class="text-gray-600 mb-4">Modern full stack isn't just UI + DB — it’s about integrating AI agents, embeddings, and LLM APIs. How I'm building smart dashboards and copilots.</p><a href="https://hiteshmishra708.medium.com/" target="_blank" class="inline-flex items-center text-indigo-600 font-medium">Read on Medium →</a></div></div>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover-lift blog-card"><div class="p-6"><i class="fab fa-linkedin text-blue-500 text-xl mb-2 block"></i><h3 class="text-xl font-bold">Why Full Stack Devs Must Learn AI in 2026</h3><p class="text-gray-600 mt-2">Sharing insights from my viral LinkedIn post: "From CRUD to intelligent systems — the developer mindset shift".</p><a href="https://www.linkedin.com/in/hiteshmishra708" target="_blank" class="mt-3 inline-block text-blue-600 text-sm font-medium">Discuss on LinkedIn →</a></div></div>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover-lift blog-card"><div class="p-6"><h3 class="text-xl font-bold">OpenAI vs Indian IT: The Value of Intelligence</h3><p class="text-gray-600 mt-2">A thought provoking comparison: OpenAI valuation vs traditional IT workforce. Embracing AI-driven building blocks.</p><a href="https://hiteshmishra708.medium.com/" target="_blank" class="mt-3 inline-block text-blue-600 text-sm font-medium">Explore more →</a></div></div>
+            </div>
+            <div class="text-center mt-10"><a href="https://hiteshmishra708.medium.com/" target="_blank" class="bg-gray-900 hover:bg-blue-800 text-white px-6 py-3 rounded-full inline-flex items-center gap-2 transition">Visit all blogs <i class="fab fa-medium"></i></a></div>
+        </div>
+    </section>
+
+    <!-- ==================== TESTIMONIALS (from referindia data) ==================== -->
+    <section id="testimonials" class="section-padding max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-4">Trusted by Leaders</h2>
+        <p class="text-center text-gray-600 mb-12">What partners and clients say about collaboration & delivery.</p>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white p-5 rounded-xl shadow-sm border testimonial-card"><i class="fas fa-star text-yellow-400 text-sm"></i><i class="fas fa-star text-yellow-400 text-sm"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star"></i><p class="mt-3 italic text-gray-600">"Hitesh took our vision and turned it into a stunning reality. Their attention to detail & technical expertise is truly remarkable."</p><p class="mt-4 font-bold">— Sushil Verma, Co-Founder ReferIndia</p></div>
+            <div class="bg-white p-5 rounded-xl shadow-sm border testimonial-card"><p class="italic text-gray-600">"Collaborating with Hitesh is always rewarding. Problem-solving skills, creative mindset — an asset to any team."</p><p class="mt-4 font-bold">— Nirav Shah, CEO Cabbagesoft</p></div>
+            <div class="bg-white p-5 rounded-xl shadow-sm border testimonial-card"><p class="italic text-gray-600">"Reliable partner, significantly enhanced our projects. I highly recommend Hitesh for outstanding design & development work."</p><p class="mt-4 font-bold">— Abdul Khan, General Manager Samah Overseas</p></div>
+            <div class="bg-white p-5 rounded-xl shadow-sm border testimonial-card"><p class="italic text-gray-600">"Working with Hitesh was an absolute pleasure. Their creative vision set our project apart."</p><p class="mt-4 font-bold">— Nikhil Bharne, DevOps Engineer</p></div>
+        </div>
+    </section>
+
+    <!-- ==================== SERVICES SECTION ==================== -->
+    <section class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4"><h2 class="text-3xl font-bold text-center mb-12">Core Services & Expertise</h2><div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="flex gap-3 p-4 rounded-xl hover:bg-gray-50 transition"><i class="fas fa-microchip text-3xl text-blue-500"></i><div><h3 class="font-bold">AI Integration</h3><p class="text-gray-500 text-sm">Embedding LLMs, agentic workflows, smart reporting</p></div></div>
+            <div class="flex gap-3 p-4 rounded-xl hover:bg-gray-50 transition"><i class="fas fa-code text-3xl text-blue-500"></i><div><h3 class="font-bold">Full Stack Dev</h3><p class="text-gray-500 text-sm">React, Next.js, Django, NodeJS — scalable products</p></div></div>
+            <div class="flex gap-3 p-4 rounded-xl hover:bg-gray-50 transition"><i class="fas fa-cloud text-3xl text-blue-500"></i><div><h3 class="font-bold">Cloud Mgmt</h3><p class="text-gray-500 text-sm">AWS, GCP, deployments, cost optimization</p></div></div>
+            <div class="flex gap-3 p-4 rounded-xl hover:bg-gray-50 transition"><i class="fas fa-database text-3xl text-blue-500"></i><div><h3 class="font-bold">Database Services</h3><p class="text-gray-500 text-sm">PostgreSQL, MongoDB, ElasticSearch, Redis</p></div></div>
+            <div class="flex gap-3 p-4 rounded-xl hover:bg-gray-50 transition"><i class="fab fa-github text-3xl text-blue-500"></i><div><h3 class="font-bold">Open Source</h3><p class="text-gray-500 text-sm">Community contributions, code quality, OSS mindset</p></div></div>
+            <div class="flex gap-3 p-4 rounded-xl hover:bg-gray-50 transition"><i class="fas fa-chalkboard-user text-3xl text-blue-500"></i><div><h3 class="font-bold">IT Consulting</h3><p class="text-gray-500 text-sm">Strategic tech advisory, team upskilling</p></div></div>
+        </div></div>
+    </section>
+
+    <!-- ==================== CONTACT + LINKEDIN FOOTER ==================== -->
+    <section id="contact" class="bg-gray-900 text-white py-16">
+        <div class="max-w-5xl mx-auto text-center px-4">
+            <h2 class="text-3xl font-bold">Let's Build AI-Driven Products</h2>
+            <p class="text-gray-300 mt-2 mb-8">Reach out for collaborations, consulting, or just a tech chat.</p>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="mailto:hiteshmishra708@gmail.com" class="bg-blue-600 hover:bg-blue-500 px-8 py-3 rounded-full font-semibold inline-flex items-center gap-2 transition"><i class="fas fa-envelope"></i> Email</a>
+                <a href="https://linkedin.com/in/hiteshmishra708" target="_blank" class="bg-gray-700 hover:bg-gray-600 px-8 py-3 rounded-full font-semibold inline-flex items-center gap-2 transition"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://hiteshmishra708.medium.com/" target="_blank" class="bg-gray-800 hover:bg-gray-700 px-8 py-3 rounded-full font-semibold inline-flex items-center gap-2 transition"><i class="fab fa-medium"></i> Medium Blog</a>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-800 text-sm text-gray-400 flex flex-wrap justify-center gap-x-6 gap-y-2">
+                <span><i class="fas fa-phone-alt"></i> +91 8286651155</span>
+                <span><i class="fas fa-map-marker-alt"></i> Mumbai, India</span>
+                <span><i class="fas fa-globe"></i> Portfolio AI-optimized</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-950 py-6 text-center text-gray-500 text-xs">© 2026 Hitesh Mishra — Full Stack Developer · AI Integrated · Built with Tailwind & modern stack</footer>
+
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if(menuBtn) menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        document.querySelectorAll('#mobile-menu a').forEach(link => link.addEventListener('click',()=>mobileMenu.classList.add('hidden')));
+    </script>
+</body>
+</html>
