@@ -53,306 +53,805 @@
 <body class="bg-gray-50 font-sans text-gray-800 antialiased">
 
     <!-- ==================== NAVIGATION ==================== -->
-    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-3 flex flex-wrap items-center justify-between">
-            <div class="flex items-center space-x-2">
-                <div class="w-9 h-9 rounded-full bg-gradient-to-br from-blue-600 to-cyan-400 flex items-center justify-center shadow-md">
-                    <span class="text-white font-bold text-sm">HM</span>
+  <!-- NAVBAR -->
+<nav id="navbar"
+    class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-[#07111F]/80 backdrop-blur-xl border-b border-white/5">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+        <div class="flex items-center justify-between h-[78px]">
+
+            <!-- LOGO -->
+            <a href="#"
+                class="flex items-center gap-3 group">
+
+                <!-- Logo -->
+                <div
+                    class="w-11 h-11 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center shadow-[0_10px_30px_rgba(59,130,246,0.35)]">
+
+                    <span class="text-white font-black text-sm">
+                        HM
+                    </span>
+
                 </div>
-                <span class="font-bold text-xl tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-gray-800 to-gray-600">Hitesh Mishra</span>
-                <!-- <span class="ml-2 text-xs font-mono bg-blue-50 text-blue-700 px-2 py-0.5 rounded-full border border-blue-200">AI · Full Stack</span> -->
+
+                <!-- Name -->
+                <div class="flex flex-col">
+
+                    <span
+                        class="text-white font-bold text-lg leading-none tracking-tight">
+                        Hitesh Mishra
+                    </span>
+
+                    <span
+                        class="text-[11px] text-slate-400 mt-1 tracking-[0.2em] uppercase">
+                        Python • AI • Full Stack
+                    </span>
+
+                </div>
+
+            </a>
+
+            <!-- DESKTOP MENU -->
+            <div
+                class="hidden lg:flex items-center gap-8">
+
+                <a href="#about"
+                    class="text-sm text-slate-300 hover:text-cyan-300 transition">
+                    About
+                </a>
+
+                <a href="#skills"
+                    class="text-sm text-slate-300 hover:text-cyan-300 transition">
+                    Skills
+                </a>
+
+                <a href="#experience"
+                    class="text-sm text-slate-300 hover:text-cyan-300 transition">
+                    Experience
+                </a>
+
+                <a href="#projects"
+                    class="text-sm text-slate-300 hover:text-cyan-300 transition">
+                    Projects
+                </a>
+
+                <a href="#blogs"
+                    class="text-sm text-slate-300 hover:text-cyan-300 transition">
+                    Insights
+                </a>
+
+                <a href="#contact"
+                    class="text-sm text-slate-300 hover:text-cyan-300 transition">
+                    Contact
+                </a>
+
             </div>
-            <div class="hidden md:flex space-x-8 text-sm font-medium">
-                <a href="#about" class="hover:text-blue-600 transition">About</a>
-                <a href="#skills" class="hover:text-blue-600 transition">Skills</a>
-                <a href="#experience" class="hover:text-blue-600 transition">Experience</a>
-                <a href="#blogs" class="hover:text-blue-600 transition">Insights</a>
-                <a href="#testimonials" class="hover:text-blue-600 transition">Testimonials</a>
-                <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
+
+            <!-- RIGHT CTA -->
+            <div
+                class="hidden lg:flex items-center gap-3">
+
+                <!-- Resume -->
+                <a href="resume.pdf"
+                    download="Hitesh-Mishra-Resume.pdf"
+                    class="border border-white/10 hover:border-cyan-400 hover:bg-white/[0.03] text-slate-200 px-5 py-2.5 rounded-xl text-sm font-medium transition-all duration-300">
+
+                    Resume
+                </a>
+
+                <!-- CTA -->
+                <a href="#contact"
+                    class="bg-white text-slate-900 hover:bg-slate-200 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300 shadow-xl">
+
+                    Let's Talk
+                </a>
+
             </div>
-            <div class="hidden md:flex items-center gap-3">
-                <a href="resume.pdf" download="Hitesh-Mishra-Resume.pdf" class="bg-white hover:bg-blue-50 text-gray-900 px-5 py-2 rounded-full text-sm font-semibold transition shadow-sm border border-gray-200">Download Resume</a>
-                <a href="#contact" class="bg-gray-900 hover:bg-blue-700 text-white px-5 py-2 rounded-full text-sm font-semibold transition shadow-md">Let's Talk <i class="fas fa-arrow-right ml-1 text-xs"></i></a>
-            </div>
-            <div class="md:hidden">
-                <button id="mobile-menu-btn" class="text-gray-700 focus:outline-none"><i class="fas fa-bars text-xl"></i></button>
-            </div>
+
+            <!-- MOBILE BUTTON -->
+            <button id="mobile-menu-btn"
+                class="lg:hidden w-11 h-11 rounded-xl border border-white/10 bg-white/[0.03] flex items-center justify-center text-white">
+
+                <i id="menu-icon"
+                    class="fas fa-bars text-lg transition-all duration-300">
+                </i>
+
+            </button>
+
         </div>
-        <!-- mobile menu (hidden by default) -->
-        <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-100 px-4 pb-4 flex flex-col space-y-3 text-sm font-medium">
-            <a href="#about" class="py-2 hover:text-blue-600">About</a>
-            <a href="#skills" class="py-2 hover:text-blue-600">Skills</a>
-            <a href="#experience" class="py-2 hover:text-blue-600">Experience</a>
-            <a href="#blogs" class="py-2 hover:text-blue-600">Insights</a>
-            <a href="#testimonials" class="py-2 hover:text-blue-600">Testimonials</a>
-            <a href="#contact" class="py-2 text-blue-600 font-semibold">Contact</a>
+
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu"
+        class="lg:hidden hidden border-t border-white/5 bg-[#07111F]/95 backdrop-blur-2xl">
+
+        <div
+            class="px-6 py-6 flex flex-col gap-5">
+
+            <a href="#about"
+                class="mobile-link text-slate-300 hover:text-cyan-300 transition">
+                About
+            </a>
+
+            <a href="#skills"
+                class="mobile-link text-slate-300 hover:text-cyan-300 transition">
+                Skills
+            </a>
+
+            <a href="#experience"
+                class="mobile-link text-slate-300 hover:text-cyan-300 transition">
+                Experience
+            </a>
+
+            <a href="#projects"
+                class="mobile-link text-slate-300 hover:text-cyan-300 transition">
+                Projects
+            </a>
+
+            <a href="#blogs"
+                class="mobile-link text-slate-300 hover:text-cyan-300 transition">
+                Insights
+            </a>
+
+            <a href="#contact"
+                class="mobile-link text-slate-300 hover:text-cyan-300 transition">
+                Contact
+            </a>
+
+            <!-- Mobile Buttons -->
+            <div class="flex flex-col gap-3 pt-4">
+
+                <a href="resume.pdf"
+                    download="Hitesh-Mishra-Resume.pdf"
+                    class="border border-white/10 hover:border-cyan-400 hover:bg-white/[0.03] text-center text-slate-200 px-5 py-3 rounded-xl text-sm font-medium transition-all duration-300">
+
+                    Download Resume
+                </a>
+
+                <a href="#contact"
+                    class="bg-white text-slate-900 hover:bg-slate-200 text-center px-5 py-3 rounded-xl text-sm font-semibold transition-all duration-300">
+
+                    Let's Talk
+                </a>
+
+            </div>
+
         </div>
-    </nav>
+
+    </div>
+
+</nav>
+
+<!-- SPACER -->
+<div class="h-[78px]"></div>
+
+<!-- SCRIPT -->
+<script>
+
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    // Toggle Menu
+    mobileMenuBtn.addEventListener('click', () => {
+
+        mobileMenu.classList.toggle('hidden');
+
+        // Change icon
+        if (mobileMenu.classList.contains('hidden')) {
+            menuIcon.classList.remove('fa-xmark');
+            menuIcon.classList.add('fa-bars');
+        } else {
+            menuIcon.classList.remove('fa-bars');
+            menuIcon.classList.add('fa-xmark');
+        }
+
+    });
+
+    // Close menu on link click
+    mobileLinks.forEach(link => {
+
+        link.addEventListener('click', () => {
+
+            mobileMenu.classList.add('hidden');
+
+            menuIcon.classList.remove('fa-xmark');
+            menuIcon.classList.add('fa-bars');
+
+        });
+
+    });
+
+    // Auto close on scroll (mobile)
+    window.addEventListener('scroll', () => {
+
+        if (window.innerWidth < 1024) {
+
+            mobileMenu.classList.add('hidden');
+
+            menuIcon.classList.remove('fa-xmark');
+            menuIcon.classList.add('fa-bars');
+
+        }
+
+    });
+
+</script>
 
     <!-- ==================== HERO SECTION (AI First) ==================== -->
-    <section class="relative overflow-hidden bg-white">
-        <div class="absolute inset-0 bg-gradient-to-br from-blue-50/40 via-white to-cyan-50/30 z-0"></div>
-        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16 md:py-24 relative z-10">
-            <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
-                <div class="flex-1 text-center lg:text-left">
-                    <div class="inline-flex items-center gap-2 bg-blue-100/80 backdrop-blur-sm rounded-full px-4 py-1.5 mb-6 text-sm font-medium text-blue-800 border border-blue-200">
-                        <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-500 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-blue-600"></span></span>
-                        AI-Integrated Full Stack Developer
-                    </div>
-                    <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-gray-900 leading-tight">Senior Full Stack Tech Lead<br><span class="ai-gradient-text">Architecting Search + Large-Scale Systems</span></h1>
-                    <p class="mt-6 text-xl text-gray-600 max-w-2xl mx-auto lg:mx-0">I help product leaders and engineering teams build resilient, high-performance platforms with <span class="font-bold">9+ years</span>  of experience in system design, high-volume search, cloud-native migrations, and AI-powered product strategy.</p>
-                    <p class="mt-4 text-gray-500 max-w-2xl mx-auto lg:mx-0">Delivered systems for 1M+ products, high-traffic search experiences, and enterprise migrations with measurable impact on latency, relevance, and operational efficiency.</p>
-                    <div class="mt-8 flex flex-wrap gap-4 justify-center lg:justify-start">
-                        <a href="https://linkedin.com/in/hiteshmishra708" target="_blank" rel="noopener noreferrer" class="bg-gray-900 hover:bg-blue-700 text-white px-7 py-3 rounded-full font-semibold transition shadow-lg flex items-center gap-2"><i class="fab fa-linkedin"></i> Connect</a>
-                        <a href="resume.pdf" download="Hitesh-Mishra-Resume.pdf" class="border border-blue-600 text-blue-600 hover:bg-blue-50 px-7 py-3 rounded-full font-semibold transition shadow-sm flex items-center gap-2"><i class="fas fa-download"></i> Download Resume</a>
-                    </div>
-                    <div class="mt-8 flex flex-wrap gap-5 justify-center lg:justify-start text-sm text-gray-500">
-                        <span> Mumbai</span>
-                        <span><i class="fas fa-network-wired text-blue-500 mr-1"></i> Search Systems</span>
-                        <span><i class="fas fa-building text-blue-500 mr-1"></i> 1M+ Catalogs</span>
-                    </div>
-                </div>
-                <div class="flex-1 flex justify-center">
-                    <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-tr from-blue-400/20 to-cyan-300/20 p-1 shadow-xl animate-float">
-                        <div class="w-full h-full rounded-full bg-white overflow-hidden border-4 border-white shadow-2xl">
-                            <!-- profile image from LinkedIn context simulation (high quality placeholde but using avatar style with initials, reflecting professional tone) -->
-                            <img src="https://ui-avatars.com/api/?background=1E293B&color=ffffff&rounded=true&bold=true&size=280&fontsize=0.33&name=Hitesh+Mishra" alt="Hitesh Mishra profile" class="w-full h-full object-cover">
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <section class="relative bg-[#07111F] text-white overflow-hidden">
+
+    <!-- Background -->
+    <div class="absolute inset-0">
+
+        <!-- Soft Gradient -->
+        <div
+            class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(37,99,235,0.10),transparent_30%),radial-gradient(circle_at_bottom_right,_rgba(14,165,233,0.08),transparent_35%)]">
         </div>
-    </section>
+
+        <!-- Grid -->
+        <div class="absolute inset-0 opacity-[0.02]"
+            style="background-image:linear-gradient(to_right,white_1px,transparent_1px),linear-gradient(to_bottom,white_1px,transparent_1px);background-size:72px_72px;">
+        </div>
+
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-14 md:py-16 relative z-10">
+
+        <div class="grid lg:grid-cols-12 gap-10 items-center">
+
+            <!-- LEFT -->
+            <div class="lg:col-span-7">
+
+                <!-- Badge -->
+                <div
+                    class="inline-flex items-center gap-2 border border-white/10 bg-white/[0.03] backdrop-blur-xl px-4 py-1.5 rounded-full text-xs text-slate-300">
+
+                    <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+
+                    AI Integrated Full Stack Developer
+                </div>
+
+                <!-- Heading -->
+                <h1
+                    class="mt-5 text-4xl md:text-5xl lg:text-6xl font-black leading-[1.02] tracking-[-0.04em] max-w-4xl">
+
+                    Python Engineer Building
+
+                    <span
+                        class="block mt-2 bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
+
+                        AI-Powered Web Applications
+
+                    </span>
+
+                </h1>
+
+                <!-- Description -->
+                <p
+                    class="mt-6 text-base md:text-lg text-slate-300 leading-relaxed max-w-2xl">
+
+                    Senior Full Stack Developer with
+                    <span class="font-semibold text-white">
+                        9+ years of experience
+                    </span>
+
+                    building scalable applications using
+                    <span class="text-white font-medium">
+                        Python, Django, React.js, Next.js, Node.js and AWS.
+                    </span>
+
+                    Focused on AI-driven products, cloud architecture,
+                    performance optimization and modern user experiences.
+
+                </p>
+
+                <!-- Tech Stack -->
+                <div
+                    class="mt-6 flex flex-wrap gap-2.5">
+
+                    <span
+                        class="px-3 py-1.5 rounded-lg border border-white/10 bg-white/[0.03] text-xs text-slate-300">
+                        Python
+                    </span>
+
+                    <span
+                        class="px-3 py-1.5 rounded-lg border border-white/10 bg-white/[0.03] text-xs text-slate-300">
+                        AI Solutions
+                    </span>
+
+                    <span
+                        class="px-3 py-1.5 rounded-lg border border-white/10 bg-white/[0.03] text-xs text-slate-300">
+                        Django
+                    </span>
+
+                    <span
+                        class="px-3 py-1.5 rounded-lg border border-white/10 bg-white/[0.03] text-xs text-slate-300">
+                        React.js
+                    </span>
+
+                    <span
+                        class="px-3 py-1.5 rounded-lg border border-white/10 bg-white/[0.03] text-xs text-slate-300">
+                        AWS
+                    </span>
+
+                </div>
+
+                <!-- Buttons -->
+                <div
+                    class="mt-8 flex flex-wrap gap-3">
+
+                    <!-- Primary -->
+                    <a href="#projects"
+                        class="inline-flex items-center gap-2 bg-white text-slate-900 hover:bg-slate-200 transition-all duration-300 px-6 py-3 rounded-xl font-semibold shadow-xl">
+
+                        View Projects
+
+                        <i class="fas fa-arrow-right text-sm"></i>
+                    </a>
+
+                    <!-- Resume -->
+                    <a href="resume.pdf"
+                        download="Hitesh-Mishra-Resume.pdf"
+                        class="inline-flex items-center gap-2 border border-white/10 hover:border-cyan-400 hover:bg-white/[0.03] transition-all duration-300 px-6 py-3 rounded-xl font-medium text-slate-200">
+
+                        <i class="fas fa-download"></i>
+
+                        Resume
+                    </a>
+
+                </div>
+
+                <!-- Small Stats -->
+                <div
+                    class="mt-10 flex flex-wrap gap-8">
+
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">
+                            9+
+                        </h3>
+
+                        <p class="text-xs text-slate-400 mt-1">
+                            Years Experience
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">
+                            AI
+                        </h3>
+
+                        <p class="text-xs text-slate-400 mt-1">
+                            Integrated Systems
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">
+                            AWS
+                        </h3>
+
+                        <p class="text-xs text-slate-400 mt-1">
+                            Cloud Infrastructure
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT -->
+            <div class="lg:col-span-5 relative flex justify-center lg:justify-end">
+
+                <!-- Glow -->
+                <div
+                    class="absolute w-[250px] h-[250px] bg-blue-500/10 blur-[100px] rounded-full">
+                </div>
+
+                <!-- Image Card -->
+                <div
+                    class="relative w-full max-w-[300px] rounded-[24px] overflow-hidden border border-white/10 bg-[#0B1627] shadow-[0_25px_60px_rgba(0,0,0,0.45)]">
+
+                    <!-- Image -->
+                    <img src="/images/profile.jpg"
+                        alt="Hitesh Mishra"
+                        class="w-full h-[400px] object-cover">
+
+                    <!-- Overlay -->
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-[#020617] via-[#020617]/20 to-transparent">
+                    </div>
+
+                    <!-- Top Badge -->
+                    <div
+                        class="absolute top-4 left-4 border border-white/10 bg-black/30 backdrop-blur-md px-3 py-1.5 rounded-full text-[10px] tracking-wide text-cyan-300 uppercase">
+
+                        Senior Developer
+                    </div>
+
+                    <!-- Bottom -->
+                    <div
+                        class="absolute bottom-0 left-0 right-0 p-5">
+
+                        <h2
+                            class="text-2xl font-bold tracking-tight">
+                            Hitesh Mishra
+                        </h2>
+
+                        <p
+                            class="mt-2 text-slate-300 leading-relaxed text-xs">
+
+                            Python • Django • React • AWS • AI Systems
+
+                        </p>
+
+                        <!-- Social -->
+                        <div
+                            class="mt-4 flex items-center gap-2.5">
+
+                            <a href="https://linkedin.com/in/hiteshmishra708"
+                                target="_blank"
+                                class="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center hover:border-cyan-400 hover:bg-white/[0.04] transition">
+
+                                <i class="fab fa-linkedin-in text-sm"></i>
+                            </a>
+
+                            <a href="#"
+                                class="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center hover:border-cyan-400 hover:bg-white/[0.04] transition">
+
+                                <i class="fab fa-github text-sm"></i>
+                            </a>
+
+                            <a href="#contact"
+                                class="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center hover:border-cyan-400 hover:bg-white/[0.04] transition">
+
+                                <i class="fas fa-envelope text-sm"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 
     <!-- ==================== ABOUT & FACTS ==================== -->
-    <section id="about" class="section-padding max-w-7xl mx-auto">
-        <div class="grid md:grid-cols-3 gap-10">
-            <div class="md:col-span-2 space-y-6">
-                <h2 class="text-3xl font-bold tracking-tight">From Code to <span class="ai-gradient-text">Cognitive Systems</span></h2>
-                <p class="text-gray-600 leading-relaxed">I'm Hitesh Mishra, a Senior Full Stack Tech Lead who architects end-to-end digital products with a modern AI-first mindset. With 9+ years of experience in system design, large-scale search, infrastructure, and product delivery, I lead teams to ship resilient platforms that scale and perform.</p>
-                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-3">
-                    <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 text-center"><i class="fas fa-layer-group text-2xl text-blue-500 mb-1"></i><p class="font-bold text-xl mt-1">12+</p><p class="text-xs text-gray-500">Full Stack Projects</p></div>
-                    <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 text-center"><i class="fas fa-cloud-upload-alt text-2xl text-blue-500 mb-1"></i><p class="font-bold text-xl mt-1">5+</p><p class="text-xs text-gray-500">Cloud Deployments</p></div>
-                    <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 text-center"><i class="fas fa-robot text-2xl text-blue-500 mb-1"></i><p class="font-bold text-xl mt-1">AI</p><p class="text-xs text-gray-500">Intelligent Integrations</p></div>
-                    <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 text-center"><i class="fas fa-users text-2xl text-blue-500 mb-1"></i><p class="font-bold text-xl mt-1">100%</p><p class="text-xs text-gray-500">Client Satisfaction</p></div>
-                </div>
-            </div>
-            <div class="bg-white rounded-2xl shadow-md p-6 border border-gray-100">
-                <h3 class="font-semibold text-xl flex items-center gap-2"><i class="fas fa-id-card text-blue-500"></i> Profile Snapshot</h3>
-                <ul class="mt-4 space-y-3 text-sm">
-                    <li class="flex justify-between border-b pb-2"><span class="text-gray-500"><i class="far fa-calendar-alt w-5"></i> Birthday</span><span class="font-medium">1998</span></li>
-                    <li class="flex justify-between border-b pb-2"><span class="text-gray-500"><i class="fas fa-phone-alt w-5"></i> Phone</span><span class="font-medium">+91 8286651155</span></li>
-                    <li class="flex justify-between border-b pb-2"><span class="text-gray-500"><i class="fas fa-envelope w-5"></i> Email</span><span class="font-medium">
-    <a href="mailto:hiteshmishra708@gmail.com" class="hover:text-blue-600 transition-colors duration-200">
-        hiteshmishra708@gmail.com
-    </a>
-</span></li>
-                    <li class="flex justify-between border-b pb-2"><span class="text-gray-500"><i class="fab fa-linkedin w-5"></i> LinkedIn</span><span class="font-medium text-blue-600">
-    <a href="https://linkedin.com/in/hiteshmishra708" target="_blank" rel="noopener noreferrer" class="hover:underline">
-        /hiteshmishra708
-    </a>
-</span></li>
-                    <li class="flex justify-between"><span class="text-gray-500"><i class="fas fa-map-marker-alt w-5"></i> City</span><span class="font-medium">Mumbai, India</span></li>
-                </ul>
-                <div class="mt-5 pt-2"><a href="tel:+918286651155" class="inline-block w-full text-center bg-gray-100 hover:bg-blue-50 rounded-lg py-2 text-sm font-medium transition">
-    📞 Call me: +91 82866 51155
-</a></div>
-            </div>
-        </div>
-    </section>
+<section id="about" class="bg-white py-16">
 
-    <!-- ==================== SELECTED CASE STUDIES ==================== -->
-    <section id="case-studies" class="bg-gray-50 section-padding">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold">Selected Case Studies</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">High-impact delivery with measurable scale, architecture clarity, and operational improvements.</p>
-            </div>
-            <div class="grid lg:grid-cols-3 gap-6">
-                <div class="bg-white rounded-3xl p-6 shadow-sm border border-gray-100 hover:shadow-lg transition hover:-translate-y-1">
-                    <span class="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-semibold">1M+ products</span>
-                    <h3 class="mt-5 text-2xl font-bold">Marketplace Search Redesign</h3>
-                    <p class="mt-3 text-gray-600 text-sm leading-relaxed">Led architecture and Elasticsearch migration for a large e-commerce platform, improving search relevance and reducing query latency by 42%.</p>
-                    <ul class="mt-4 space-y-2 text-sm text-gray-600">
-                        <li>System design for multi-tenant search & recommendation.</li>
-                        <li>Cloud deployment on AWS with autoscaling & monitoring.</li>
-                        <li>Improved UX conversion through faster relevance tuning.</li>
-                    </ul>
-                </div>
-                <div class="bg-white rounded-3xl p-6 shadow-sm border border-gray-100 hover:shadow-lg transition hover:-translate-y-1">
-                    <span class="inline-flex items-center px-3 py-1 rounded-full bg-cyan-100 text-cyan-700 text-xs font-semibold">Legacy migration</span>
-                    <h3 class="mt-5 text-2xl font-bold">Legacy Platform Modernization</h3>
-                    <p class="mt-3 text-gray-600 text-sm leading-relaxed">Directed the migration of legacy PHP and Magento applications into Next.js + Python services, enabling faster releases and stronger reliability.</p>
-                    <ul class="mt-4 space-y-2 text-sm text-gray-600">
-                        <li>Architected a phased migration to reduce business risk.</li>
-                        <li>Introduced microservices and CI/CD pipelines.</li>
-                        <li>Delivered measurable uptime and performance gains.</li>
-                    </ul>
-                </div>
-                <div class="bg-white rounded-3xl p-6 shadow-sm border border-gray-100 hover:shadow-lg transition hover:-translate-y-1">
-                    <span class="inline-flex items-center px-3 py-1 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold">AI-enabled</span>
-                    <h3 class="mt-5 text-2xl font-bold">AI & Automation Delivery</h3>
-                    <p class="mt-3 text-gray-600 text-sm leading-relaxed">Built intelligent automations and agent workflows for product discovery and internal tooling, raising team velocity and decision quality.</p>
-                    <ul class="mt-4 space-y-2 text-sm text-gray-600">
-                        <li>Embedded AI workflows into existing web systems.</li>
-                        <li>Implemented monitoring and fallback resiliency.</li>
-                        <li>Reduced manual work and improved feature delivery.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
 
-    <!-- ==================== SKILLS (Highlight AI & Modern Stack) ==================== -->
-    <section id="skills" class="bg-white section-padding">
-    <div class="max-w-7xl mx-auto">
-        <!-- Section Header -->
+        <!-- SECTION HEADER -->
+        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+
+            <div class="max-w-3xl">
+
+                <p class="text-sm font-semibold tracking-[0.2em] uppercase text-blue-600">
+                    About
+                </p>
+
+                <h2 class="mt-3 text-3xl md:text-4xl font-black text-slate-900 leading-tight">
+                    Full Stack Engineer focused on
+                    scalable products & AI-powered systems
+                </h2>
+
+            </div>
+
+            <div class="lg:max-w-md">
+
+                <p class="text-slate-600 leading-relaxed">
+                    9+ years of experience building modern applications using
+                    Python, Django, React.js, Next.js, Node.js and AWS
+                    with expertise in AI integrations, cloud architecture,
+                    APIs and scalable web systems.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- MAIN GRID -->
+        <div class="mt-12 grid lg:grid-cols-3 gap-6">
+
+            <!-- LEFT CARD -->
+            <div
+                class="bg-slate-50 border border-slate-200 rounded-3xl p-7">
+
+                <div
+                    class="w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center">
+
+                    <i class="fas fa-code text-blue-600 text-xl"></i>
+
+                </div>
+
+                <h3
+                    class="mt-5 text-xl font-bold text-slate-900">
+                    Engineering
+                </h3>
+
+                <p
+                    class="mt-3 text-slate-600 leading-relaxed text-sm">
+
+                    Building scalable full stack applications,
+                    cloud-native systems and modern APIs with
+                    performance-focused architecture.
+
+                </p>
+
+            </div>
+
+            <!-- CENTER CARD -->
+            <div
+                class="bg-slate-900 text-white rounded-3xl p-7 relative overflow-hidden">
+
+                <div
+                    class="absolute top-0 right-0 w-40 h-40 bg-blue-500/20 blur-3xl rounded-full">
+                </div>
+
+                <p
+                    class="text-sm uppercase tracking-[0.2em] text-cyan-300">
+                    Experience
+                </p>
+
+                <h3
+                    class="mt-4 text-5xl font-black">
+                    9+
+                </h3>
+
+                <p
+                    class="mt-2 text-slate-300">
+                    Years building digital products
+                </p>
+
+                <div
+                    class="mt-8 flex flex-wrap gap-2">
+
+                    <span class="px-3 py-1 rounded-full bg-white/10 text-xs">
+                        Python
+                    </span>
+
+                    <span class="px-3 py-1 rounded-full bg-white/10 text-xs">
+                        AI
+                    </span>
+
+                    <span class="px-3 py-1 rounded-full bg-white/10 text-xs">
+                        AWS
+                    </span>
+
+                    <span class="px-3 py-1 rounded-full bg-white/10 text-xs">
+                        React
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT CARD -->
+            <div
+                class="bg-slate-50 border border-slate-200 rounded-3xl p-7">
+
+                <div
+                    class="w-14 h-14 rounded-2xl bg-cyan-100 flex items-center justify-center">
+
+                    <i class="fas fa-brain text-cyan-600 text-xl"></i>
+
+                </div>
+
+                <h3
+                    class="mt-5 text-xl font-bold text-slate-900">
+                    AI & Cloud
+                </h3>
+
+                <p
+                    class="mt-3 text-slate-600 leading-relaxed text-sm">
+
+                    Specialized in AI-powered workflows,
+                    automation systems, AWS infrastructure
+                    and intelligent product experiences.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+   <!-- ==================== SKILLS (Category cards styled like picture) ==================== -->
+<section id="skills" class="bg-[#050816] text-white py-20 relative overflow-hidden">
+
+    <!-- Premium Glow -->
+    <div class="absolute top-0 left-0 w-[350px] h-[350px] bg-blue-500/10 blur-[140px] rounded-full"></div>
+    <div class="absolute bottom-0 right-0 w-[350px] h-[350px] bg-cyan-500/10 blur-[140px] rounded-full"></div>
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+
+        <!-- Heading -->
         <div class="text-center max-w-2xl mx-auto mb-16">
-            <h2 class="text-3xl font-bold mb-4">Tech Arsenal <span class="ai-gradient-text">+ AI Intelligence</span></h2>
-            <p class="text-gray-600 text-lg">Mastering modern full stack while integrating LLMs, agents, and cloud AI services.</p>
-            <!-- Decorative line -->
-            <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-400 mx-auto mt-6 rounded-full"></div>
+
+            <p class="uppercase tracking-[0.3em] text-sky-400 text-xs md:text-sm mb-4">
+                Expertise • Technologies • Innovation
+            </p>
+
+            <h2 class="text-3xl md:text-5xl font-black mb-5 leading-tight">
+                Skills & Technologies
+            </h2>
+
+            <p class="text-slate-400 text-base md:text-lg leading-relaxed">
+                Organized by domain with a focus on modern technologies,
+                intelligent systems, scalable infrastructure, and development tools.
+            </p>
+
+            <div class="w-28 h-[3px] bg-gradient-to-r from-blue-500 to-cyan-400 mx-auto mt-7 rounded-full"></div>
+
         </div>
 
-        <!-- Skills Grid - Modern Card Based Design without percentages -->
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Backend / Search / Infra Card -->
-            <div class="group bg-gray-50 hover:bg-white rounded-2xl p-6 transition-all duration-300 hover:shadow-xl hover:shadow-blue-100/50 border border-gray-100 hover:border-blue-200">
-                <div class="flex items-center justify-between mb-4">
-                    <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
-                        <i class="fas fa-server text-white"></i>
+        <!-- Grid -->
+        <div class="grid gap-6 lg:grid-cols-2">
+
+            <!-- CARD -->
+            <div class="group rounded-[2rem] border border-white/10 bg-white/[0.04] p-8 shadow-[0_10px_40px_rgba(0,0,0,0.35)] backdrop-blur-2xl hover:border-sky-400/30 hover:-translate-y-1 transition duration-500">
+
+                <div class="flex items-center gap-4 mb-5">
+
+                    <div class="w-14 h-14 rounded-2xl bg-sky-500/10 border border-sky-400/20 flex items-center justify-center text-2xl">
+                        🤖
                     </div>
-                    <span class="text-xs font-semibold px-3 py-1 bg-blue-100 text-blue-700 rounded-full">Infrastructure</span>
+
+                    <div>
+                        <h3 class="text-2xl font-bold">
+                            ML / AI
+                        </h3>
+
+                        <p class="text-slate-400 text-sm mt-1">
+                            Intelligent systems & AI-first workflows
+                        </p>
+                    </div>
+
                 </div>
-                <h3 class="text-xl font-bold mb-2">Backend, Search & Infra</h3>
-                <p class="text-gray-500 text-sm leading-relaxed">Designing scalable APIs, Elasticsearch search stacks, and cloud infrastructure for high-traffic systems.</p>
-                <div class="flex flex-wrap gap-2 mt-4">
-                    <span class="text-xs bg-white px-2 py-1 rounded-lg text-gray-600 border">Elasticsearch</span>
-                    <span class="text-xs bg-white px-2 py-1 rounded-lg text-gray-600 border">AWS</span>
-                    <span class="text-xs bg-white px-2 py-1 rounded-lg text-gray-600 border">Microservices</span>
+
+                <div class="flex flex-wrap gap-3">
+
+                    <span class="skill-tag">LLMs</span>
+                    <span class="skill-tag">Computer Vision</span>
+                    <span class="skill-tag">Diffusion Models</span>
+                    <span class="skill-tag">PyTorch</span>
+                    <span class="skill-tag">LangChain</span>
+                    <span class="skill-tag">Multi-Agent Systems</span>
+
                 </div>
+
             </div>
 
-            <!-- Python / Django Card -->
-            <div class="group bg-gray-50 hover:bg-white rounded-2xl p-6 transition-all duration-300 hover:shadow-xl hover:shadow-blue-100/50 border border-gray-100 hover:border-blue-200">
-                <div class="flex items-center justify-between mb-4">
-                    <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-                        </svg>
+            <!-- CARD -->
+            <div class="group rounded-[2rem] border border-white/10 bg-white/[0.04] p-8 shadow-[0_10px_40px_rgba(0,0,0,0.35)] backdrop-blur-2xl hover:border-cyan-400/30 hover:-translate-y-1 transition duration-500">
+
+                <div class="flex items-center gap-4 mb-5">
+
+                    <div class="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-400/20 flex items-center justify-center text-2xl">
+                        ☁️
                     </div>
-                    <span class="text-xs font-semibold px-3 py-1 bg-blue-100 text-blue-700 rounded-full">Expert</span>
+
+                    <div>
+                        <h3 class="text-2xl font-bold">
+                            Cloud & Infra
+                        </h3>
+
+                        <p class="text-slate-400 text-sm mt-1">
+                            Scalable cloud infrastructure & deployment
+                        </p>
+                    </div>
+
                 </div>
-                <h3 class="text-xl font-bold mb-2">Python Ecosystem</h3>
-                <p class="text-gray-500 text-sm leading-relaxed">Django, FastAPI, Celery — building robust backends with async support and task queues.</p>
-                <div class="flex flex-wrap gap-2 mt-4">
-                    <span class="text-xs bg-white px-2 py-1 rounded-lg text-gray-600 border">Django REST</span>
-                    <span class="text-xs bg-white px-2 py-1 rounded-lg text-gray-600 border">FastAPI</span>
-                    <span class="text-xs bg-white px-2 py-1 rounded-lg text-gray-600 border">Celery</span>
+
+                <div class="flex flex-wrap gap-3">
+
+                    <span class="skill-tag">AWS</span>
+                    <span class="skill-tag">GCP</span>
+                    <span class="skill-tag">Kubernetes</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">RabbitMQ</span>
+                    <span class="skill-tag">Redis</span>
+
                 </div>
+
             </div>
 
-            <!-- React / NextJS Card -->
-            <div class="group bg-gray-50 hover:bg-white rounded-2xl p-6 transition-all duration-300 hover:shadow-xl hover:shadow-blue-100/50 border border-gray-100 hover:border-blue-200">
-                <div class="flex items-center justify-between mb-4">
-                    <div class="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path>
-                        </svg>
+            <!-- CARD -->
+            <div class="group rounded-[2rem] border border-white/10 bg-white/[0.04] p-8 shadow-[0_10px_40px_rgba(0,0,0,0.35)] backdrop-blur-2xl hover:border-purple-400/30 hover:-translate-y-1 transition duration-500">
+
+                <div class="flex items-center gap-4 mb-5">
+
+                    <div class="w-14 h-14 rounded-2xl bg-purple-500/10 border border-purple-400/20 flex items-center justify-center text-2xl">
+                        🚀
                     </div>
-                    <span class="text-xs font-semibold px-3 py-1 bg-blue-100 text-blue-700 rounded-full">Expert</span>
+
+                    <div>
+                        <h3 class="text-2xl font-bold">
+                            Frameworks & 3D
+                        </h3>
+
+                        <p class="text-slate-400 text-sm mt-1">
+                            Full-stack frameworks & immersive tools
+                        </p>
+                    </div>
+
                 </div>
-                <h3 class="text-xl font-bold mb-2">React & Next.js</h3>
-                <p class="text-gray-500 text-sm leading-relaxed">Modern component architecture, SSR, and optimized frontend performance.</p>
-                <div class="flex flex-wrap gap-2 mt-4">
-                    <span class="text-xs bg-white px-2 py-1 rounded-lg text-gray-600 border">Next.js 14</span>
-                    <span class="text-xs bg-white px-2 py-1 rounded-lg text-gray-600 border">React Query</span>
-                    <span class="text-xs bg-white px-2 py-1 rounded-lg text-gray-600 border">Redux</span>
+
+                <div class="flex flex-wrap gap-3">
+
+                    <span class="skill-tag">FastAPI</span>
+                    <span class="skill-tag">Django</span>
+                    <span class="skill-tag">Unreal Engine 5</span>
+                    <span class="skill-tag">3D Gaussian Splatting</span>
+                    <span class="skill-tag">NVIDIA Omniverse</span>
+                    <span class="skill-tag">Next.js</span>
+
                 </div>
+
             </div>
 
-            <!-- TypeScript Card -->
-            <div class="group bg-gray-50 hover:bg-white rounded-2xl p-6 transition-all duration-300 hover:shadow-xl hover:shadow-blue-100/50 border border-gray-100 hover:border-blue-200">
-                <div class="flex items-center justify-between mb-4">
-                    <div class="w-12 h-12 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                        </svg>
+            <!-- CARD -->
+            <div class="group rounded-[2rem] border border-white/10 bg-white/[0.04] p-8 shadow-[0_10px_40px_rgba(0,0,0,0.35)] backdrop-blur-2xl hover:border-emerald-400/30 hover:-translate-y-1 transition duration-500">
+
+                <div class="flex items-center gap-4 mb-5">
+
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 border border-emerald-400/20 flex items-center justify-center text-2xl">
+                        💻
                     </div>
-                    <span class="text-xs font-semibold px-3 py-1 bg-blue-100 text-blue-700 rounded-full">Expert</span>
+
+                    <div>
+                        <h3 class="text-2xl font-bold">
+                            Languages
+                        </h3>
+
+                        <p class="text-slate-400 text-sm mt-1">
+                            Core programming & scalable application logic
+                        </p>
+                    </div>
+
                 </div>
-                <h3 class="text-xl font-bold mb-2">TypeScript</h3>
-                <p class="text-gray-500 text-sm leading-relaxed">Type-safe development, interfaces, generics — scalable and maintainable code.</p>
-                <div class="flex flex-wrap gap-2 mt-4">
-                    <span class="text-xs bg-white px-2 py-1 rounded-lg text-gray-600 border">Strict mode</span>
-                    <span class="text-xs bg-white px-2 py-1 rounded-lg text-gray-600 border">Generics</span>
-                    <span class="text-xs bg-white px-2 py-1 rounded-lg text-gray-600 border">Utility types</span>
+
+                <div class="flex flex-wrap gap-3">
+
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">C++</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">TypeScript</span>
+
                 </div>
+
             </div>
 
-            <!-- AI Integration Card -->
-            <div class="group bg-gray-50 hover:bg-white rounded-2xl p-6 transition-all duration-300 hover:shadow-xl hover:shadow-indigo-100/50 border border-gray-100 hover:border-indigo-200">
-                <div class="flex items-center justify-between mb-4">
-                    <div class="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-                        </svg>
-                    </div>
-                    <span class="text-xs font-semibold px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full">Advanced</span>
-                </div>
-                <h3 class="text-xl font-bold mb-2">AI & LLM Integration</h3>
-                <p class="text-gray-500 text-sm leading-relaxed">OpenAI, LangChain, agent workflows — intelligent features and automation.</p>
-                <div class="flex flex-wrap gap-2 mt-4">
-                    <span class="text-xs bg-white px-2 py-1 rounded-lg text-gray-600 border">LangChain</span>
-                    <span class="text-xs bg-white px-2 py-1 rounded-lg text-gray-600 border">RAG pipelines</span>
-                    <span class="text-xs bg-white px-2 py-1 rounded-lg text-gray-600 border">Function calling</span>
-                </div>
-            </div>
-
-            <!-- Cloud Services Card -->
-            <div class="group bg-gray-50 hover:bg-white rounded-2xl p-6 transition-all duration-300 hover:shadow-xl hover:shadow-blue-100/50 border border-gray-100 hover:border-blue-200">
-                <div class="flex items-center justify-between mb-4">
-                    <div class="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-500 rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
-                        </svg>
-                    </div>
-                    <span class="text-xs font-semibold px-3 py-1 bg-blue-100 text-blue-700 rounded-full">Proficient</span>
-                </div>
-                <h3 class="text-xl font-bold mb-2">Cloud Platforms</h3>
-                <p class="text-gray-500 text-sm leading-relaxed">AWS (EC2, S3, CloudFront) and GCP — scalable cloud infrastructure.</p>
-                <div class="flex flex-wrap gap-2 mt-4">
-                    <span class="text-xs bg-white px-2 py-1 rounded-lg text-gray-600 border">EC2 / S3</span>
-                    <span class="text-xs bg-white px-2 py-1 rounded-lg text-gray-600 border">CloudFront</span>
-                    <span class="text-xs bg-white px-2 py-1 rounded-lg text-gray-600 border">GCP</span>
-                </div>
-            </div>
-
-            <!-- Databases Card -->
-            <div class="group bg-gray-50 hover:bg-white rounded-2xl p-6 transition-all duration-300 hover:shadow-xl hover:shadow-blue-100/50 border border-gray-100 hover:border-blue-200">
-                <div class="flex items-center justify-between mb-4">
-                    <div class="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
-                        </svg>
-                    </div>
-                    <span class="text-xs font-semibold px-3 py-1 bg-blue-100 text-blue-700 rounded-full">Proficient</span>
-                </div>
-                <h3 class="text-xl font-bold mb-2">SQL & NoSQL</h3>
-                <p class="text-gray-500 text-sm leading-relaxed">PostgreSQL, MongoDB, Elasticsearch — data persistence and search.</p>
-                <div class="flex flex-wrap gap-2 mt-4">
-                    <span class="text-xs bg-white px-2 py-1 rounded-lg text-gray-600 border">PostgreSQL</span>
-                    <span class="text-xs bg-white px-2 py-1 rounded-lg text-gray-600 border">MongoDB</span>
-                    <span class="text-xs bg-white px-2 py-1 rounded-lg text-gray-600 border">Elasticsearch</span>
-                </div>
-            </div>
         </div>
 
-      
     </div>
 </section>
 
+<style>
+    .skill-tag{
+        @apply inline-flex items-center justify-center rounded-full 
+        border border-white/10 bg-slate-900/80 
+        px-4 py-2 text-sm text-slate-200 
+        transition duration-300 
+        hover:border-sky-400/40 hover:bg-slate-800 hover:text-white;
+    }
+</style>
+ 
 <style>
     /* Smooth gradient text utility */
     .ai-gradient-text {
@@ -367,169 +866,930 @@
         transform: scale(1.05);
     }
 </style>
-    
 
-    <!-- ==================== EXPERIENCE & RESUME ==================== -->
- <section id="experience" class="section-padding max-w-7xl mx-auto">
-    <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold mb-3 tracking-tight">Professional Journey</h2>
-        <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-cyan-400 mx-auto rounded-full mb-4"></div>
-        <p class="text-gray-600 text-lg max-w-2xl mx-auto">9+ years of scale, resilience & innovation — architecting future-ready digital solutions across industries.</p>
-    </div>
+<!-- ================= EXPERIENCE SECTION ================= -->
+<section id="experience" class="bg-[#F8FAFC] py-20">
 
-    <div class="grid md:grid-cols-2 gap-10">
-        <!-- LEFT: Experience Timeline -->
-        <div class="space-y-8">
-            <!-- Sr Software Engineer - eClerx -->
-            <div class="border-l-4 border-blue-500 pl-5 pb-1 transition-all hover:translate-y-[-2px] duration-200">
-                <div class="flex items-center gap-2 flex-wrap">
-                    <h3 class="text-xl font-bold tracking-tight">Sr Software Engineer</h3>
-                    <span class="inline-flex items-center rounded-full bg-blue-50 px-2.5 py-0.5 text-xs font-medium text-blue-700">Elasticsearch · High traffic</span>
-                </div>
-                <p class="text-blue-600 text-sm font-medium mt-1 flex items-center gap-1">
-                    <i class="far fa-calendar-alt text-xs"></i> Oct 2023 – Present
-                </p>
-                <p class="mt-2 text-gray-600 leading-relaxed text-[0.95rem]">
-                    Designed and optimized Elasticsearch-based search systems for high-traffic platforms. Improved query performance and relevance tuning, managed deployments and system reliability on AWS infrastructure. Optimized Elasticsearch queries reducing search latency and improving relevance.
-                </p>
-            </div>
+    <div class="max-w-6xl mx-auto px-6 lg:px-8">
 
-            <!-- Full Stack Developer - Medikabazaar -->
-            <div class="border-l-4 border-blue-500 pl-5 pb-1 transition-all hover:translate-y-[-2px] duration-200">
-                <div class="flex items-center gap-2 flex-wrap">
-                    <h3 class="text-xl font-bold tracking-tight">Full Stack Developer</h3>
-                    <span class="inline-flex items-center rounded-full bg-blue-50 px-2.5 py-0.5 text-xs font-medium text-blue-700">1M+ catalog · Migration</span>
-                </div>
-                <p class="text-blue-600 text-sm font-medium mt-1 flex items-center gap-1">
-                    <i class="far fa-calendar-alt text-xs"></i> Apr 2021 – Jul 2023
-                </p>
-                <p class="mt-2 text-gray-600 leading-relaxed text-[0.95rem]">
-                    Built and scaled a full-stack platform managing 1M+ product catalog with multi-seller onboarding. Led migration of legacy Magento platform to Next.js + Python architecture, improving scalability and performance. Implemented Elasticsearch-based search system significantly enhancing search speed and relevance. Designed backend systems using Django, Celery, RabbitMQ, Redis for async processing and high throughput.
-                </p>
-            </div>
+        <!-- SECTION HEADER -->
+        <div class="max-w-3xl">
 
-            <!-- Software Engineer - CitiusTech -->
-            <div class="border-l-4 border-blue-500 pl-5 pb-1 transition-all hover:translate-y-[-2px] duration-200">
-                <div class="flex items-center gap-2 flex-wrap">
-                    <h3 class="text-xl font-bold tracking-tight">Software Engineer</h3>
-                    <span class="inline-flex items-center rounded-full bg-blue-50 px-2.5 py-0.5 text-xs font-medium text-blue-700">Healthcare · SonarQube</span>
-                </div>
-                <p class="text-blue-600 text-sm font-medium mt-1 flex items-center gap-1">
-                    <i class="far fa-calendar-alt text-xs"></i> Oct 2019 – Apr 2021
-                </p>
-                <p class="mt-2 text-gray-600 leading-relaxed text-[0.95rem]">
-                    Contributed to large-scale healthcare platforms (H-Scale, IBC Migration). Improved code quality and maintainability using SonarQube integration. Built scalable frontend components using Angular and Node.js.
-                </p>
-            </div>
+            <p
+                class="text-sm font-semibold tracking-[0.2em] uppercase text-blue-600">
+                Experience
+            </p>
 
-            <!-- Software Engineer (Early) - AvenDATA GmbH -->
-            <div class="border-l-4 border-blue-500 pl-5 pb-1 transition-all hover:translate-y-[-2px] duration-200">
-                <div class="flex items-center gap-2 flex-wrap">
-                    <h3 class="text-xl font-bold tracking-tight">Software Engineer</h3>
-                    <span class="inline-flex items-center rounded-full bg-blue-50 px-2.5 py-0.5 text-xs font-medium text-blue-700">Legacy migration · Team lead</span>
-                </div>
-                <p class="text-blue-600 text-sm font-medium mt-1 flex items-center gap-1">
-                    <i class="far fa-calendar-alt text-xs"></i> Sep 2017 – Oct 2019
-                </p>
-                <p class="mt-2 text-gray-600 leading-relaxed text-[0.95rem]">
-                    Progressed to Team Lead, managing development and delivery of multiple projects. Led full-stack development across Python, Django, React, Node.js. Migrated legacy Python 2 systems to modern architecture, improving maintainability. Developed NFC-based mobile applications using Ionic framework. Delivered projects including Digiprax, Baulogi, PhoneBoost, and BetHai.
-                </p>
-            </div>
+            <h2
+                class="mt-3 text-4xl md:text-5xl font-black text-slate-900 leading-tight tracking-[-0.03em]">
+
+                Building scalable systems &
+                high-performance digital platforms
+
+            </h2>
+
+            <p
+                class="mt-5 text-slate-600 leading-relaxed text-lg">
+
+                9+ years of experience delivering enterprise applications,
+                Elasticsearch-driven platforms, cloud-native infrastructure,
+                and scalable full stack systems across e-commerce,
+                healthcare, and enterprise domains.
+
+            </p>
+
         </div>
 
-        <!-- RIGHT: Education & Recognition + Quote + Contact highlight -->
-        <div class="bg-gray-50 p-6 rounded-2xl shadow-sm recognition-block transition-all duration-200">
-            <h3 class="text-xl font-bold flex items-center gap-2">
-                <i class="fas fa-graduation-cap text-blue-500"></i> Education & Recognition
-            </h3>
-            <ul class="space-y-4 mt-4">
-                <li class="flex gap-2">
-                    <i class="fas fa-university text-blue-400 mt-1 text-sm"></i>
-                    <div><span class="font-semibold">MCA, IGNOU University</span> (2018-2022) — Built <span class="text-blue-600">alumni.ignou.ac.in</span> serving 5.2M+ users; created chatbot for IGNOU study center; received Potential Innovator award twice.</div>
-                </li>
-                <li class="flex gap-2">
-                    <i class="fas fa-laptop-code text-blue-400 mt-1 text-sm"></i>
-                    <div><span class="font-semibold">BSC-IT, Bhavans College, Mumbai University</span> (2014-2017) — Student of the Year, Received Kulpati Award for academic excellence.</div>
-                </li>
-                <li class="flex gap-2">
-                    <i class="fas fa-school text-blue-400 mt-1 text-sm"></i>
-                    <div><span class="font-semibold">HSC & SSC</span> – Maharashtra State Board with distinction.</div>
-                </li>
-            </ul>
+        <!-- TIMELINE -->
+        <div
+            class="mt-16 relative border-l border-slate-200 ml-3 space-y-14">
 
-            <!-- leadership + impact snippet -->
-            <div class="mt-6 p-4 bg-white rounded-xl border border-gray-200 quote-bubble">
-                <i class="fas fa-quote-left text-blue-300 mr-2"></i>
-                <span class="text-sm font-medium text-gray-700">Hands-on Senior Full-Stack Engineer & Tech Lead with 9+ years building scalable e-commerce and enterprise platforms. Specialize in Elasticsearch optimization, legacy-to-modern migrations, and high-traffic system design — delivering across 1M+ product catalogs and multi-seller platforms.</span>
+            <!-- EXPERIENCE ITEM -->
+            <div class="relative pl-10">
+
+                <!-- DOT -->
+                <div
+                    class="absolute -left-[11px] top-2 w-5 h-5 rounded-full bg-blue-600 border-4 border-white shadow">
+                </div>
+
+                <!-- TOP -->
+                <div
+                    class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
+
+                    <div>
+
+                        <h3
+                            class="text-2xl font-bold text-slate-900">
+                            Sr Software Engineer
+                        </h3>
+
+                        <p
+                            class="mt-1 text-blue-600 font-semibold">
+                            eClerx
+                        </p>
+
+                    </div>
+
+                    <div
+                        class="text-sm font-medium text-slate-500 lg:text-right">
+
+                        Oct 2023 — Present
+
+                    </div>
+
+                </div>
+
+                <!-- DESCRIPTION -->
+                <div
+                    class="mt-6 space-y-3 text-slate-600 leading-relaxed">
+
+                    <p>
+                        • Designed and optimized Elasticsearch-based search systems
+                        for high-traffic platforms.
+                    </p>
+
+                    <p>
+                        • Improved query performance and relevance tuning for
+                        enhanced product discovery and user experience.
+                    </p>
+
+                    <p>
+                        • Managed AWS deployments, infrastructure reliability,
+                        and scalable production systems.
+                    </p>
+
+                    <p>
+                        • Optimized Elasticsearch queries reducing latency
+                        and improving search performance.
+                    </p>
+
+                </div>
+
+                <!-- TECH -->
+                <div
+                    class="mt-6 flex flex-wrap gap-2">
+
+                    <span
+                        class="px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-medium">
+                        Python
+                    </span>
+
+                    <span
+                        class="px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-medium">
+                        Elasticsearch
+                    </span>
+
+                    <span
+                        class="px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-medium">
+                        AWS
+                    </span>
+
+                    <span
+                        class="px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-medium">
+                        Django
+                    </span>
+
+                </div>
+
             </div>
 
-            <!-- extra: contact micro card (professional) -->
-            <div class="mt-6 flex flex-wrap gap-4 justify-between items-center bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
-                <div class="flex items-center gap-2 text-sm text-gray-600">
-                    <i class="fas fa-map-marker-alt text-blue-400"></i>
-                    <span>Mumbai, Maharashtra</span>
+            <!-- EXPERIENCE ITEM -->
+            <div class="relative pl-10">
+
+                <div
+                    class="absolute -left-[11px] top-2 w-5 h-5 rounded-full bg-cyan-500 border-4 border-white shadow">
                 </div>
-                <div class="flex items-center gap-3">
-                    <a href="https://linkedin.com/in/hiteshmishra708" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 transition">
-                        <i class="fab fa-linkedin text-lg"></i>
-                    </a>
-                    <a href="https://github.com/hiteshmishra708" target="_blank" rel="noopener noreferrer" class="text-gray-700 hover:text-blue-600 transition">
-                        <i class="fab fa-github text-lg"></i>
-                    </a>
-                    <a href="mailto:hiteshmishra708@gmail.com" class="text-gray-600 hover:text-blue-500 text-sm">
-                        <i class="far fa-envelope"></i> Email
-                    </a>
+
+                <div
+                    class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
+
+                    <div>
+
+                        <h3
+                            class="text-2xl font-bold text-slate-900">
+                            Full Stack Developer
+                        </h3>
+
+                        <p
+                            class="mt-1 text-cyan-600 font-semibold">
+                            Medikabazaar
+                        </p>
+
+                    </div>
+
+                    <div
+                        class="text-sm font-medium text-slate-500 lg:text-right">
+
+                        Apr 2021 — Jul 2023
+
+                    </div>
+
                 </div>
+
+                <div
+                    class="mt-6 space-y-3 text-slate-600 leading-relaxed">
+
+                    <p>
+                        • Built and scaled a full-stack platform managing
+                        1M+ product catalog with multi-seller onboarding.
+                    </p>
+
+                    <p>
+                        • Led migration from legacy Magento architecture
+                        to Next.js + Python ecosystem.
+                    </p>
+
+                    <p>
+                        • Implemented Elasticsearch-powered search improving
+                        relevance and search performance.
+                    </p>
+
+                    <p>
+                        • Developed scalable backend systems using Django,
+                        Celery, RabbitMQ and Redis.
+                    </p>
+
+                    <p>
+                        • Managed AWS infrastructure including EC2,
+                        S3 and CloudFront deployments.
+                    </p>
+
+                </div>
+
+                <div
+                    class="mt-6 flex flex-wrap gap-2">
+
+                    <span
+                        class="px-3 py-1 rounded-full bg-cyan-50 text-cyan-700 text-xs font-medium">
+                        Next.js
+                    </span>
+
+                    <span
+                        class="px-3 py-1 rounded-full bg-cyan-50 text-cyan-700 text-xs font-medium">
+                        Python
+                    </span>
+
+                    <span
+                        class="px-3 py-1 rounded-full bg-cyan-50 text-cyan-700 text-xs font-medium">
+                        Django
+                    </span>
+
+                    <span
+                        class="px-3 py-1 rounded-full bg-cyan-50 text-cyan-700 text-xs font-medium">
+                        RabbitMQ
+                    </span>
+
+                    <span
+                        class="px-3 py-1 rounded-full bg-cyan-50 text-cyan-700 text-xs font-medium">
+                        Redis
+                    </span>
+
+                </div>
+
             </div>
+
+            <!-- EXPERIENCE ITEM -->
+            <div class="relative pl-10">
+
+                <div
+                    class="absolute -left-[11px] top-2 w-5 h-5 rounded-full bg-indigo-500 border-4 border-white shadow">
+                </div>
+
+                <div
+                    class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
+
+                    <div>
+
+                        <h3
+                            class="text-2xl font-bold text-slate-900">
+                            Software Engineer
+                        </h3>
+
+                        <p
+                            class="mt-1 text-indigo-600 font-semibold">
+                            CitiusTech
+                        </p>
+
+                    </div>
+
+                    <div
+                        class="text-sm font-medium text-slate-500 lg:text-right">
+
+                        Oct 2019 — Apr 2021
+
+                    </div>
+
+                </div>
+
+                <div
+                    class="mt-6 space-y-3 text-slate-600 leading-relaxed">
+
+                    <p>
+                        • Contributed to enterprise healthcare platforms
+                        including H-Scale and IBC Migration projects.
+                    </p>
+
+                    <p>
+                        • Improved code quality and maintainability
+                        using SonarQube integration.
+                    </p>
+
+                    <p>
+                        • Built scalable frontend systems using
+                        Angular and Node.js.
+                    </p>
+
+                </div>
+
+                <div
+                    class="mt-6 flex flex-wrap gap-2">
+
+                    <span
+                        class="px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-xs font-medium">
+                        Angular
+                    </span>
+
+                    <span
+                        class="px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-xs font-medium">
+                        Node.js
+                    </span>
+
+                    <span
+                        class="px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-xs font-medium">
+                        SonarQube
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- EXPERIENCE ITEM -->
+            <div class="relative pl-10">
+
+                <div
+                    class="absolute -left-[11px] top-2 w-5 h-5 rounded-full bg-violet-500 border-4 border-white shadow">
+                </div>
+
+                <div
+                    class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
+
+                    <div>
+
+                        <h3
+                            class="text-2xl font-bold text-slate-900">
+                            Software Engineer
+                        </h3>
+
+                        <p
+                            class="mt-1 text-violet-600 font-semibold">
+                            AvenDATA GmbH
+                        </p>
+
+                    </div>
+
+                    <div
+                        class="text-sm font-medium text-slate-500 lg:text-right">
+
+                        Sep 2017 — Oct 2019
+
+                    </div>
+
+                </div>
+
+                <div
+                    class="mt-6 space-y-3 text-slate-600 leading-relaxed">
+
+                    <p>
+                        • Progressed into Team Lead role managing
+                        development and project delivery.
+                    </p>
+
+                    <p>
+                        • Led full stack development using Python,
+                        Django, React.js and Node.js.
+                    </p>
+
+                    <p>
+                        • Migrated legacy Python 2 applications
+                        to modern scalable systems.
+                    </p>
+
+                    <p>
+                        • Developed NFC-based mobile applications
+                        using Ionic framework.
+                    </p>
+
+                </div>
+
+                <div
+                    class="mt-6 flex flex-wrap gap-2">
+
+                    <span
+                        class="px-3 py-1 rounded-full bg-violet-50 text-violet-700 text-xs font-medium">
+                        Python
+                    </span>
+
+                    <span
+                        class="px-3 py-1 rounded-full bg-violet-50 text-violet-700 text-xs font-medium">
+                        Django
+                    </span>
+
+                    <span
+                        class="px-3 py-1 rounded-full bg-violet-50 text-violet-700 text-xs font-medium">
+                        React.js
+                    </span>
+
+                    <span
+                        class="px-3 py-1 rounded-full bg-violet-50 text-violet-700 text-xs font-medium">
+                        Ionic
+                    </span>
+
+                </div>
+
+            </div>
+
         </div>
+
     </div>
+
 </section>
 
-    <!-- ==================== SYSTEM DESIGN PROOF ==================== -->
-    <section id="design" class="bg-white section-padding">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-10">
-                <h2 class="text-3xl font-bold">System Design Proof</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Architecture patterns for search, async processing, and scalable platform operations.</p>
-            </div>
-            <div class="grid lg:grid-cols-2 gap-10">
-                <div class="rounded-3xl border border-gray-100 bg-gray-50 p-8 shadow-sm">
-                    <h3 class="text-xl font-bold mb-4">Search System Architecture</h3>
-                    <div class="space-y-4 text-sm text-gray-700">
-                        <p>Designed an elastic search pipeline that supports real-time indexing, relevance tuning, and multi-language queries for high-volume product catalogs.</p>
-                        <div class="space-y-3">
-                            <div class="rounded-2xl bg-white p-4 border border-gray-200">
-                                <strong>1. Ingestion</strong><br>API / ETL & batch updater
-                            </div>
-                            <div class="rounded-2xl bg-white p-4 border border-gray-200">
-                                <strong>2. Search Core</strong><br>Elasticsearch cluster with relevance layers
-                            </div>
-                            <div class="rounded-2xl bg-white p-4 border border-gray-200">
-                                <strong>3. UX Layer</strong><br>Next.js / React frontend with personalized results
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="rounded-3xl border border-gray-100 bg-gray-50 p-8 shadow-sm">
-                    <h3 class="text-xl font-bold mb-4">Async Processing & Scale</h3>
-                    <div class="space-y-4 text-sm text-gray-700">
-                        <p>Built architecture patterns to process high-throughput workloads using task queues, caching, and observability.</p>
-                        <div class="space-y-3">
-                            <div class="rounded-2xl bg-white p-4 border border-gray-200">
-                                <strong>API / Worker Split</strong><br>Fast response APIs + background workers
-                            </div>
-                            <div class="rounded-2xl bg-white p-4 border border-gray-200">
-                                <strong>Resiliency</strong><br>Retry policies, dead-letter handling, alerting
-                            </div>
-                            <div class="rounded-2xl bg-white p-4 border border-gray-200">
-                                <strong>Monitoring</strong><br>Logs, metrics, and operational dashboards
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!-- 🔹 AI & Engineering Focus (Mini Section - Use inside ABOUT or top of EXPERIENCE) -->
+<div class="mt-8 p-6 rounded-2xl border border-white/10 bg-[#0B1120] text-white">
+
+  <p class="text-xs uppercase tracking-[0.3em] text-cyan-400 mb-3">
+    AI • Backend • System Design
+  </p>
+
+  <h3 class="text-xl md:text-2xl font-bold mb-3">
+    Engineering AI-Driven & Scalable Systems
+  </h3>
+
+  <p class="text-sm md:text-base text-gray-300 leading-relaxed">
+    Full Stack Engineer with 9+ years of experience building scalable backend systems using
+    <span class="text-white font-medium">Python, Django, and Node.js</span>.
+    Strong focus on <span class="text-cyan-300">Elasticsearch, AI-powered systems, and high-traffic architectures</span>,
+    delivering platforms handling <span class="font-semibold text-white">1M+ product catalogs</span> and enterprise-scale workloads.
+  </p>
+
+</div>
+
+
+<!-- ==================== CASE STUDIES SECTION ==================== -->
+<section id="case-studies"
+    class="relative bg-[#F8FAFC] py-20 overflow-hidden">
+
+    <!-- Background -->
+    <div class="absolute inset-0">
+
+        <div
+            class="absolute top-0 right-0 w-[350px] h-[350px] bg-cyan-100 blur-3xl rounded-full opacity-40">
         </div>
-    </section>
+
+        <div
+            class="absolute bottom-0 left-0 w-[300px] h-[300px] bg-blue-100 blur-3xl rounded-full opacity-40">
+        </div>
+
+    </div>
+
+    <div
+        class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+
+        <!-- HEADER -->
+        <div class="max-w-3xl">
+
+            <p
+                class="text-sm uppercase tracking-[0.25em] font-semibold text-blue-600">
+                Case Studies
+            </p>
+
+            <h2
+                class="mt-4 text-4xl md:text-5xl font-black text-slate-900 leading-tight tracking-[-0.03em]">
+
+                Real-world engineering challenges &
+                scalable product architecture
+
+            </h2>
+
+            <p
+                class="mt-6 text-slate-600 text-lg leading-relaxed">
+
+                A selection of enterprise platforms, large-scale migrations,
+                and search systems built across e-commerce,
+                healthcare, and high-traffic digital products.
+
+            </p>
+
+        </div>
+
+        <!-- CASE STUDIES -->
+        <div
+            class="mt-16 space-y-8">
+
+            <!-- CASE STUDY 1 -->
+            <div
+                class="group bg-white border border-slate-200 rounded-[32px] p-8 lg:p-10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500">
+
+                <!-- TOP -->
+                <div
+                    class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
+
+                    <div>
+
+                        <div
+                            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-50 border border-cyan-100 text-cyan-700 text-xs font-semibold">
+
+                            Enterprise E-Commerce
+
+                        </div>
+
+                        <h3
+                            class="mt-5 text-3xl font-black text-slate-900 tracking-tight">
+
+                            Medikabazaar Platform Migration
+
+                        </h3>
+
+                        <p
+                            class="mt-4 text-slate-600 leading-relaxed max-w-3xl">
+
+                            Led migration of a large-scale e-commerce platform
+                            from legacy Magento architecture to a modern
+                            Next.js + Python ecosystem while managing
+                            a 1M+ product catalog and multi-seller onboarding system.
+
+                        </p>
+
+                    </div>
+
+                    <!-- METRIC -->
+                    <div
+                        class="min-w-[140px] rounded-2xl bg-slate-900 text-white p-5">
+
+                        <p
+                            class="text-slate-400 text-xs uppercase tracking-wider">
+                            Catalog Scale
+                        </p>
+
+                        <h4
+                            class="mt-2 text-4xl font-black">
+                            1M+
+                        </h4>
+
+                        <span
+                            class="text-sm text-slate-400">
+                            Products
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <!-- GRID -->
+                <div
+                    class="mt-10 grid md:grid-cols-3 gap-6">
+
+                    <!-- PROBLEM -->
+                    <div
+                        class="rounded-2xl border border-slate-200 p-6">
+
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-red-50 flex items-center justify-center text-red-500">
+
+                            <i class="fas fa-layer-group"></i>
+
+                        </div>
+
+                        <h4
+                            class="mt-5 text-lg font-bold text-slate-900">
+                            Challenge
+                        </h4>
+
+                        <p
+                            class="mt-3 text-slate-600 leading-relaxed text-sm">
+
+                            Legacy Magento infrastructure struggled with scalability,
+                            search performance, and multi-seller operations
+                            under production traffic.
+
+                        </p>
+
+                    </div>
+
+                    <!-- SOLUTION -->
+                    <div
+                        class="rounded-2xl border border-slate-200 p-6">
+
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-cyan-50 flex items-center justify-center text-cyan-600">
+
+                            <i class="fas fa-code"></i>
+
+                        </div>
+
+                        <h4
+                            class="mt-5 text-lg font-bold text-slate-900">
+                            Solution
+                        </h4>
+
+                        <p
+                            class="mt-3 text-slate-600 leading-relaxed text-sm">
+
+                            Built scalable backend systems using Django,
+                            Redis, Celery and RabbitMQ while migrating
+                            frontend architecture to Next.js.
+
+                        </p>
+
+                    </div>
+
+                    <!-- RESULT -->
+                    <div
+                        class="rounded-2xl border border-slate-200 p-6">
+
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-green-50 flex items-center justify-center text-green-600">
+
+                            <i class="fas fa-chart-line"></i>
+
+                        </div>
+
+                        <h4
+                            class="mt-5 text-lg font-bold text-slate-900">
+                            Impact
+                        </h4>
+
+                        <p
+                            class="mt-3 text-slate-600 leading-relaxed text-sm">
+
+                            Improved scalability, search relevance,
+                            async processing and overall platform performance
+                            for high-volume operations.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- TECH STACK -->
+                <div
+                    class="mt-8 flex flex-wrap gap-3">
+
+                    <span class="case-study-skill">Next.js</span>
+                    <span class="case-study-skill">Python</span>
+                    <span class="case-study-skill">Django</span>
+                    <span class="case-study-skill">Elasticsearch</span>
+                    <span class="case-study-skill">Redis</span>
+                    <span class="case-study-skill">RabbitMQ</span>
+                    <span class="case-study-skill">AWS</span>
+
+                </div>
+
+            </div>
+
+            <!-- CASE STUDY 2 -->
+            <div
+                class="group bg-white border border-slate-200 rounded-[32px] p-8 lg:p-10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500">
+
+                <div
+                    class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
+
+                    <div>
+
+                        <div
+                            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-xs font-semibold">
+
+                            Search Infrastructure
+
+                        </div>
+
+                        <h3
+                            class="mt-5 text-3xl font-black text-slate-900 tracking-tight">
+
+                            Elasticsearch Search Platform
+
+                        </h3>
+
+                        <p
+                            class="mt-4 text-slate-600 leading-relaxed max-w-3xl">
+
+                            Designed and optimized Elasticsearch-powered
+                            search systems for enterprise platforms,
+                            focusing on relevance tuning,
+                            indexing optimization and low-latency search performance.
+
+                        </p>
+
+                    </div>
+
+                    <div
+                        class="min-w-[140px] rounded-2xl bg-slate-900 text-white p-5">
+
+                        <p
+                            class="text-slate-400 text-xs uppercase tracking-wider">
+                            Focus
+                        </p>
+
+                        <h4
+                            class="mt-2 text-3xl font-black">
+                            Search
+                        </h4>
+
+                        <span
+                            class="text-sm text-slate-400">
+                            Optimization
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <!-- GRID -->
+                <div
+                    class="mt-10 grid md:grid-cols-3 gap-6">
+
+                    <div
+                        class="rounded-2xl border border-slate-200 p-6">
+
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-red-50 flex items-center justify-center text-red-500">
+
+                            <i class="fas fa-search"></i>
+
+                        </div>
+
+                        <h4
+                            class="mt-5 text-lg font-bold text-slate-900">
+                            Challenge
+                        </h4>
+
+                        <p
+                            class="mt-3 text-slate-600 leading-relaxed text-sm">
+
+                            High-traffic platforms required faster product discovery,
+                            optimized query performance and accurate search relevance.
+
+                        </p>
+
+                    </div>
+
+                    <div
+                        class="rounded-2xl border border-slate-200 p-6">
+
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-cyan-50 flex items-center justify-center text-cyan-600">
+
+                            <i class="fas fa-server"></i>
+
+                        </div>
+
+                        <h4
+                            class="mt-5 text-lg font-bold text-slate-900">
+                            Solution
+                        </h4>
+
+                        <p
+                            class="mt-3 text-slate-600 leading-relaxed text-sm">
+
+                            Implemented Elasticsearch indexing strategies,
+                            relevance tuning and optimized query pipelines
+                            across production systems.
+
+                        </p>
+
+                    </div>
+
+                    <div
+                        class="rounded-2xl border border-slate-200 p-6">
+
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-green-50 flex items-center justify-center text-green-600">
+
+                            <i class="fas fa-bolt"></i>
+
+                        </div>
+
+                        <h4
+                            class="mt-5 text-lg font-bold text-slate-900">
+                            Impact
+                        </h4>
+
+                        <p
+                            class="mt-3 text-slate-600 leading-relaxed text-sm">
+
+                            Improved search latency, product relevance
+                            and overall search experience
+                            across large-scale catalogs.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- STACK -->
+                <div
+                    class="mt-8 flex flex-wrap gap-3">
+
+                    <span class="case-study-skill">Elasticsearch</span>
+                    <span class="case-study-skill">Python</span>
+                    <span class="case-study-skill">AWS</span>
+                    <span class="case-study-skill">Redis</span>
+                    <span class="case-study-skill">System Design</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<style>
+.case-study-skill{
+    padding:10px 15px;
+    border-radius:14px;
+    background:#F1F5F9;
+    border:1px solid #E2E8F0;
+    color:#334155;
+    font-size:.88rem;
+    font-weight:600;
+    transition:all .3s ease;
+}
+
+.case-study-skill:hover{
+    background:#0F172A;
+    color:white;
+    transform:translateY(-2px);
+}
+</style>
+
+<!-- system architecture -->
+<section id="architecture" class="bg-[#0B1220] text-white py-20 relative overflow-hidden">
+
+    <!-- Background glow -->
+    <div class="absolute inset-0">
+        <div class="absolute top-0 left-0 w-[300px] h-[300px] bg-blue-500/10 blur-3xl rounded-full"></div>
+        <div class="absolute bottom-0 right-0 w-[300px] h-[300px] bg-cyan-400/10 blur-3xl rounded-full"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+
+        <!-- Header -->
+        <div class="max-w-3xl">
+            <h2 class="text-4xl md:text-5xl font-black tracking-tight">
+                Scalable <span class="text-cyan-400">System Architecture</span>
+            </h2>
+
+            <p class="mt-5 text-gray-300 leading-relaxed">
+                Real production architectures designed across e-commerce, search systems,
+                and high-traffic enterprise platforms with focus on performance, scalability and reliability.
+            </p>
+        </div>
+
+        <!-- Grid -->
+        <div class="mt-14 grid md:grid-cols-2 gap-8">
+
+            <!-- SEARCH ARCHITECTURE -->
+            <div class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl">
+
+                <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                    <i class="fas fa-search text-cyan-400"></i>
+                    Elasticsearch Search Architecture
+                </h3>
+
+                <p class="mt-4 text-gray-300 text-sm leading-relaxed">
+                    Designed and optimized search systems for high-traffic e-commerce platforms handling large product catalogs
+                    with focus on relevance tuning and low-latency query performance.
+                </p>
+
+                <!-- Flow -->
+                <div class="mt-6 space-y-3 text-sm">
+
+                    <div class="bg-black/30 border border-white/10 p-4 rounded-xl">
+                        <strong class="text-cyan-300">Ingestion Layer</strong><br>
+                        APIs / ETL / Batch Indexing (Product Data Sync)
+                    </div>
+
+                    <div class="bg-black/30 border border-white/10 p-4 rounded-xl">
+                        <strong class="text-cyan-300">Search Engine</strong><br>
+                        Elasticsearch Cluster (Indexing + Relevance + Query Optimization)
+                    </div>
+
+                    <div class="bg-black/30 border border-white/10 p-4 rounded-xl">
+                        <strong class="text-cyan-300">Client Layer</strong><br>
+                        Next.js / React UI with fast search & filtering experience
+                    </div>
+
+                </div>
+
+                <!-- Tech -->
+                <div class="mt-6 flex flex-wrap gap-2 text-xs">
+                    <span class="px-3 py-1 bg-white/10 rounded-full">Elasticsearch</span>
+                    <span class="px-3 py-1 bg-white/10 rounded-full">Python</span>
+                    <span class="px-3 py-1 bg-white/10 rounded-full">AWS</span>
+                    <span class="px-3 py-1 bg-white/10 rounded-full">Redis</span>
+                </div>
+
+            </div>
+
+            <!-- ASYNC ARCHITECTURE -->
+            <div class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl">
+
+                <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                    <i class="fas fa-bolt text-cyan-400"></i>
+                    Async & Scalable Processing System
+                </h3>
+
+                <p class="mt-4 text-gray-300 text-sm leading-relaxed">
+                    Built distributed backend systems to handle high-volume workloads using
+                    queue-based architecture and background processing.
+                </p>
+
+                <!-- Flow -->
+                <div class="mt-6 space-y-3 text-sm">
+
+                    <div class="bg-black/30 border border-white/10 p-4 rounded-xl">
+                        <strong class="text-cyan-300">API Layer</strong><br>
+                        Fast APIs handling user requests with minimal latency
+                    </div>
+
+                    <div class="bg-black/30 border border-white/10 p-4 rounded-xl">
+                        <strong class="text-cyan-300">Queue System</strong><br>
+                        Celery + RabbitMQ for async task processing
+                    </div>
+
+                    <div class="bg-black/30 border border-white/10 p-4 rounded-xl">
+                        <strong class="text-cyan-300">Worker Layer</strong><br>
+                        Background jobs for indexing, processing & heavy operations
+                    </div>
+
+                </div>
+
+                <!-- Tech -->
+                <div class="mt-6 flex flex-wrap gap-2 text-xs">
+                    <span class="px-3 py-1 bg-white/10 rounded-full">Celery</span>
+                    <span class="px-3 py-1 bg-white/10 rounded-full">RabbitMQ</span>
+                    <span class="px-3 py-1 bg-white/10 rounded-full">Django</span>
+                    <span class="px-3 py-1 bg-white/10 rounded-full">Docker</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- FOOT NOTE -->
+        <div class="mt-12 text-center text-gray-400 text-sm">
+            Designed from real production systems: 1M+ catalog scale, enterprise search, and cloud deployments on AWS.
+        </div>
+
+    </div>
+
+</section>
+
 
     <!-- ==================== BLOGS FROM MEDIUM (Linked ES6 & AI themed) ==================== -->
     <section id="blogs" class="bg-gray-100 section-padding">
@@ -547,6 +1807,113 @@
         </div>
     </section>
 
+    <!-- ==================== GITHUB PROJECTS (REDESIGNED) ==================== -->
+<section id="github" class="py-20 bg-[#050816] text-white">
+
+  <div class="max-w-6xl mx-auto px-6">
+
+    <!-- Heading -->
+    <div class="text-center mb-14">
+
+      <p class="text-cyan-400 uppercase tracking-[0.3em] text-xs mb-3">
+        Engineering Work
+      </p>
+
+      <h2 class="text-3xl md:text-5xl font-black">
+        GitHub & Technical Projects
+      </h2>
+
+      <p class="mt-4 text-gray-400 max-w-2xl mx-auto">
+        Production-oriented backend systems, search architectures, and Python-based engineering solutions.
+      </p>
+
+    </div>
+
+    <!-- Grid -->
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <!-- Project 1 -->
+      <div class="p-6 rounded-2xl border border-white/10 bg-white/5 hover:border-cyan-400/30 transition">
+
+        <h3 class="text-lg font-bold mb-2">
+          Python Chatbot System
+        </h3>
+
+        <p class="text-sm text-gray-400 mb-4 leading-relaxed">
+          Python-based conversational system with automated response handling and modular architecture.
+        </p>
+
+        <div class="flex flex-wrap gap-2 text-xs mb-5">
+          <span class="px-3 py-1 rounded-full bg-white/10">Python</span>
+          <span class="px-3 py-1 rounded-full bg-white/10">AI</span>
+          <span class="px-3 py-1 rounded-full bg-white/10">Automation</span>
+        </div>
+
+        <a href="https://github.com/hiteshmishra708/python-chatbot"
+           target="_blank"
+           class="text-cyan-400 text-sm hover:underline">
+          View Repository →
+        </a>
+
+      </div>
+
+      <!-- Project 2 -->
+      <div class="p-6 rounded-2xl border border-white/10 bg-white/5 hover:border-blue-400/30 transition">
+
+        <h3 class="text-lg font-bold mb-2">
+          Python Engineering Toolkit
+        </h3>
+
+        <p class="text-sm text-gray-400 mb-4 leading-relaxed">
+          Collection of algorithms, logic building programs, and backend utility scripts.
+        </p>
+
+        <div class="flex flex-wrap gap-2 text-xs mb-5">
+          <span class="px-3 py-1 rounded-full bg-white/10">Python</span>
+          <span class="px-3 py-1 rounded-full bg-white/10">DSA</span>
+          <span class="px-3 py-1 rounded-full bg-white/10">Backend</span>
+        </div>
+
+        <a href="https://github.com/hiteshmishra708/python-programs"
+           target="_blank"
+           class="text-blue-400 text-sm hover:underline">
+          View Repository →
+        </a>
+
+      </div>
+
+      <!-- Project 3 -->
+      <div class="p-6 rounded-2xl border border-white/10 bg-white/5 hover:border-sky-400/30 transition">
+
+        <h3 class="text-lg font-bold mb-2">
+          Django Search Engine Integration
+        </h3>
+
+        <p class="text-sm text-gray-400 mb-4 leading-relaxed">
+          Scalable search system using Django + Elasticsearch for optimized query performance.
+        </p>
+
+        <div class="flex flex-wrap gap-2 text-xs mb-5">
+          <span class="px-3 py-1 rounded-full bg-white/10">Django</span>
+          <span class="px-3 py-1 rounded-full bg-white/10">Elasticsearch</span>
+          <span class="px-3 py-1 rounded-full bg-white/10">System Design</span>
+        </div>
+
+        <a href="https://github.com/hiteshmishra708/django-elasticsearch"
+           target="_blank"
+           class="text-sky-400 text-sm hover:underline">
+          View Repository →
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+    
+
     <!-- ==================== TESTIMONIALS (from referindia data) ==================== -->
     <section id="testimonials" class="section-padding max-w-7xl mx-auto">
         <h2 class="text-3xl font-bold text-center mb-4">Trusted by Leaders</h2>
@@ -559,38 +1926,107 @@
         </div>
     </section>
 
-    <!-- ==================== SERVICES SECTION ==================== -->
-    <section class="bg-white py-16">
-        <div class="max-w-7xl mx-auto px-4"><h2 class="text-3xl font-bold text-center mb-12">What I Bring</h2><div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="flex gap-3 p-4 rounded-xl hover:bg-gray-50 transition"><i class="fas fa-microchip text-3xl text-blue-500"></i><div><h3 class="font-bold">AI Integration</h3><p class="text-gray-500 text-sm">Embedding LLMs, agentic workflows, smart reporting</p></div></div>
-            <div class="flex gap-3 p-4 rounded-xl hover:bg-gray-50 transition"><i class="fas fa-code text-3xl text-blue-500"></i><div><h3 class="font-bold">Full Stack Dev</h3><p class="text-gray-500 text-sm">React, Next.js, Django, NodeJS — scalable products</p></div></div>
-            <div class="flex gap-3 p-4 rounded-xl hover:bg-gray-50 transition"><i class="fas fa-cloud text-3xl text-blue-500"></i><div><h3 class="font-bold">Cloud Mgmt</h3><p class="text-gray-500 text-sm">AWS, GCP, deployments, cost optimization</p></div></div>
-            <div class="flex gap-3 p-4 rounded-xl hover:bg-gray-50 transition"><i class="fas fa-database text-3xl text-blue-500"></i><div><h3 class="font-bold">Database Services</h3><p class="text-gray-500 text-sm">PostgreSQL, MongoDB, ElasticSearch, Redis</p></div></div>
-            <div class="flex gap-3 p-4 rounded-xl hover:bg-gray-50 transition"><i class="fab fa-github text-3xl text-blue-500"></i><div><h3 class="font-bold">Open Source</h3><p class="text-gray-500 text-sm">Community contributions, code quality, OSS mindset</p></div></div>
-            <div class="flex gap-3 p-4 rounded-xl hover:bg-gray-50 transition"><i class="fas fa-chalkboard-user text-3xl text-blue-500"></i><div><h3 class="font-bold">IT Consulting</h3><p class="text-gray-500 text-sm">Strategic tech advisory, team upskilling</p></div></div>
-        </div></div>
-    </section>
 
-    <!-- ==================== CONTACT + LINKEDIN FOOTER ==================== -->
-    <section id="contact" class="bg-gray-900 text-white py-16">
-        <div class="max-w-5xl mx-auto text-center px-4">
-            <h2 class="text-3xl font-bold">Let's Build AI-Driven Products</h2>
-            <p class="text-gray-300 mt-2 mb-8">Reach out for collaborations, consulting, or just a tech chat.</p>
-            <div class="flex flex-wrap justify-center gap-6">
-                <a href="mailto:hiteshmishra708@gmail.com" class="bg-blue-600 hover:bg-blue-500 px-8 py-3 rounded-full font-semibold inline-flex items-center gap-2 transition"><i class="fas fa-envelope"></i> Email</a>
-                <a href="https://linkedin.com/in/hiteshmishra708" target="_blank" class="bg-gray-700 hover:bg-gray-600 px-8 py-3 rounded-full font-semibold inline-flex items-center gap-2 transition"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="https://hiteshmishra708.medium.com/" target="_blank" class="bg-gray-800 hover:bg-gray-700 px-8 py-3 rounded-full font-semibold inline-flex items-center gap-2 transition"><i class="fab fa-medium"></i> Medium Blog</a>
-            </div>
-            <div class="mt-12 pt-8 border-t border-gray-800 text-sm text-gray-400 flex flex-wrap justify-center gap-x-6 gap-y-2">
-                <span><i class="fas fa-phone-alt"></i> +91 8286651155</span>
-                <span><i class="fas fa-map-marker-alt"></i> Mumbai, India</span>
-                <span><i class="fas fa-globe"></i> Portfolio AI-optimized</span>
-            </div>
-        </div>
-    </section>
+   <!-- ==================== CONTACT (PREMIUM) ==================== -->
+<section id="contact" class="relative py-24 bg-[#050816] text-white overflow-hidden">
 
-    <footer class="bg-gray-950 py-6 text-center text-gray-500 text-xs">© 2026 Hitesh Mishra — Full Stack Developer · AI Integrated · Built with Tailwind & modern stack</footer>
+  <!-- Glow Background -->
+  <div class="absolute inset-0">
+    <div class="absolute top-0 left-0 w-[320px] h-[320px] bg-blue-500/10 blur-[140px] rounded-full"></div>
+    <div class="absolute bottom-0 right-0 w-[320px] h-[320px] bg-cyan-500/10 blur-[140px] rounded-full"></div>
+  </div>
 
+  <div class="relative max-w-5xl mx-auto px-6 text-center">
+
+    <!-- Heading -->
+    <h2 class="text-3xl md:text-5xl font-black tracking-tight">
+      Let’s Build AI-Driven & Scalable Systems
+    </h2>
+
+    <p class="mt-5 text-gray-400 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+      Open to collaborations, system design discussions, and engineering opportunities focused on backend scalability,
+      AI systems, and distributed architecture.
+    </p>
+
+    <!-- CTA Buttons -->
+    <div class="mt-10 flex flex-wrap justify-center gap-4">
+
+      <!-- Email -->
+      <a href="mailto:hiteshmishra708@gmail.com"
+         class="px-7 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 transition font-semibold flex items-center gap-2 shadow-lg shadow-blue-600/20">
+
+        <i class="fas fa-envelope"></i>
+        Email
+      </a>
+
+      <!-- Phone -->
+      <a href="tel:+918286651155"
+         class="px-7 py-3.5 rounded-xl border border-white/10 bg-white/5 hover:border-blue-400 hover:text-blue-300 transition font-semibold flex items-center gap-2">
+
+        <i class="fas fa-phone"></i>
+        Call
+      </a>
+
+      <!-- LinkedIn -->
+      <a href="https://linkedin.com/in/hiteshmishra708"
+         target="_blank"
+         class="px-7 py-3.5 rounded-xl border border-white/10 bg-white/5 hover:border-cyan-400 hover:text-cyan-300 transition font-semibold flex items-center gap-2">
+
+        <i class="fab fa-linkedin"></i>
+        LinkedIn
+      </a>
+
+      <!-- GitHub -->
+      <a href="https://github.com/hiteshmishra708"
+         target="_blank"
+         class="px-7 py-3.5 rounded-xl border border-white/10 bg-white/5 hover:border-gray-300 hover:text-gray-200 transition font-semibold flex items-center gap-2">
+
+        <i class="fab fa-github"></i>
+        GitHub
+      </a>
+
+      <!-- Medium -->
+      <a href="https://hiteshmishra708.medium.com/"
+         target="_blank"
+         class="px-7 py-3.5 rounded-xl border border-white/10 bg-white/5 hover:border-green-400 hover:text-green-300 transition font-semibold flex items-center gap-2">
+
+        <i class="fab fa-medium"></i>
+        Articles
+      </a>
+
+    </div>
+
+    <!-- Info Strip -->
+    <div class="mt-14 pt-8 border-t border-white/10 flex flex-wrap justify-center gap-x-10 gap-y-3 text-sm text-gray-400">
+
+      <span class="flex items-center gap-2">
+        <i class="fas fa-map-marker-alt text-blue-400"></i>
+        Mumbai, Maharashtra
+      </span>
+
+      <span class="flex items-center gap-2">
+        <i class="fas fa-code text-cyan-400"></i>
+        Python • AI • System Design • Full Stack
+      </span>
+
+      <span class="flex items-center gap-2">
+        <i class="fas fa-layer-group text-blue-400"></i>
+        9+ Years Experience
+      </span>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="bg-[#030615] border-t border-white/10 py-6 text-center text-gray-500 text-xs">
+
+  <p>
+    © 2026 <span class="text-white font-medium">Hitesh Mishra</span> — Senior Full-Stack Engineer · AI Systems · Built with Python, React & Cloud
+  </p>
+
+</footer>
     <script>
         const menuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
