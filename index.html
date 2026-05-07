@@ -174,22 +174,16 @@
 <!-- SPACER -->
 <div class="h-[72px]"></div>
 <script>
-
   const btn = document.getElementById('mobile-menu-btn');
   const menu = document.getElementById('mobile-menu');
-  const links = document.querySelectorAll('.mobile-link');
+  const links = document.querySelectorAll('#mobile-menu a');
 
   let isOpen = false;
 
   // Toggle menu
   btn.addEventListener('click', () => {
     isOpen = !isOpen;
-
-    if (isOpen) {
-      menu.classList.remove('hidden');
-    } else {
-      menu.classList.add('hidden');
-    }
+    menu.classList.toggle('hidden');
   });
 
   // Close on link click
@@ -200,7 +194,7 @@
     });
   });
 
-  // ✅ FIXED SCROLL CLOSE (SIMPLE + RELIABLE)
+  // Close on scroll
   window.addEventListener('scroll', () => {
     if (isOpen) {
       menu.classList.add('hidden');
@@ -208,14 +202,13 @@
     }
   });
 
-  // close on resize
+  // Close on resize (desktop switch)
   window.addEventListener('resize', () => {
     if (window.innerWidth >= 1024) {
       menu.classList.add('hidden');
       isOpen = false;
     }
   });
-
 </script>
     <!-- ==================== HERO SECTION (AI First) ==================== -->
   <section id="home" class="relative bg-[#07111F] text-white overflow-hidden">
@@ -1962,34 +1955,6 @@
   </p>
 
 </footer>
-   <script>
-  const menuBtn = document.getElementById('mobile-menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
 
-  let isOpen = false;
-
-  if (menuBtn) {
-    menuBtn.addEventListener('click', () => {
-      isOpen = !isOpen;
-      mobileMenu.classList.toggle('hidden');
-    });
-  }
-
-  // close on link click
-  document.querySelectorAll('#mobile-menu a').forEach(link =>
-    link.addEventListener('click', () => {
-      mobileMenu.classList.add('hidden');
-      isOpen = false;
-    })
-  );
-
-  // ✅ AUTO CLOSE ON SCROLL (THIS WAS MISSING)
-  window.addEventListener('scroll', () => {
-    if (isOpen) {
-      mobileMenu.classList.add('hidden');
-      isOpen = false;
-    }
-  });
-</script>
 </body>
 </html>
