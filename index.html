@@ -38,6 +38,13 @@
             }
         }
     </script>
+
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <style>
         body { scroll-behavior: smooth; }
         .glass-card { background: rgba(255, 255, 255, 0.96); backdrop-filter: blur(2px); border: 1px solid rgba(0,0,0,0.05); }
@@ -321,7 +328,7 @@
                     class="mt-8 flex flex-wrap gap-3">
 
                     <!-- Primary -->
-                    <a href="#projects"
+                    <a href="#github"
                         class="inline-flex items-center gap-2 bg-white text-slate-900 hover:bg-slate-200 transition-all duration-300 px-6 py-3 rounded-xl font-semibold shadow-xl">
 
                         View Projects
@@ -939,7 +946,7 @@
 
                         <p
                             class="mt-1 text-cyan-600 font-semibold">
-                            Medikabazaar
+                            E-Commerce Platform
                         </p>
 
                     </div>
@@ -957,13 +964,18 @@
                     class="mt-6 space-y-3 text-slate-600 leading-relaxed">
 
                     <p>
-                        • Built and scaled a full-stack platform managing
-                        1M+ product catalog with multi-seller onboarding.
+                        • Contributed to one of India’s leading healthcare e-commerce platforms
+                        managing large-scale B2B medical supply operations.
+                    </p>
+
+                    <p>
+                        • Built and scaled a high-performance platform managing
+                        1M+ product catalog with multi-seller onboarding systems.
                     </p>
 
                     <p>
                         • Led migration from legacy Magento architecture
-                        to Next.js + Python ecosystem.
+                        to modern Next.js + Python ecosystem.
                     </p>
 
                     <p>
@@ -1009,6 +1021,21 @@
                     <span
                         class="px-3 py-1 rounded-full bg-cyan-50 text-cyan-700 text-xs font-medium">
                         Redis
+                    </span>
+
+                    <span
+                        class="px-3 py-1 rounded-full bg-cyan-50 text-cyan-700 text-xs font-medium">
+                        Elasticsearch
+                    </span>
+
+                    <span
+                        class="px-3 py-1 rounded-full bg-cyan-50 text-cyan-700 text-xs font-medium">
+                        AWS
+                    </span>
+
+                    <span
+                        class="px-3 py-1 rounded-full bg-cyan-50 text-cyan-700 text-xs font-medium">
+                        E-Commerce
                     </span>
 
                 </div>
@@ -1181,6 +1208,387 @@
 
 </section>
 
+
+
+
+<!-- ========================================= -->
+<!-- 🏆 ACHIEVEMENTS GALLERY WITH SWIPER JS -->
+<!-- ========================================= -->
+
+<section id="achievements" class="relative py-16 md:py-28 bg-gradient-to-b from-[#07111F] to-[#0B1220] overflow-hidden">
+
+  <!-- BACKGROUND GLOW -->
+  <div class="absolute inset-0">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] md:w-[700px] h-[400px] md:h-[700px] bg-cyan-500/10 blur-[100px] md:blur-[180px] rounded-full"></div>
+    <div class="absolute bottom-0 right-1/3 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-blue-500/10 blur-[100px] rounded-full"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 relative z-10">
+
+    <!-- HEADER -->
+    <div class="text-center mb-12 md:mb-16">
+      <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-400/20 bg-cyan-400/10 text-cyan-300 text-xs md:text-sm tracking-[2px] uppercase backdrop-blur-xl">
+        ✦ Achievements & Recognition
+      </span>
+
+      <h2 class="mt-4 md:mt-6 text-3xl md:text-5xl font-black text-white leading-tight">
+        Certificates &
+        <span class="bg-gradient-to-r from-cyan-400 via-blue-400 to-cyan-300 bg-clip-text text-transparent">
+          Latest Work
+        </span>
+      </h2>
+
+      <p class="mt-4 text-slate-400 text-sm md:text-base max-w-2xl mx-auto">
+        Academic achievements, appreciation certificates, honours, recognition and premium project showcase.
+      </p>
+    </div>
+
+    <!-- Category Filter Buttons -->
+    <div class="mb-12 md:mb-16 flex justify-center flex-wrap gap-3">
+      <button class="achievement-category-btn active px-5 md:px-7 py-2 md:py-3 rounded-full text-xs md:text-sm font-semibold transition-all duration-300 border border-cyan-400/50 bg-cyan-400/20 text-cyan-200 hover:bg-cyan-400/30 shadow-lg shadow-cyan-500/10" data-achievement-category="all">
+        All Achievements
+      </button>
+      <button class="achievement-category-btn px-5 md:px-7 py-2 md:py-3 rounded-full text-xs md:text-sm font-semibold transition-all duration-300 border border-white/10 bg-white/5 text-white hover:border-cyan-400/50 hover:bg-cyan-400/20 backdrop-blur-xl" data-achievement-category="academics">
+        🎓 Academics
+      </button>
+      <button class="achievement-category-btn px-5 md:px-7 py-2 md:py-3 rounded-full text-xs md:text-sm font-semibold transition-all duration-300 border border-white/10 bg-white/5 text-white hover:border-blue-400/50 hover:bg-blue-400/20 backdrop-blur-xl" data-achievement-category="appreciation">
+        🏅 Appreciation
+      </button>
+      <button class="achievement-category-btn px-5 md:px-7 py-2 md:py-3 rounded-full text-xs md:text-sm font-semibold transition-all duration-300 border border-white/10 bg-white/5 text-white hover:border-purple-400/50 hover:bg-purple-400/20 backdrop-blur-xl" data-achievement-category="honour">
+        ⭐ Honours
+      </button>
+      <button class="achievement-category-btn px-5 md:px-7 py-2 md:py-3 rounded-full text-xs md:text-sm font-semibold transition-all duration-300 border border-white/10 bg-white/5 text-white hover:border-pink-400/50 hover:bg-pink-400/20 backdrop-blur-xl" data-achievement-category="work">
+        🚀 Latest Work
+      </button>
+    </div>
+
+    <!-- ACHIEVEMENTS SWIPER -->
+    <div class="swiper achievementsSwiper rounded-[24px] overflow-hidden">
+
+      <div class="swiper-wrapper">
+
+        <!-- ACADEMICS CATEGORY -->
+        <div class="swiper-slide achievement-slide" data-achievement-category="academics">
+          <div class="relative h-[300px] md:h-[400px] lg:h-[520px] overflow-hidden group cursor-pointer rounded-2xl">
+            <img src="images/image1.webp" alt="Academic Achievement 1" class="achievement-img w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="absolute inset-0 flex flex-col justify-end p-4 md:p-6">
+              <h3 class="text-white text-base md:text-xl font-bold">Academic Excellence</h3>
+              <p class="text-cyan-300 text-xs md:text-sm mt-1">MCA Certificate</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide achievement-slide" data-achievement-category="academics">
+          <div class="relative h-[300px] md:h-[400px] lg:h-[520px] overflow-hidden group cursor-pointer rounded-2xl">
+            <img src="images/image3.webp" alt="Academic Achievement 2" class="achievement-img w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="absolute inset-0 flex flex-col justify-end p-4 md:p-6">
+              <h3 class="text-white text-base md:text-xl font-bold">Learning Milestone</h3>
+              <p class="text-cyan-300 text-xs md:text-sm mt-1">University Recognition</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide achievement-slide" data-achievement-category="academics">
+          <div class="relative h-[300px] md:h-[400px] lg:h-[520px] overflow-hidden group cursor-pointer rounded-2xl">
+            <img src="images/image9.webp" alt="Academic Achievement 3" class="achievement-img w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="absolute inset-0 flex flex-col justify-end p-4 md:p-6">
+              <h3 class="text-white text-base md:text-xl font-bold">Certification</h3>
+              <p class="text-cyan-300 text-xs md:text-sm mt-1">Professional Growth</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- APPRECIATION CATEGORY -->
+        <div class="swiper-slide achievement-slide" data-achievement-category="appreciation">
+          <div class="relative h-[300px] md:h-[400px] lg:h-[520px] overflow-hidden group cursor-pointer rounded-2xl">
+            <img src="images/image2.webp" alt="Appreciation 1" class="achievement-img w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="absolute inset-0 flex flex-col justify-end p-4 md:p-6">
+              <h3 class="text-white text-base md:text-xl font-bold">Team Appreciation</h3>
+              <p class="text-blue-300 text-xs md:text-sm mt-1">Recognition Award</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide achievement-slide" data-achievement-category="appreciation">
+          <div class="relative h-[300px] md:h-[400px] lg:h-[520px] overflow-hidden group cursor-pointer rounded-2xl">
+            <img src="images/image4.webp" alt="Appreciation 2" class="achievement-img w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="absolute inset-0 flex flex-col justify-end p-4 md:p-6">
+              <h3 class="text-white text-base md:text-xl font-bold">Special Recognition</h3>
+              <p class="text-blue-300 text-xs md:text-sm mt-1">Contribution Award</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- HONOUR CATEGORY -->
+        <div class="swiper-slide achievement-slide" data-achievement-category="honour">
+          <div class="relative h-[300px] md:h-[400px] lg:h-[520px] overflow-hidden group cursor-pointer rounded-2xl">
+            <img src="images/image6.webp" alt="Honours 1" class="achievement-img w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="absolute inset-0 flex flex-col justify-end p-4 md:p-6">
+              <h3 class="text-white text-base md:text-xl font-bold">Premium Honours</h3>
+              <p class="text-purple-300 text-xs md:text-sm mt-1">Excellence Award</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide achievement-slide" data-achievement-category="honour">
+          <div class="relative h-[300px] md:h-[400px] lg:h-[520px] overflow-hidden group cursor-pointer rounded-2xl">
+            <img src="images/image7.webp" alt="Honours 2" class="achievement-img w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="absolute inset-0 flex flex-col justify-end p-4 md:p-6">
+              <h3 class="text-white text-base md:text-xl font-bold">Special Achievement</h3>
+              <p class="text-purple-300 text-xs md:text-sm mt-1">Distinguished Award</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide achievement-slide" data-achievement-category="honour">
+          <div class="relative h-[300px] md:h-[400px] lg:h-[520px] overflow-hidden group cursor-pointer rounded-2xl">
+            <img src="images/image8.webp" alt="Honours 3" class="achievement-img w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="absolute inset-0 flex flex-col justify-end p-4 md:p-6">
+              <h3 class="text-white text-base md:text-xl font-bold">Excellence Recognition</h3>
+              <p class="text-purple-300 text-xs md:text-sm mt-1">Premium Recognition</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- LATEST WORK CATEGORY -->
+        <div class="swiper-slide achievement-slide" data-achievement-category="work">
+          <div class="relative h-[300px] md:h-[400px] lg:h-[520px] overflow-hidden group cursor-pointer rounded-2xl">
+            <img src="https://ik.imagekit.io/iuiy6mihw/ignou2.jpeg" alt="Latest Work 1" class="achievement-img w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="absolute inset-0 flex flex-col justify-end p-4 md:p-6">
+              <h3 class="text-white text-base md:text-xl font-bold">Project Showcase</h3>
+              <p class="text-pink-300 text-xs md:text-sm mt-1">Latest Innovation</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide achievement-slide" data-achievement-category="work">
+          <div class="relative h-[300px] md:h-[400px] lg:h-[520px] overflow-hidden group cursor-pointer rounded-2xl">
+            <img src="https://ik.imagekit.io/iuiy6mihw/ignou1.jpeg" alt="Latest Work 2" class="achievement-img w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="absolute inset-0 flex flex-col justify-end p-4 md:p-6">
+              <h3 class="text-white text-base md:text-xl font-bold">Cutting Edge Work</h3>
+              <p class="text-pink-300 text-xs md:text-sm mt-1">Current Projects</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide achievement-slide" data-achievement-category="work">
+          <div class="relative h-[300px] md:h-[400px] lg:h-[520px] overflow-hidden group cursor-pointer rounded-2xl">
+            <img src="https://ik.imagekit.io/iuiy6mihw/ignou3.jpeg" alt="Latest Work 3" class="achievement-img w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="absolute inset-0 flex flex-col justify-end p-4 md:p-6">
+              <h3 class="text-white text-base md:text-xl font-bold">Professional Showcase</h3>
+              <p class="text-pink-300 text-xs md:text-sm mt-1">Portfolio Work</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Navigation Arrows -->
+      <button class="swiper-button-prev achievement-prev !text-white !left-2 md:!left-4 !w-10 md:!w-12 !h-10 md:!h-12 !rounded-full !border !border-white/20 !bg-white/10 !backdrop-blur-xl hover:!border-cyan-400 hover:!bg-cyan-400/20 transition-all duration-300 !after:!text-sm md:!after:!text-base"></button>
+      <button class="swiper-button-next achievement-next !text-white !right-2 md:!right-4 !w-10 md:!w-12 !h-10 md:!h-12 !rounded-full !border !border-white/20 !bg-white/10 !backdrop-blur-xl hover:!border-cyan-400 hover:!bg-cyan-400/20 transition-all duration-300 !after:!text-sm md:!after:!text-base"></button>
+
+      <!-- Pagination -->
+      <div class="swiper-pagination achievement-pagination !bottom-4 md:!bottom-6"></div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- Achievements Fullscreen Modal -->
+<div id="achievementModal" class="fixed inset-0 z-[300] hidden bg-black/95 backdrop-blur-xl flex items-center justify-center p-4">
+  <div class="relative max-w-5xl max-h-[90vh] w-full h-full flex items-center justify-center">
+    <img id="achievementModalImage" src="" alt="Fullscreen" class="max-w-full max-h-full object-contain rounded-2xl shadow-2xl">
+    
+    <!-- Close Button -->
+    <button id="closeAchievementModal" class="absolute top-4 right-4 z-10 w-10 md:w-12 h-10 md:h-12 rounded-full bg-white/20 hover:bg-white/30 text-white flex items-center justify-center transition-all backdrop-blur-xl border border-white/30">
+      <svg class="w-5 md:w-6 h-5 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+
+    <!-- Previous Arrow -->
+    <button id="prevAchievementImage" class="absolute left-4 z-10 w-10 md:w-12 h-10 md:h-12 rounded-full bg-white/20 hover:bg-white/30 text-white flex items-center justify-center transition-all backdrop-blur-xl border border-white/30">
+      <svg class="w-5 md:w-6 h-5 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+      </svg>
+    </button>
+    
+    <!-- Next Arrow -->
+    <button id="nextAchievementImage" class="absolute right-4 z-10 w-10 md:w-12 h-10 md:h-12 rounded-full bg-white/20 hover:bg-white/30 text-white flex items-center justify-center transition-all backdrop-blur-xl border border-white/30">
+      <svg class="w-5 md:w-6 h-5 md:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<script>
+  // Achievements Swiper
+  let achievementImages = [];
+  let currentAchievementIndex = 0;
+  let currentAchievementCategory = 'all';
+
+  const achievementModal = document.getElementById('achievementModal');
+  const achievementModalImage = document.getElementById('achievementModalImage');
+  const closeAchievementModal = document.getElementById('closeAchievementModal');
+  const prevAchievementBtn = document.getElementById('prevAchievementImage');
+  const nextAchievementBtn = document.getElementById('nextAchievementImage');
+  const achievementCategoryBtns = document.querySelectorAll('.achievement-category-btn');
+
+  // Initialize Achievements Swiper
+  let achievementSwiper = new Swiper('.achievementsSwiper', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: false,
+    autoplay: false,
+    navigation: {
+      nextEl: '.achievement-next',
+      prevEl: '.achievement-prev',
+    },
+    pagination: {
+      el: '.achievement-pagination',
+      clickable: true,
+      dynamicBullets: true,
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 15,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+    }
+  });
+
+  // Update Achievement Images for current category
+  function updateAchievementImages() {
+    const selector = currentAchievementCategory === 'all' 
+      ? '.achievementsSwiper .achievement-slide'
+      : `.achievementsSwiper .achievement-slide[data-achievement-category="${currentAchievementCategory}"]`;
+    
+    const slides = document.querySelectorAll(selector);
+    achievementImages = [];
+    
+    slides.forEach((slide) => {
+      const img = slide.querySelector('.achievement-img');
+      if (img) {
+        achievementImages.push(img.src);
+      }
+    });
+  }
+
+  // Achievement Category Filtering
+  achievementCategoryBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Update active button state
+      achievementCategoryBtns.forEach(b => {
+        b.classList.remove('active', 'border-cyan-400/50', 'bg-cyan-400/20', 'text-cyan-200', 'shadow-lg', 'shadow-cyan-500/10');
+        b.classList.add('border-white/10', 'bg-white/5', 'text-white');
+      });
+      
+      btn.classList.add('active', 'border-cyan-400/50', 'bg-cyan-400/20', 'text-cyan-200', 'shadow-lg', 'shadow-cyan-500/10');
+      btn.classList.remove('border-white/10', 'bg-white/5', 'text-white');
+      
+      // Update category
+      currentAchievementCategory = btn.getAttribute('data-achievement-category');
+      
+      // Filter slides with smooth transition
+      document.querySelectorAll('.achievementsSwiper .achievement-slide').forEach(slide => {
+        const slideCategory = slide.getAttribute('data-achievement-category');
+        if (currentAchievementCategory === 'all' || slideCategory === currentAchievementCategory) {
+          slide.style.display = 'block';
+        } else {
+          slide.style.display = 'none';
+        }
+      });
+      
+      // Update images array and reset swiper
+      updateAchievementImages();
+      achievementSwiper.update();
+      achievementSwiper.slideTo(0);
+    });
+  });
+
+  // Achievement Image Clicks for Fullscreen
+  function setupImageClickHandlers() {
+    document.querySelectorAll('.achievement-img').forEach((img) => {
+      img.addEventListener('click', (e) => {
+        e.stopPropagation();
+        currentAchievementIndex = achievementImages.indexOf(img.src);
+        if (currentAchievementIndex === -1) currentAchievementIndex = 0;
+        showAchievementFullscreen();
+      });
+    });
+  }
+
+  function showAchievementFullscreen() {
+    if (achievementImages.length > 0) {
+      achievementModalImage.src = achievementImages[currentAchievementIndex];
+      achievementModal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function closeAchievementFullscreen() {
+    achievementModal.classList.add('hidden');
+    document.body.style.overflow = 'auto';
+  }
+
+  function showPrevAchievementImage() {
+    currentAchievementIndex = (currentAchievementIndex - 1 + achievementImages.length) % achievementImages.length;
+    showAchievementFullscreen();
+  }
+
+  function showNextAchievementImage() {
+    currentAchievementIndex = (currentAchievementIndex + 1) % achievementImages.length;
+    showAchievementFullscreen();
+  }
+
+  closeAchievementModal.addEventListener('click', closeAchievementFullscreen);
+  prevAchievementBtn.addEventListener('click', showPrevAchievementImage);
+  nextAchievementBtn.addEventListener('click', showNextAchievementImage);
+
+  // Close on background click
+  achievementModal.addEventListener('click', (e) => {
+    if (e.target === achievementModal) closeAchievementFullscreen();
+  });
+
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (achievementModal.classList.contains('hidden')) return;
+    if (e.key === 'Escape') closeAchievementFullscreen();
+    if (e.key === 'ArrowLeft') showPrevAchievementImage();
+    if (e.key === 'ArrowRight') showNextAchievementImage();
+  });
+
+  // Watch for slide changes to ensure click handlers are updated
+  achievementSwiper.on('slideChange', () => {
+    setupImageClickHandlers();
+  });
+
+  // Initialize
+  updateAchievementImages();
+  setupImageClickHandlers();
+</script>
+
+
+
+
+
 <!-- 🔹 AI & Engineering Focus (Mini Section - Use inside ABOUT or top of EXPERIENCE) -->
 <div class="mt-8 p-6 rounded-2xl border border-white/10 bg-[#0B1120] text-white">
 
@@ -1255,165 +1663,168 @@
 
             <!-- CASE STUDY 1 -->
             <div
-                class="group bg-white border border-slate-200 rounded-[32px] p-8 lg:p-10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500">
+    class="group bg-white border border-slate-200 rounded-[32px] p-8 lg:p-10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500">
 
-                <!-- TOP -->
-                <div
-                    class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
+    <!-- TOP -->
+    <div
+        class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
 
-                    <div>
+        <div>
 
-                        <div
-                            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-50 border border-cyan-100 text-cyan-700 text-xs font-semibold">
+            <div
+                class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-50 border border-cyan-100 text-cyan-700 text-xs font-semibold">
 
-                            Enterprise E-Commerce
-
-                        </div>
-
-                        <h3
-                            class="mt-5 text-3xl font-black text-slate-900 tracking-tight">
-
-                            Medikabazaar Platform Migration
-
-                        </h3>
-
-                        <p
-                            class="mt-4 text-slate-600 leading-relaxed max-w-3xl">
-
-                            Led migration of a large-scale e-commerce platform
-                            from legacy Magento architecture to a modern
-                            Next.js + Python ecosystem while managing
-                            a 1M+ product catalog and multi-seller onboarding system.
-
-                        </p>
-
-                    </div>
-
-                    <!-- METRIC -->
-                    <div
-                        class="min-w-[140px] rounded-2xl bg-slate-900 text-white p-5">
-
-                        <p
-                            class="text-slate-400 text-xs uppercase tracking-wider">
-                            Catalog Scale
-                        </p>
-
-                        <h4
-                            class="mt-2 text-4xl font-black">
-                            1M+
-                        </h4>
-
-                        <span
-                            class="text-sm text-slate-400">
-                            Products
-                        </span>
-
-                    </div>
-
-                </div>
-
-                <!-- GRID -->
-                <div
-                    class="mt-10 grid md:grid-cols-3 gap-6">
-
-                    <!-- PROBLEM -->
-                    <div
-                        class="rounded-2xl border border-slate-200 p-6">
-
-                        <div
-                            class="w-12 h-12 rounded-2xl bg-red-50 flex items-center justify-center text-red-500">
-
-                            <i class="fas fa-layer-group"></i>
-
-                        </div>
-
-                        <h4
-                            class="mt-5 text-lg font-bold text-slate-900">
-                            Challenge
-                        </h4>
-
-                        <p
-                            class="mt-3 text-slate-600 leading-relaxed text-sm">
-
-                            Legacy Magento infrastructure struggled with scalability,
-                            search performance, and multi-seller operations
-                            under production traffic.
-
-                        </p>
-
-                    </div>
-
-                    <!-- SOLUTION -->
-                    <div
-                        class="rounded-2xl border border-slate-200 p-6">
-
-                        <div
-                            class="w-12 h-12 rounded-2xl bg-cyan-50 flex items-center justify-center text-cyan-600">
-
-                            <i class="fas fa-code"></i>
-
-                        </div>
-
-                        <h4
-                            class="mt-5 text-lg font-bold text-slate-900">
-                            Solution
-                        </h4>
-
-                        <p
-                            class="mt-3 text-slate-600 leading-relaxed text-sm">
-
-                            Built scalable backend systems using Django,
-                            Redis, Celery and RabbitMQ while migrating
-                            frontend architecture to Next.js.
-
-                        </p>
-
-                    </div>
-
-                    <!-- RESULT -->
-                    <div
-                        class="rounded-2xl border border-slate-200 p-6">
-
-                        <div
-                            class="w-12 h-12 rounded-2xl bg-green-50 flex items-center justify-center text-green-600">
-
-                            <i class="fas fa-chart-line"></i>
-
-                        </div>
-
-                        <h4
-                            class="mt-5 text-lg font-bold text-slate-900">
-                            Impact
-                        </h4>
-
-                        <p
-                            class="mt-3 text-slate-600 leading-relaxed text-sm">
-
-                            Improved scalability, search relevance,
-                            async processing and overall platform performance
-                            for high-volume operations.
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <!-- TECH STACK -->
-                <div
-                    class="mt-8 flex flex-wrap gap-3">
-
-                    <span class="case-study-skill">Next.js</span>
-                    <span class="case-study-skill">Python</span>
-                    <span class="case-study-skill">Django</span>
-                    <span class="case-study-skill">Elasticsearch</span>
-                    <span class="case-study-skill">Redis</span>
-                    <span class="case-study-skill">RabbitMQ</span>
-                    <span class="case-study-skill">AWS</span>
-
-                </div>
+                Enterprise E-Commerce Platform
 
             </div>
+
+            <h3
+                class="mt-5 text-3xl font-black text-slate-900 tracking-tight">
+
+                Scalable Multi-Vendor Commerce System
+
+            </h3>
+
+            <p
+                class="mt-4 text-slate-600 leading-relaxed max-w-3xl">
+
+                Developed and optimized a large-scale e-commerce ecosystem
+                using modern frontend and backend technologies with focus on
+                scalability, performance, secure APIs, seller onboarding,
+                and high-volume product management inspired by real-world
+                enterprise commerce platforms.
+
+            </p>
+
+        </div>
+
+        <!-- METRIC -->
+        <div
+            class="min-w-[140px] rounded-2xl bg-slate-900 text-white p-5">
+
+            <p
+                class="text-slate-400 text-xs uppercase tracking-wider">
+                Platform Scale
+            </p>
+
+            <h4
+                class="mt-2 text-4xl font-black">
+                1M+
+            </h4>
+
+            <span
+                class="text-sm text-slate-400">
+                Product Listings
+            </span>
+
+        </div>
+
+    </div>
+
+    <!-- GRID -->
+    <div
+        class="mt-10 grid md:grid-cols-3 gap-6">
+
+        <!-- PROBLEM -->
+        <div
+            class="rounded-2xl border border-slate-200 p-6">
+
+            <div
+                class="w-12 h-12 rounded-2xl bg-red-50 flex items-center justify-center text-red-500">
+
+                <i class="fas fa-database"></i>
+
+            </div>
+
+            <h4
+                class="mt-5 text-lg font-bold text-slate-900">
+                Challenge
+            </h4>
+
+            <p
+                class="mt-3 text-slate-600 leading-relaxed text-sm">
+
+                Managing massive product inventories, vendor operations,
+                advanced search functionality, and high concurrent traffic
+                while maintaining smooth customer experience and fast loading speeds.
+
+            </p>
+
+        </div>
+
+        <!-- SOLUTION -->
+        <div
+            class="rounded-2xl border border-slate-200 p-6">
+
+            <div
+                class="w-12 h-12 rounded-2xl bg-cyan-50 flex items-center justify-center text-cyan-600">
+
+                <i class="fas fa-code"></i>
+
+            </div>
+
+            <h4
+                class="mt-5 text-lg font-bold text-slate-900">
+                Solution
+            </h4>
+
+            <p
+                class="mt-3 text-slate-600 leading-relaxed text-sm">
+
+                Engineered scalable architecture using Next.js,
+                Python, Django, Redis, RabbitMQ, and Elasticsearch
+                with asynchronous processing, optimized APIs,
+                and responsive UI/UX for modern commerce operations.
+
+            </p>
+
+        </div>
+
+        <!-- RESULT -->
+        <div
+            class="rounded-2xl border border-slate-200 p-6">
+
+            <div
+                class="w-12 h-12 rounded-2xl bg-green-50 flex items-center justify-center text-green-600">
+
+                <i class="fas fa-chart-line"></i>
+
+            </div>
+
+            <h4
+                class="mt-5 text-lg font-bold text-slate-900">
+                Impact
+            </h4>
+
+            <p
+                class="mt-3 text-slate-600 leading-relaxed text-sm">
+
+                Improved platform scalability, faster product discovery,
+                seamless multi-vendor management, enhanced search relevance,
+                and reliable performance for enterprise-level traffic handling.
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- TECH STACK -->
+    <div
+        class="mt-8 flex flex-wrap gap-3">
+
+        <span class="case-study-skill">Next.js</span>
+        <span class="case-study-skill">React.js</span>
+        <span class="case-study-skill">Python</span>
+        <span class="case-study-skill">Django</span>
+        <span class="case-study-skill">Redis</span>
+        <span class="case-study-skill">RabbitMQ</span>
+        <span class="case-study-skill">Elasticsearch</span>
+        <span class="case-study-skill">AWS</span>
+
+    </div>
+
+</div>
 
             <!-- CASE STUDY 2 -->
             <div
@@ -1574,6 +1985,8 @@
     </div>
 
 </section>
+
+
 
 <style>
 .case-study-skill{
@@ -1842,17 +2255,473 @@
     
 
     <!-- ==================== TESTIMONIALS (from referindia data) ==================== -->
-    <section id="testimonials" class="section-padding max-w-7xl mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-4">Trusted by Leaders</h2>
-        <p class="text-center text-gray-600 mb-12">What partners and clients say about collaboration & delivery.</p>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white p-5 rounded-xl shadow-sm border testimonial-card"><i class="fas fa-star text-yellow-400 text-sm"></i><i class="fas fa-star text-yellow-400 text-sm"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star"></i><p class="mt-3 italic text-gray-600">"Hitesh took our vision and turned it into a stunning reality. Their attention to detail & technical expertise is truly remarkable."</p><p class="mt-4 font-bold">— Sushil Verma, Co-Founder ReferIndia</p></div>
-            <div class="bg-white p-5 rounded-xl shadow-sm border testimonial-card"><p class="italic text-gray-600">"Collaborating with Hitesh is always rewarding. Problem-solving skills, creative mindset — an asset to any team."</p><p class="mt-4 font-bold">— Nirav Shah, CEO Cabbagesoft</p></div>
-            <div class="bg-white p-5 rounded-xl shadow-sm border testimonial-card"><p class="italic text-gray-600">"Reliable partner, significantly enhanced our projects. I highly recommend Hitesh for outstanding design & development work."</p><p class="mt-4 font-bold">— Abdul Khan, General Manager Samah Overseas</p></div>
-            <div class="bg-white p-5 rounded-xl shadow-sm border testimonial-card"><p class="italic text-gray-600">"Working with Hitesh was an absolute pleasure. Their creative vision set our project apart."</p><p class="mt-4 font-bold">— Nikhil Bharne, DevOps Engineer</p></div>
-        </div>
-    </section>
+<!-- SWIPER CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
+<!-- ==================== PROFESSIONAL GALLERY WITH CATEGORIES ==================== -->
+<!-- SWIPER CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+<section id="testimonials" class="relative py-28 overflow-hidden bg-white">
+
+    <!-- SOFT GLOW -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] 
+    bg-cyan-100 blur-[140px] rounded-full"></div>
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+
+        <!-- HEADING -->
+        <div class="text-center mb-16">
+
+            <span class="text-cyan-600 uppercase tracking-[0.3em] text-sm font-semibold">
+                Testimonials
+            </span>
+
+            <h2 class="text-4xl md:text-5xl font-bold text-[#07111F] mt-4">
+                Trusted By Industry Leaders
+            </h2>
+
+            <p class="text-slate-600 mt-5 max-w-2xl mx-auto leading-relaxed text-lg">
+                Recommendations and appreciation from founders, CEOs, engineers,
+                and professionals I’ve collaborated with.
+            </p>
+
+        </div>
+
+        <!-- SLIDER -->
+        <div class="swiper testimonialSwiper">
+
+            <div class="swiper-wrapper">
+
+                <!-- CARD -->
+                <div class="swiper-slide">
+                    <div class="h-full bg-[#0B1120] border border-slate-800 rounded-[30px] p-8 shadow-2xl transition duration-500 hover:-translate-y-2 hover:border-cyan-400 hover:shadow-cyan-500/20">
+
+                        <!-- STARS -->
+                        <div class="flex gap-1 text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+
+                        <!-- TEXT -->
+                        <p class="mt-6 text-slate-300 leading-relaxed italic">
+                            “Hitesh consistently delivers high-quality work with exceptional
+                            attention to detail. His creativity and technical execution
+                            make every project stand out.”
+                        </p>
+
+                        <!-- PROFILE -->
+                        <div class="mt-8 flex items-center gap-4">
+
+                            <div class="w-14 h-14 rounded-full bg-cyan-500 flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                                S
+                            </div>
+
+                            <div>
+                                <h4 class="text-white font-semibold text-lg">
+                                    Sushil Verma
+                                </h4>
+
+                                <p class="text-slate-400 text-sm">
+                                    Co-Founder • ReferIndia
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD -->
+                <div class="swiper-slide">
+                    <div class="h-full bg-[#0B1120] border border-slate-800 rounded-[30px] p-8 shadow-2xl transition duration-500 hover:-translate-y-2 hover:border-purple-400 hover:shadow-purple-500/20">
+
+                        <div class="flex gap-1 text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+
+                        <p class="mt-6 text-slate-300 leading-relaxed italic">
+                            “One of the most reliable and talented developers I’ve worked with.
+                            Hitesh approaches every challenge with a strong problem-solving mindset.”
+                        </p>
+
+                        <div class="mt-8 flex items-center gap-4">
+
+                            <div class="w-14 h-14 rounded-full bg-purple-500 flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                                N
+                            </div>
+
+                            <div>
+                                <h4 class="text-white font-semibold text-lg">
+                                    Nirav Shah
+                                </h4>
+
+                                <p class="text-slate-400 text-sm">
+                                    CEO • Cabbagesoft
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FEATURED CARD -->
+                <div class="swiper-slide">
+                    <div class="h-full bg-[#0B1120] border border-cyan-400 rounded-[30px] p-8 shadow-2xl relative overflow-hidden transition duration-500 hover:-translate-y-2 hover:shadow-cyan-500/30">
+
+                        <!-- BADGE -->
+                        <div class="absolute top-5 right-5">
+                            <span class="px-4 py-1 rounded-full bg-cyan-400 text-black text-xs font-bold">
+                                Featured
+                            </span>
+                        </div>
+
+                        <div class="flex gap-1 text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+
+                        <p class="mt-6 text-slate-100 leading-relaxed italic text-lg">
+                            “Hitesh is among the few developers who truly understand
+                            both design aesthetics and scalable development.
+                            His ability to create premium user experiences is outstanding.”
+                        </p>
+
+                        <div class="mt-8 flex items-center gap-4">
+
+                            <div class="w-14 h-14 rounded-full bg-cyan-400 flex items-center justify-center text-black font-bold text-xl shadow-lg">
+                                ★
+                            </div>
+
+                            <div>
+                                <h4 class="text-white font-semibold text-lg">
+                                    Senior Developer
+                                </h4>
+
+                                <p class="text-slate-300 text-sm">
+                                    Industry Recommendation
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD -->
+                <div class="swiper-slide">
+                    <div class="h-full bg-[#0B1120] border border-slate-800 rounded-[30px] p-8 shadow-2xl transition duration-500 hover:-translate-y-2 hover:border-pink-400 hover:shadow-pink-500/20">
+
+                        <div class="flex gap-1 text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+
+                        <p class="mt-6 text-slate-300 leading-relaxed italic">
+                            “Hitesh brings innovation, professionalism, and dedication
+                            to every collaboration. His design sense elevated our product experience.”
+                        </p>
+
+                        <div class="mt-8 flex items-center gap-4">
+
+                            <div class="w-14 h-14 rounded-full bg-pink-500 flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                                A
+                            </div>
+
+                            <div>
+                                <h4 class="text-white font-semibold text-lg">
+                                    Abdul Khan
+                                </h4>
+
+                                <p class="text-slate-400 text-sm">
+                                    General Manager • Samah Overseas
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- PAGINATION -->
+            <div class="swiper-pagination mt-10"></div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- SWIPER JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+    const swiper = new Swiper(".testimonialSwiper", {
+
+        loop: true,
+        spaceBetween: 30,
+        grabCursor: true,
+
+        autoplay: {
+            delay: 3500,
+            disableOnInteraction: false,
+        },
+
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+
+        breakpoints: {
+
+            0: {
+                slidesPerView: 1,
+            },
+
+            768: {
+                slidesPerView: 2,
+            },
+
+            1200: {
+                slidesPerView: 3,
+            }
+        }
+    });
+</script>
+
+<!-- Fullscreen Image Modal -->
+<div id="galleryModal" class="fixed inset-0 z-[300] hidden bg-black/90 backdrop-blur-xl flex items-center justify-center p-4">
+  <div class="relative max-w-4xl max-h-[90vh] w-full h-full flex items-center justify-center">
+    <img id="galleryModalImage" src="" alt="Fullscreen" class="max-w-full max-h-full object-contain rounded-xl md:rounded-2xl shadow-2xl">
+    
+    <!-- Close Button -->
+    <button id="closeGalleryModal" class="absolute top-4 right-4 z-10 w-10 md:w-12 h-10 md:h-12 rounded-full bg-white/20 hover:bg-white/30 text-white flex items-center justify-center transition-all backdrop-blur-xl border border-white/30">
+      <svg class="w-5 md:w-6 h-5 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+    
+    <!-- Counter -->
+    <div class="absolute top-4 left-4 px-4 py-2 rounded-full bg-white/20 backdrop-blur-xl border border-white/30 text-white text-sm font-semibold">
+      <span id="currentImageNum">1</span> / <span id="totalImageNum">1</span>
+    </div>
+
+    <!-- Previous Arrow -->
+    <button id="prevGalleryImage" class="absolute left-4 z-10 w-10 md:w-12 h-10 md:h-12 rounded-full bg-white/20 hover:bg-white/30 text-white flex items-center justify-center transition-all backdrop-blur-xl border border-white/30">
+      <svg class="w-5 md:w-6 h-5 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+      </svg>
+    </button>
+    
+    <!-- Next Arrow -->
+    <button id="nextGalleryImage" class="absolute right-4 z-10 w-10 md:w-12 h-10 md:h-12 rounded-full bg-white/20 hover:bg-white/30 text-white flex items-center justify-center transition-all backdrop-blur-xl border border-white/30">
+      <svg class="w-5 md:w-6 h-5 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<script>
+  // Gallery Images Array
+  let galleryImages = [];
+  let currentGalleryIndex = 0;
+  let currentCategory = 'all';
+
+  const galleryModal = document.getElementById('galleryModal');
+  const galleryModalImage = document.getElementById('galleryModalImage');
+  const closeGalleryModal = document.getElementById('closeGalleryModal');
+  const prevGalleryBtn = document.getElementById('prevGalleryImage');
+  const nextGalleryBtn = document.getElementById('nextGalleryImage');
+  const currentImageNum = document.getElementById('currentImageNum');
+  const totalImageNum = document.getElementById('totalImageNum');
+
+  // Category buttons
+  const categoryBtns = document.querySelectorAll('.category-btn');
+  const gallerySwiper = document.querySelector('.gallerySwiper');
+
+  // Initialize Swiper
+  let swiper = new Swiper('.gallerySwiper', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      dynamicBullets: true,
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 15,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+    }
+  });
+
+  // Collect all gallery images
+  function updateGalleryImages() {
+    const slides = document.querySelectorAll(`.swiper-slide[data-category="${currentCategory}"], .swiper-slide[data-category="all"]`);
+    galleryImages = [];
+    
+    if (currentCategory === 'all') {
+      document.querySelectorAll('.swiper-slide').forEach((slide) => {
+        const img = slide.querySelector('.gallery-img');
+        if (img) galleryImages.push(img.src);
+      });
+    } else {
+      document.querySelectorAll(`.swiper-slide[data-category="${currentCategory}"]`).forEach((slide) => {
+        const img = slide.querySelector('.gallery-img');
+        if (img) galleryImages.push(img.src);
+      });
+    }
+    
+    totalImageNum.textContent = galleryImages.length;
+  }
+
+  // Category filtering
+  categoryBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      categoryBtns.forEach(b => {
+        b.classList.remove('active', 'border-cyan-400/50', 'bg-cyan-400/20', 'text-cyan-200');
+        b.classList.add('border-white/10', 'bg-white/5', 'text-white');
+      });
+      
+      btn.classList.add('active', 'border-cyan-400/50', 'bg-cyan-400/20', 'text-cyan-200');
+      btn.classList.remove('border-white/10', 'bg-white/5', 'text-white');
+      
+      currentCategory = btn.getAttribute('data-category');
+      
+      // Filter slides
+      document.querySelectorAll('.swiper-slide').forEach(slide => {
+        const slideCategory = slide.getAttribute('data-category');
+        if (currentCategory === 'all' || slideCategory === currentCategory) {
+          slide.style.display = 'block';
+        } else {
+          slide.style.display = 'none';
+        }
+      });
+      
+      updateGalleryImages();
+      swiper.update();
+    });
+  });
+
+  // Gallery image clicks
+  document.querySelectorAll('.gallery-img').forEach((img, index) => {
+    img.addEventListener('click', (e) => {
+      e.stopPropagation();
+      currentGalleryIndex = galleryImages.indexOf(img.src);
+      if (currentGalleryIndex === -1) currentGalleryIndex = 0;
+      showGalleryFullscreen();
+    });
+  });
+
+  function showGalleryFullscreen() {
+    if (galleryImages.length > 0) {
+      galleryModalImage.src = galleryImages[currentGalleryIndex];
+      currentImageNum.textContent = currentGalleryIndex + 1;
+      galleryModal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function closeGalleryFullscreen() {
+    galleryModal.classList.add('hidden');
+    document.body.style.overflow = 'auto';
+  }
+
+  function showPrevGalleryImage() {
+    currentGalleryIndex = (currentGalleryIndex - 1 + galleryImages.length) % galleryImages.length;
+    showGalleryFullscreen();
+  }
+
+  function showNextGalleryImage() {
+    currentGalleryIndex = (currentGalleryIndex + 1) % galleryImages.length;
+    showGalleryFullscreen();
+  }
+
+  closeGalleryModal.addEventListener('click', closeGalleryFullscreen);
+  prevGalleryBtn.addEventListener('click', showPrevGalleryImage);
+  nextGalleryBtn.addEventListener('click', showNextGalleryImage);
+
+  // Close on background click
+  galleryModal.addEventListener('click', (e) => {
+    if (e.target === galleryModal) closeGalleryFullscreen();
+  });
+
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (galleryModal.classList.contains('hidden')) return;
+    if (e.key === 'Escape') closeGalleryFullscreen();
+    if (e.key === 'ArrowLeft') showPrevGalleryImage();
+    if (e.key === 'ArrowRight') showNextGalleryImage();
+  });
+
+  // Initialize
+  updateGalleryImages();
+</script>
+
+
+
+<!-- SWIPER JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+    const swiper = new Swiper(".testimonialSwiper", {
+
+        loop: true,
+        spaceBetween: 30,
+        grabCursor: true,
+
+        autoplay: {
+            delay: 3500,
+            disableOnInteraction: false,
+        },
+
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+
+        breakpoints: {
+
+            0: {
+                slidesPerView: 1,
+            },
+
+            768: {
+                slidesPerView: 2,
+            },
+
+            1200: {
+                slidesPerView: 3,
+            }
+        }
+    });
+</script>
 
    <!-- ==================== CONTACT (PREMIUM) ==================== -->
 <section id="contact" class="relative py-24 bg-[#050816] text-white overflow-hidden">
@@ -1879,12 +2748,13 @@
     <div class="mt-10 flex flex-wrap justify-center gap-4">
 
       <!-- Email -->
-      <a href="mailto:hiteshmishra708@gmail.com"
-         class="px-7 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 transition font-semibold flex items-center gap-2 shadow-lg shadow-blue-600/20">
+  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hiteshmishra708@gmail.com"
+   target="_blank"
+   class="px-7 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 transition font-semibold flex items-center gap-2 shadow-lg shadow-blue-600/20">
 
-        <i class="fas fa-envelope"></i>
-        Email
-      </a>
+    <i class="fas fa-envelope"></i>
+    Email
+</a>
 
       <!-- Phone -->
       <a href="tel:+918286651155"
@@ -1933,7 +2803,7 @@
 
       <span class="flex items-center gap-2">
         <i class="fas fa-code text-cyan-400"></i>
-        Python • AI • System Design • Full Stack
+        Python • AI • Scalable Systems • Full Stack
       </span>
 
       <span class="flex items-center gap-2">
@@ -1954,6 +2824,65 @@
   </p>
 
 </footer>
+
+
+<!-- FULLSCREEN IMAGE VIEWER -->
+<div id="imageModal"
+  class="fixed inset-0 bg-black/95 backdrop-blur-lg z-[9999] hidden items-center justify-center p-6">
+
+  <!-- CLOSE BUTTON -->
+  <button id="closeModal"
+    class="absolute top-6 right-6 text-white text-5xl font-light hover:scale-110 transition">
+    ×
+  </button>
+
+  <!-- IMAGE -->
+  <img id="modalImage"
+    class="max-w-full max-h-full object-contain rounded-2xl shadow-2xl" />
+
+</div>
+
+<script>
+  const modal = document.getElementById("imageModal");
+  const modalImg = document.getElementById("modalImage");
+  const closeBtn = document.getElementById("closeModal");
+
+  // ALL CLICKABLE IMAGES
+  const images = document.querySelectorAll(".fullscreen-img");
+
+  images.forEach((img) => {
+    img.style.cursor = "zoom-in";
+
+    img.addEventListener("click", () => {
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+
+      modalImg.src = img.src;
+    });
+  });
+
+  // CLOSE
+  closeBtn.addEventListener("click", () => {
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+  });
+
+  // CLOSE ON BACKGROUND CLICK
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+    }
+  });
+
+  // ESC KEY CLOSE
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+    }
+  });
+</script>
 
 </body>
 </html>
