@@ -62,19 +62,20 @@
 
 <!-- ==================== FULL WIDTH APPLE-STYLE NAVBAR ==================== -->
 <nav id="navbar"
-  class="fixed top-0 left-0 w-full z-50 bg-[#07111F]/80 backdrop-blur-2xl border-b border-white/10">
+  class="fixed top-0 left-0 w-full z-50 bg-[#07111F]/90 backdrop-blur-2xl border-b border-white/10">
 
   <div class="max-w-7xl mx-auto px-6 lg:px-8">
 
     <div class="flex items-center justify-between h-[72px]">
 
       <!-- LOGO -->
-      <a href="#home" class="flex items-center gap-3">
+      <a href="#home" class="flex items-center gap-3 bg-white border border-blue-400/20 px-3 py-2 rounded-xl hover:bg-white/40 transition duration-300">
 
-        <div
+        <!-- <div
           class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center shadow-lg">
 
           <span class="text-white font-black text-xs">HM</span>
+          
 
         </div>
 
@@ -88,8 +89,8 @@
             Full Stack • AI • System Design
           </span>
 
-        </div>
-
+        </div> -->
+        <img src="https://ik.imagekit.io/iuiy6mihw/logo.png" alt="Logo" width="200" >
       </a>
 
       <!-- DESKTOP MENU -->
@@ -225,14 +226,15 @@
   });
 </script>
     <!-- ==================== HERO SECTION (AI First) ==================== -->
-  <section id="home" class="relative bg-[#07111F] text-white overflow-hidden">
+ <section id="home"
+    class="relative bg-[#07111F] text-white overflow-hidden">
 
     <!-- Background -->
     <div class="absolute inset-0">
 
         <!-- Soft Gradient -->
         <div
-            class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(37,99,235,0.10),transparent_30%),radial-gradient(circle_at_bottom_right,_rgba(14,165,233,0.08),transparent_35%)]">
+            class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(37,99,235,0.10),transparent_30%),radial-gradient(circle_at_bottom_right,_rgba(14,165,233,0.08),transparent_35%)] animate-pulse">
         </div>
 
         <!-- Grid -->
@@ -242,18 +244,21 @@
 
     </div>
 
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-14 md:py-16 relative z-10">
+    <div
+        class="max-w-7xl mx-auto px-6 lg:px-8 py-14 md:py-16 relative z-10">
 
         <div class="grid lg:grid-cols-12 gap-10 items-center">
 
             <!-- LEFT -->
-            <div class="lg:col-span-7">
+            <div
+                class="lg:col-span-7 opacity-0 animate-[fadeInUp_1s_ease_forwards]">
 
                 <!-- Badge -->
                 <div
-                    class="inline-flex items-center gap-2 border border-white/10 bg-white/[0.03] backdrop-blur-xl px-4 py-1.5 rounded-full text-xs text-slate-300">
+                    class="inline-flex items-center gap-2 border border-white/10 bg-white/[0.03] backdrop-blur-xl px-4 py-1.5 rounded-full text-xs text-slate-300 hover:border-cyan-400 transition-all duration-500 hover:scale-105">
 
-                    <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                    <span
+                        class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
 
                     AI Integrated Full Stack Developer
                 </div>
@@ -262,10 +267,13 @@
                 <h1
                     class="mt-5 text-4xl md:text-5xl lg:text-6xl font-black leading-[1.02] tracking-[-0.04em] max-w-4xl">
 
-                    Python Engineer Building
+                    <span
+                        class="inline-block animate-[fadeInUp_1s_ease_forwards]">
+                        Python Engineer Building
+                    </span>
 
                     <span
-                        class="block mt-2 bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
+                        class="block mt-2 bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent animate-gradient bg-[length:200%_200%]">
 
                         AI-Powered Web Applications
 
@@ -275,7 +283,7 @@
 
                 <!-- Description -->
                 <p
-                    class="mt-6 text-base md:text-lg text-slate-300 leading-relaxed max-w-2xl">
+                    class="mt-6 text-base md:text-lg text-slate-300 leading-relaxed max-w-2xl opacity-0 animate-[fadeInUp_1.3s_ease_forwards]">
 
                     Senior Full Stack Developer with
                     <span class="font-semibold text-white">
@@ -294,30 +302,30 @@
 
                 <!-- Tech Stack -->
                 <div
-                    class="mt-6 flex flex-wrap gap-2.5">
+                    class="mt-6 flex flex-wrap gap-2.5 opacity-0 animate-[fadeInUp_1.5s_ease_forwards]">
 
                     <span
-                        class="px-3 py-1.5 rounded-lg border border-white/10 bg-white/[0.03] text-xs text-slate-300">
+                        class="px-3 py-1.5 rounded-lg border border-white/10 bg-white/[0.03] text-xs text-slate-300 hover:-translate-y-1 hover:border-cyan-400 hover:bg-cyan-400/10 transition duration-300">
                         Python
                     </span>
 
                     <span
-                        class="px-3 py-1.5 rounded-lg border border-white/10 bg-white/[0.03] text-xs text-slate-300">
+                        class="px-3 py-1.5 rounded-lg border border-white/10 bg-white/[0.03] text-xs text-slate-300 hover:-translate-y-1 hover:border-cyan-400 hover:bg-cyan-400/10 transition duration-300">
                         AI Solutions
                     </span>
 
                     <span
-                        class="px-3 py-1.5 rounded-lg border border-white/10 bg-white/[0.03] text-xs text-slate-300">
+                        class="px-3 py-1.5 rounded-lg border border-white/10 bg-white/[0.03] text-xs text-slate-300 hover:-translate-y-1 hover:border-cyan-400 hover:bg-cyan-400/10 transition duration-300">
                         Django
                     </span>
 
                     <span
-                        class="px-3 py-1.5 rounded-lg border border-white/10 bg-white/[0.03] text-xs text-slate-300">
+                        class="px-3 py-1.5 rounded-lg border border-white/10 bg-white/[0.03] text-xs text-slate-300 hover:-translate-y-1 hover:border-cyan-400 hover:bg-cyan-400/10 transition duration-300">
                         React.js
                     </span>
 
                     <span
-                        class="px-3 py-1.5 rounded-lg border border-white/10 bg-white/[0.03] text-xs text-slate-300">
+                        class="px-3 py-1.5 rounded-lg border border-white/10 bg-white/[0.03] text-xs text-slate-300 hover:-translate-y-1 hover:border-cyan-400 hover:bg-cyan-400/10 transition duration-300">
                         AWS
                     </span>
 
@@ -325,25 +333,26 @@
 
                 <!-- Buttons -->
                 <div
-                    class="mt-8 flex flex-wrap gap-3">
+                    class="mt-8 flex flex-wrap gap-3 opacity-0 animate-[fadeInUp_1.7s_ease_forwards]">
 
                     <!-- Primary -->
                     <a href="#github"
-                        class="inline-flex items-center gap-2 bg-white text-slate-900 hover:bg-slate-200 transition-all duration-300 px-6 py-3 rounded-xl font-semibold shadow-xl">
+                        class="group inline-flex items-center gap-2 bg-white text-slate-900 hover:bg-slate-200 transition-all duration-300 px-6 py-3 rounded-xl font-semibold shadow-xl hover:scale-105 hover:shadow-cyan-500/20">
 
                         View Projects
 
-                        <i class="fas fa-arrow-right text-sm"></i>
+                        <i
+                            class="fas fa-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
                     </a>
-
 
                 </div>
 
                 <!-- Small Stats -->
                 <div
-                    class="mt-10 flex flex-wrap gap-8">
+                    class="mt-10 flex flex-wrap gap-8 opacity-0 animate-[fadeInUp_2s_ease_forwards]">
 
-                    <div>
+                    <div
+                        class="hover:-translate-y-1 transition duration-300">
                         <h3 class="text-2xl font-bold text-white">
                             9+
                         </h3>
@@ -353,7 +362,8 @@
                         </p>
                     </div>
 
-                    <div>
+                    <div
+                        class="hover:-translate-y-1 transition duration-300">
                         <h3 class="text-2xl font-bold text-white">
                             AI
                         </h3>
@@ -363,7 +373,8 @@
                         </p>
                     </div>
 
-                    <div>
+                    <div
+                        class="hover:-translate-y-1 transition duration-300">
                         <h3 class="text-2xl font-bold text-white">
                             AWS
                         </h3>
@@ -378,21 +389,22 @@
             </div>
 
             <!-- RIGHT -->
-            <div class="lg:col-span-5 relative flex justify-center lg:justify-end">
+            <div
+                class="lg:col-span-5 relative flex justify-center lg:justify-end opacity-0 animate-[fadeIn_1.5s_ease_forwards]">
 
                 <!-- Glow -->
                 <div
-                    class="absolute w-[250px] h-[250px] bg-blue-500/10 blur-[100px] rounded-full">
+                    class="absolute w-[250px] h-[250px] bg-blue-500/10 blur-[100px] rounded-full animate-pulse">
                 </div>
 
-                <!-- Image Card -->
+                <!-- Floating Card -->
                 <div
-                    class="relative w-full max-w-[300px] rounded-[24px] overflow-hidden border border-white/10 bg-[#0B1627] shadow-[0_25px_60px_rgba(0,0,0,0.45)]">
+                    class="relative w-full max-w-[300px] rounded-[24px] overflow-hidden border border-white/10 bg-[#0B1627] shadow-[0_25px_60px_rgba(0,0,0,0.45)] hover:-translate-y-3 transition-all duration-700 animate-[float_5s_ease-in-out_infinite]">
 
                     <!-- Image -->
                     <img src="https://ik.imagekit.io/iuiy6mihw/profile.jpg"
-                        alt="Hitesh Mishra"
-                        class="w-full h-[400px] object-cover">
+                        alt="Hitesh Mishra" loading="lazy"
+                        class="w-full h-[400px] object-cover hover:scale-105 transition duration-700">
 
                     <!-- Overlay -->
                     <div
@@ -401,7 +413,7 @@
 
                     <!-- Top Badge -->
                     <div
-                        class="absolute top-4 left-4 border border-white/10 bg-black/30 backdrop-blur-md px-3 py-1.5 rounded-full text-[10px] tracking-wide text-cyan-300 uppercase">
+                        class="absolute top-4 left-4 border border-white/10 bg-black/30 backdrop-blur-md px-3 py-1.5 rounded-full text-[10px] tracking-wide text-cyan-300 uppercase animate-pulse">
 
                         Senior Developer
                     </div>
@@ -428,19 +440,19 @@
 
                             <a href="https://linkedin.com/in/hiteshmishra708"
                                 target="_blank"
-                                class="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center hover:border-cyan-400 hover:bg-white/[0.04] transition">
+                                class="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center hover:border-cyan-400 hover:bg-white/[0.04] hover:-translate-y-1 transition duration-300">
 
                                 <i class="fab fa-linkedin-in text-sm"></i>
                             </a>
 
                             <a href="#"
-                                class="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center hover:border-cyan-400 hover:bg-white/[0.04] transition">
+                                class="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center hover:border-cyan-400 hover:bg-white/[0.04] hover:-translate-y-1 transition duration-300">
 
                                 <i class="fab fa-github text-sm"></i>
                             </a>
 
                             <a href="#contact"
-                                class="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center hover:border-cyan-400 hover:bg-white/[0.04] transition">
+                                class="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center hover:border-cyan-400 hover:bg-white/[0.04] hover:-translate-y-1 transition duration-300">
 
                                 <i class="fas fa-envelope text-sm"></i>
                             </a>
@@ -459,35 +471,109 @@
 
 </section>
 
+<!-- CUSTOM ANIMATIONS -->
+<style>
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(40px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes float {
+
+        0%,
+        100% {
+            transform: translateY(0px);
+        }
+
+        50% {
+            transform: translateY(-12px);
+        }
+    }
+
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    .animate-gradient {
+        animation: gradient 6s ease infinite;
+    }
+</style>
+
 
     <!-- ==================== ABOUT & FACTS ==================== -->
-<section id="about" class="bg-white py-16">
+<!-- AOS CSS -->
+<link rel="stylesheet"
+    href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+<section id="about"
+    class="bg-white py-16 overflow-hidden">
 
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
 
         <!-- SECTION HEADER -->
-        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+        <div
+            class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
 
-            <div class="max-w-3xl">
+            <div
+                class="max-w-3xl"
+                data-aos="fade-up"
+                data-aos-duration="1000">
 
-                <p class="text-sm font-semibold tracking-[0.2em] uppercase text-blue-600">
+                <p
+                    class="text-sm font-semibold tracking-[0.2em] uppercase text-blue-600 animate-pulse">
                     About
                 </p>
 
-                <h2 class="mt-3 text-3xl md:text-4xl font-black text-slate-900 leading-tight">
+                <h2
+                    class="mt-3 text-3xl md:text-4xl font-black text-slate-900 leading-tight">
+
                     Full Stack Engineer focused on
                     scalable products & AI-powered systems
+
                 </h2>
 
             </div>
 
-            <div class="lg:max-w-md">
+            <div
+                class="lg:max-w-md"
+                data-aos="fade-up"
+                data-aos-delay="200"
+                data-aos-duration="1000">
 
                 <p class="text-slate-600 leading-relaxed">
+
                     9+ years of experience building modern applications using
                     Python, Django, React.js, Next.js, Node.js and AWS
                     with expertise in AI integrations, cloud architecture,
                     APIs and scalable web systems.
+
                 </p>
 
             </div>
@@ -495,16 +581,21 @@
         </div>
 
         <!-- MAIN GRID -->
-        <div class="mt-12 grid lg:grid-cols-3 gap-6">
+        <div
+            class="mt-12 grid lg:grid-cols-3 gap-6">
 
             <!-- LEFT CARD -->
             <div
-                class="bg-slate-50 border border-slate-200 rounded-3xl p-7">
+                class="bg-slate-50 border border-slate-200 rounded-3xl p-7 hover:-translate-y-3 hover:shadow-2xl hover:shadow-blue-100 transition-all duration-500 group"
+                data-aos="zoom-in-up"
+                data-aos-delay="100"
+                data-aos-duration="1000">
 
                 <div
-                    class="w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center">
+                    class="w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center group-hover:rotate-6 group-hover:scale-110 transition duration-500">
 
-                    <i class="fas fa-code text-blue-600 text-xl"></i>
+                    <i
+                        class="fas fa-code text-blue-600 text-xl"></i>
 
                 </div>
 
@@ -526,10 +617,13 @@
 
             <!-- CENTER CARD -->
             <div
-                class="bg-slate-900 text-white rounded-3xl p-7 relative overflow-hidden">
+                class="bg-slate-900 text-white rounded-3xl p-7 relative overflow-hidden hover:-translate-y-3 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-500"
+                data-aos="zoom-in"
+                data-aos-delay="250"
+                data-aos-duration="1200">
 
                 <div
-                    class="absolute top-0 right-0 w-40 h-40 bg-blue-500/20 blur-3xl rounded-full">
+                    class="absolute top-0 right-0 w-40 h-40 bg-blue-500/20 blur-3xl rounded-full animate-pulse">
                 </div>
 
                 <p
@@ -538,7 +632,7 @@
                 </p>
 
                 <h3
-                    class="mt-4 text-5xl font-black">
+                    class="mt-4 text-5xl font-black animate-pulse">
                     9+
                 </h3>
 
@@ -550,19 +644,23 @@
                 <div
                     class="mt-8 flex flex-wrap gap-2">
 
-                    <span class="px-3 py-1 rounded-full bg-white/10 text-xs">
+                    <span
+                        class="px-3 py-1 rounded-full bg-white/10 text-xs hover:bg-cyan-400/20 transition duration-300 hover:scale-105">
                         Python
                     </span>
 
-                    <span class="px-3 py-1 rounded-full bg-white/10 text-xs">
+                    <span
+                        class="px-3 py-1 rounded-full bg-white/10 text-xs hover:bg-cyan-400/20 transition duration-300 hover:scale-105">
                         AI
                     </span>
 
-                    <span class="px-3 py-1 rounded-full bg-white/10 text-xs">
+                    <span
+                        class="px-3 py-1 rounded-full bg-white/10 text-xs hover:bg-cyan-400/20 transition duration-300 hover:scale-105">
                         AWS
                     </span>
 
-                    <span class="px-3 py-1 rounded-full bg-white/10 text-xs">
+                    <span
+                        class="px-3 py-1 rounded-full bg-white/10 text-xs hover:bg-cyan-400/20 transition duration-300 hover:scale-105">
                         React
                     </span>
 
@@ -572,12 +670,16 @@
 
             <!-- RIGHT CARD -->
             <div
-                class="bg-slate-50 border border-slate-200 rounded-3xl p-7">
+                class="bg-slate-50 border border-slate-200 rounded-3xl p-7 hover:-translate-y-3 hover:shadow-2xl hover:shadow-cyan-100 transition-all duration-500 group"
+                data-aos="zoom-in-up"
+                data-aos-delay="400"
+                data-aos-duration="1000">
 
                 <div
-                    class="w-14 h-14 rounded-2xl bg-cyan-100 flex items-center justify-center">
+                    class="w-14 h-14 rounded-2xl bg-cyan-100 flex items-center justify-center group-hover:rotate-6 group-hover:scale-110 transition duration-500">
 
-                    <i class="fas fa-brain text-cyan-600 text-xl"></i>
+                    <i
+                        class="fas fa-brain text-cyan-600 text-xl"></i>
 
                 </div>
 
@@ -603,32 +705,63 @@
 
 </section>
 
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+    AOS.init({
+        once: true,
+        offset: 100,
+    });
+</script>
+
    <!-- ==================== SKILLS (Category cards styled like picture) ==================== -->
-<section id="skills" class="bg-[#050816] text-white py-20 relative overflow-hidden">
+<!-- AOS CSS -->
+<link rel="stylesheet"
+    href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+<section id="skills"
+    class="bg-[#050816] text-white py-20 relative overflow-hidden">
 
     <!-- Premium Glow -->
-    <div class="absolute top-0 left-0 w-[350px] h-[350px] bg-blue-500/10 blur-[140px] rounded-full"></div>
-    <div class="absolute bottom-0 right-0 w-[350px] h-[350px] bg-cyan-500/10 blur-[140px] rounded-full"></div>
+    <div
+        class="absolute top-0 left-0 w-[350px] h-[350px] bg-blue-500/10 blur-[140px] rounded-full"
+        data-aos="fade-right"
+        data-aos-duration="1500"></div>
 
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+    <div
+        class="absolute bottom-0 right-0 w-[350px] h-[350px] bg-cyan-500/10 blur-[140px] rounded-full"
+        data-aos="fade-left"
+        data-aos-duration="1500"></div>
+
+    <div
+        class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
 
         <!-- Heading -->
-        <div class="text-center max-w-2xl mx-auto mb-16">
+        <div
+            class="text-center max-w-2xl mx-auto mb-16"
+            data-aos="fade-up"
+            data-aos-duration="1200">
 
-            <p class="uppercase tracking-[0.3em] text-sky-400 text-xs md:text-sm mb-4">
+            <p
+                class="uppercase tracking-[0.3em] text-sky-400 text-xs md:text-sm mb-4">
                 Expertise • Technologies • Innovation
             </p>
 
-            <h2 class="text-3xl md:text-5xl font-black mb-5 leading-tight">
+            <h2
+                class="text-3xl md:text-5xl font-black mb-5 leading-tight">
                 Skills & Technologies
             </h2>
 
-            <p class="text-slate-400 text-base md:text-lg leading-relaxed">
+            <p
+                class="text-slate-400 text-base md:text-lg leading-relaxed">
                 Organized by domain with a focus on modern technologies,
                 intelligent systems, scalable infrastructure, and development tools.
             </p>
 
-            <div class="w-28 h-[3px] bg-gradient-to-r from-blue-500 to-cyan-400 mx-auto mt-7 rounded-full"></div>
+            <div
+                class="w-28 h-[3px] bg-gradient-to-r from-blue-500 to-cyan-400 mx-auto mt-7 rounded-full">
+            </div>
 
         </div>
 
@@ -636,11 +769,16 @@
         <div class="grid gap-6 lg:grid-cols-2">
 
             <!-- CARD -->
-            <div class="group rounded-[2rem] border border-white/10 bg-white/[0.04] p-8 shadow-[0_10px_40px_rgba(0,0,0,0.35)] backdrop-blur-2xl hover:border-sky-400/30 hover:-translate-y-1 transition duration-500">
+            <div
+                class="group rounded-[2rem] border border-white/10 bg-white/[0.04] p-8 shadow-[0_10px_40px_rgba(0,0,0,0.35)] backdrop-blur-2xl hover:border-sky-400/30 hover:-translate-y-1 transition duration-500"
+                data-aos="zoom-in-up"
+                data-aos-delay="100"
+                data-aos-duration="1000">
 
                 <div class="flex items-center gap-4 mb-5">
 
-                    <div class="w-14 h-14 rounded-2xl bg-sky-500/10 border border-sky-400/20 flex items-center justify-center text-2xl">
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-sky-500/10 border border-sky-400/20 flex items-center justify-center text-2xl">
                         🤖
                     </div>
 
@@ -659,22 +797,25 @@
                 <div class="flex flex-wrap gap-3">
 
                     <span class="skill-tag">LLMs</span>
-                    <span class="skill-tag">Computer Vision</span>
-                    <span class="skill-tag">Diffusion Models</span>
-                    <span class="skill-tag">PyTorch</span>
-                    <span class="skill-tag">LangChain</span>
-                    <span class="skill-tag">Multi-Agent Systems</span>
+                    <span class="skill-tag">Generative AI</span>
+                    <span class="skill-tag">TensorFlow</span>
+                    <span class="skill-tag">NLP</span>
 
                 </div>
 
             </div>
 
             <!-- CARD -->
-            <div class="group rounded-[2rem] border border-white/10 bg-white/[0.04] p-8 shadow-[0_10px_40px_rgba(0,0,0,0.35)] backdrop-blur-2xl hover:border-cyan-400/30 hover:-translate-y-1 transition duration-500">
+            <div
+                class="group rounded-[2rem] border border-white/10 bg-white/[0.04] p-8 shadow-[0_10px_40px_rgba(0,0,0,0.35)] backdrop-blur-2xl hover:border-cyan-400/30 hover:-translate-y-1 transition duration-500"
+                data-aos="zoom-in-up"
+                data-aos-delay="250"
+                data-aos-duration="1000">
 
                 <div class="flex items-center gap-4 mb-5">
 
-                    <div class="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-400/20 flex items-center justify-center text-2xl">
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-400/20 flex items-center justify-center text-2xl">
                         ☁️
                     </div>
 
@@ -694,7 +835,6 @@
 
                     <span class="skill-tag">AWS</span>
                     <span class="skill-tag">GCP</span>
-                    <span class="skill-tag">Kubernetes</span>
                     <span class="skill-tag">Docker</span>
                     <span class="skill-tag">RabbitMQ</span>
                     <span class="skill-tag">Redis</span>
@@ -704,11 +844,16 @@
             </div>
 
             <!-- CARD -->
-            <div class="group rounded-[2rem] border border-white/10 bg-white/[0.04] p-8 shadow-[0_10px_40px_rgba(0,0,0,0.35)] backdrop-blur-2xl hover:border-purple-400/30 hover:-translate-y-1 transition duration-500">
+            <div
+                class="group rounded-[2rem] border border-white/10 bg-white/[0.04] p-8 shadow-[0_10px_40px_rgba(0,0,0,0.35)] backdrop-blur-2xl hover:border-purple-400/30 hover:-translate-y-1 transition duration-500"
+                data-aos="zoom-in-up"
+                data-aos-delay="400"
+                data-aos-duration="1000">
 
                 <div class="flex items-center gap-4 mb-5">
 
-                    <div class="w-14 h-14 rounded-2xl bg-purple-500/10 border border-purple-400/20 flex items-center justify-center text-2xl">
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-purple-500/10 border border-purple-400/20 flex items-center justify-center text-2xl">
                         🚀
                     </div>
 
@@ -726,11 +871,8 @@
 
                 <div class="flex flex-wrap gap-3">
 
-                    <span class="skill-tag">FastAPI</span>
                     <span class="skill-tag">Django</span>
-                    <span class="skill-tag">Unreal Engine 5</span>
-                    <span class="skill-tag">3D Gaussian Splatting</span>
-                    <span class="skill-tag">NVIDIA Omniverse</span>
+                    <span class="skill-tag">Flask</span>
                     <span class="skill-tag">Next.js</span>
 
                 </div>
@@ -738,11 +880,16 @@
             </div>
 
             <!-- CARD -->
-            <div class="group rounded-[2rem] border border-white/10 bg-white/[0.04] p-8 shadow-[0_10px_40px_rgba(0,0,0,0.35)] backdrop-blur-2xl hover:border-emerald-400/30 hover:-translate-y-1 transition duration-500">
+            <div
+                class="group rounded-[2rem] border border-white/10 bg-white/[0.04] p-8 shadow-[0_10px_40px_rgba(0,0,0,0.35)] backdrop-blur-2xl hover:border-emerald-400/30 hover:-translate-y-1 transition duration-500"
+                data-aos="zoom-in-up"
+                data-aos-delay="550"
+                data-aos-duration="1000">
 
                 <div class="flex items-center gap-4 mb-5">
 
-                    <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 border border-emerald-400/20 flex items-center justify-center text-2xl">
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-emerald-500/10 border border-emerald-400/20 flex items-center justify-center text-2xl">
                         💻
                     </div>
 
@@ -761,10 +908,8 @@
                 <div class="flex flex-wrap gap-3">
 
                     <span class="skill-tag">Python</span>
-                    <span class="skill-tag">C++</span>
                     <span class="skill-tag">JavaScript</span>
                     <span class="skill-tag">SQL</span>
-                    <span class="skill-tag">Java</span>
                     <span class="skill-tag">TypeScript</span>
 
                 </div>
@@ -775,6 +920,16 @@
 
     </div>
 </section>
+
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+    AOS.init({
+        once: true,
+        offset: 100,
+    });
+</script>
 
 <style>
     .skill-tag{
@@ -802,12 +957,26 @@
 </style>
 
 <!-- ================= EXPERIENCE SECTION ================= -->
-<section id="experience" class="bg-[#F8FAFC] py-20">
+<!-- AOS CSS -->
+<link rel="stylesheet"
+    href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
 
-    <div class="max-w-6xl mx-auto px-6 lg:px-8">
+<section id="experience"
+    class="bg-[#F8FAFC] py-20 relative overflow-hidden">
+
+    <!-- Background Glow -->
+    <div
+        class="absolute top-0 left-0 w-[320px] h-[320px] bg-blue-500/10 blur-[120px] rounded-full"></div>
+
+    <div
+        class="absolute bottom-0 right-0 w-[320px] h-[320px] bg-cyan-400/10 blur-[120px] rounded-full"></div>
+
+    <div class="max-w-6xl mx-auto px-6 lg:px-8 relative z-10">
 
         <!-- SECTION HEADER -->
-        <div class="max-w-3xl">
+        <div class="max-w-3xl"
+            data-aos="fade-up"
+            data-aos-duration="1200">
 
             <p
                 class="text-sm font-semibold tracking-[0.2em] uppercase text-blue-600">
@@ -838,365 +1007,376 @@
         <div
             class="mt-16 relative border-l border-slate-200 ml-3 space-y-14">
 
+            <!-- Animated Timeline Line -->
+            <div
+                class="absolute left-0 top-0 w-[2px] h-full bg-gradient-to-b from-blue-500 via-cyan-400 to-violet-500 opacity-30">
+            </div>
+
             <!-- EXPERIENCE ITEM -->
-            <div class="relative pl-10">
+            <div class="relative pl-10 group"
+                data-aos="fade-right"
+                data-aos-delay="100"
+                data-aos-duration="1000">
 
                 <!-- DOT -->
                 <div
-                    class="absolute -left-[11px] top-2 w-5 h-5 rounded-full bg-blue-600 border-4 border-white shadow">
+                    class="absolute -left-[11px] top-2 w-5 h-5 rounded-full bg-blue-600 border-4 border-white shadow-lg group-hover:scale-125 transition duration-500">
                 </div>
 
-                <!-- TOP -->
+                <!-- CARD EFFECT -->
                 <div
-                    class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
+                    class="bg-white rounded-3xl p-7 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 border border-slate-100">
 
-                    <div>
+                    <!-- TOP -->
+                    <div
+                        class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
 
-                        <h3
-                            class="text-2xl font-bold text-slate-900">
-                            Sr Software Engineer
-                        </h3>
+                        <div>
 
-                        <p
-                            class="mt-1 text-blue-600 font-semibold">
-                            eClerx
+                            <h3
+                                class="text-2xl font-bold text-slate-900">
+                                Sr Software Engineer
+                            </h3>
+
+                            <p
+                                class="mt-1 text-blue-600 font-semibold">
+                                eClerx
+                            </p>
+
+                        </div>
+
+                        <div
+                            class="text-sm font-medium text-slate-500 lg:text-right">
+
+                            Oct 2023 — Present
+
+                        </div>
+
+                    </div>
+
+                    <!-- DESCRIPTION -->
+                    <div
+                        class="mt-6 space-y-3 text-slate-600 leading-relaxed">
+
+                        <p>
+                            • Designed and optimized Elasticsearch-based search systems
+                            for high-traffic platforms.
+                        </p>
+
+                        <p>
+                            • Improved query performance and relevance tuning for
+                            enhanced product discovery and user experience.
+                        </p>
+
+                        <p>
+                            • Managed AWS deployments, infrastructure reliability,
+                            and scalable production systems.
+                        </p>
+
+                        <p>
+                            • Optimized Elasticsearch queries reducing latency
+                            and improving search performance.
                         </p>
 
                     </div>
 
+                    <!-- TECH -->
                     <div
-                        class="text-sm font-medium text-slate-500 lg:text-right">
+                        class="mt-6 flex flex-wrap gap-2">
 
-                        Oct 2023 — Present
+                        <span
+                            class="px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-medium hover:scale-105 hover:bg-blue-100 transition">
+                            Python
+                        </span>
+
+                        <span
+                            class="px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-medium hover:scale-105 hover:bg-blue-100 transition">
+                            Elasticsearch
+                        </span>
+
+                        <span
+                            class="px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-medium hover:scale-105 hover:bg-blue-100 transition">
+                            AWS
+                        </span>
+
+                        <span
+                            class="px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-medium hover:scale-105 hover:bg-blue-100 transition">
+                            Django
+                        </span>
 
                     </div>
-
-                </div>
-
-                <!-- DESCRIPTION -->
-                <div
-                    class="mt-6 space-y-3 text-slate-600 leading-relaxed">
-
-                    <p>
-                        • Designed and optimized Elasticsearch-based search systems
-                        for high-traffic platforms.
-                    </p>
-
-                    <p>
-                        • Improved query performance and relevance tuning for
-                        enhanced product discovery and user experience.
-                    </p>
-
-                    <p>
-                        • Managed AWS deployments, infrastructure reliability,
-                        and scalable production systems.
-                    </p>
-
-                    <p>
-                        • Optimized Elasticsearch queries reducing latency
-                        and improving search performance.
-                    </p>
-
-                </div>
-
-                <!-- TECH -->
-                <div
-                    class="mt-6 flex flex-wrap gap-2">
-
-                    <span
-                        class="px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-medium">
-                        Python
-                    </span>
-
-                    <span
-                        class="px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-medium">
-                        Elasticsearch
-                    </span>
-
-                    <span
-                        class="px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-medium">
-                        AWS
-                    </span>
-
-                    <span
-                        class="px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-medium">
-                        Django
-                    </span>
 
                 </div>
 
             </div>
 
             <!-- EXPERIENCE ITEM -->
-            <div class="relative pl-10">
+            <div class="relative pl-10 group"
+                data-aos="fade-left"
+                data-aos-delay="150"
+                data-aos-duration="1000">
 
                 <div
-                    class="absolute -left-[11px] top-2 w-5 h-5 rounded-full bg-cyan-500 border-4 border-white shadow">
+                    class="absolute -left-[11px] top-2 w-5 h-5 rounded-full bg-cyan-500 border-4 border-white shadow-lg group-hover:scale-125 transition duration-500">
                 </div>
 
                 <div
-                    class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
+                    class="bg-white rounded-3xl p-7 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 border border-slate-100">
 
-                    <div>
+                    <div
+                        class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
 
-                        <h3
-                            class="text-2xl font-bold text-slate-900">
-                            Full Stack Developer
-                        </h3>
+                        <div>
 
-                        <p
-                            class="mt-1 text-cyan-600 font-semibold">
-                            E-Commerce Platform
+                            <h3
+                                class="text-2xl font-bold text-slate-900">
+                                Full Stack Developer
+                            </h3>
+
+                            <p
+                                class="mt-1 text-cyan-600 font-semibold">
+                                E-Commerce Platform
+                            </p>
+
+                        </div>
+
+                        <div
+                            class="text-sm font-medium text-slate-500 lg:text-right">
+
+                            Apr 2021 — Jul 2023
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        class="mt-6 space-y-3 text-slate-600 leading-relaxed">
+
+                        <p>
+                            • Contributed to one of India’s leading healthcare e-commerce platforms
+                            managing large-scale B2B medical supply operations.
+                        </p>
+
+                        <p>
+                            • Built and scaled a high-performance platform managing
+                            1M+ product catalog with multi-seller onboarding systems.
+                        </p>
+
+                        <p>
+                            • Led migration from legacy Magento architecture
+                            to modern Next.js + Python ecosystem.
+                        </p>
+
+                        <p>
+                            • Implemented Elasticsearch-powered search improving
+                            relevance and search performance.
+                        </p>
+
+                        <p>
+                            • Developed scalable backend systems using Django,
+                            Celery, RabbitMQ and Redis.
+                        </p>
+
+                        <p>
+                            • Managed AWS infrastructure including EC2,
+                            S3 and CloudFront deployments.
                         </p>
 
                     </div>
 
                     <div
-                        class="text-sm font-medium text-slate-500 lg:text-right">
+                        class="mt-6 flex flex-wrap gap-2">
 
-                        Apr 2021 — Jul 2023
+                        <span class="px-3 py-1 rounded-full bg-cyan-50 text-cyan-700 text-xs font-medium hover:scale-105 transition">
+                            Next.js
+                        </span>
+
+                        <span class="px-3 py-1 rounded-full bg-cyan-50 text-cyan-700 text-xs font-medium hover:scale-105 transition">
+                            Python
+                        </span>
+
+                        <span class="px-3 py-1 rounded-full bg-cyan-50 text-cyan-700 text-xs font-medium hover:scale-105 transition">
+                            Django
+                        </span>
+
+                        <span class="px-3 py-1 rounded-full bg-cyan-50 text-cyan-700 text-xs font-medium hover:scale-105 transition">
+                            RabbitMQ
+                        </span>
+
+                        <span class="px-3 py-1 rounded-full bg-cyan-50 text-cyan-700 text-xs font-medium hover:scale-105 transition">
+                            Redis
+                        </span>
 
                     </div>
-
-                </div>
-
-                <div
-                    class="mt-6 space-y-3 text-slate-600 leading-relaxed">
-
-                    <p>
-                        • Contributed to one of India’s leading healthcare e-commerce platforms
-                        managing large-scale B2B medical supply operations.
-                    </p>
-
-                    <p>
-                        • Built and scaled a high-performance platform managing
-                        1M+ product catalog with multi-seller onboarding systems.
-                    </p>
-
-                    <p>
-                        • Led migration from legacy Magento architecture
-                        to modern Next.js + Python ecosystem.
-                    </p>
-
-                    <p>
-                        • Implemented Elasticsearch-powered search improving
-                        relevance and search performance.
-                    </p>
-
-                    <p>
-                        • Developed scalable backend systems using Django,
-                        Celery, RabbitMQ and Redis.
-                    </p>
-
-                    <p>
-                        • Managed AWS infrastructure including EC2,
-                        S3 and CloudFront deployments.
-                    </p>
-
-                </div>
-
-                <div
-                    class="mt-6 flex flex-wrap gap-2">
-
-                    <span
-                        class="px-3 py-1 rounded-full bg-cyan-50 text-cyan-700 text-xs font-medium">
-                        Next.js
-                    </span>
-
-                    <span
-                        class="px-3 py-1 rounded-full bg-cyan-50 text-cyan-700 text-xs font-medium">
-                        Python
-                    </span>
-
-                    <span
-                        class="px-3 py-1 rounded-full bg-cyan-50 text-cyan-700 text-xs font-medium">
-                        Django
-                    </span>
-
-                    <span
-                        class="px-3 py-1 rounded-full bg-cyan-50 text-cyan-700 text-xs font-medium">
-                        RabbitMQ
-                    </span>
-
-                    <span
-                        class="px-3 py-1 rounded-full bg-cyan-50 text-cyan-700 text-xs font-medium">
-                        Redis
-                    </span>
-
-                    <span
-                        class="px-3 py-1 rounded-full bg-cyan-50 text-cyan-700 text-xs font-medium">
-                        Elasticsearch
-                    </span>
-
-                    <span
-                        class="px-3 py-1 rounded-full bg-cyan-50 text-cyan-700 text-xs font-medium">
-                        AWS
-                    </span>
-
-                    <span
-                        class="px-3 py-1 rounded-full bg-cyan-50 text-cyan-700 text-xs font-medium">
-                        E-Commerce
-                    </span>
 
                 </div>
 
             </div>
 
             <!-- EXPERIENCE ITEM -->
-            <div class="relative pl-10">
+            <div class="relative pl-10 group"
+                data-aos="fade-right"
+                data-aos-delay="200"
+                data-aos-duration="1000">
 
                 <div
-                    class="absolute -left-[11px] top-2 w-5 h-5 rounded-full bg-indigo-500 border-4 border-white shadow">
+                    class="absolute -left-[11px] top-2 w-5 h-5 rounded-full bg-indigo-500 border-4 border-white shadow-lg group-hover:scale-125 transition duration-500">
                 </div>
 
                 <div
-                    class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
+                    class="bg-white rounded-3xl p-7 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 border border-slate-100">
 
-                    <div>
+                    <div
+                        class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
 
-                        <h3
-                            class="text-2xl font-bold text-slate-900">
-                            Software Engineer
-                        </h3>
+                        <div>
 
-                        <p
-                            class="mt-1 text-indigo-600 font-semibold">
-                            CitiusTech
+                            <h3
+                                class="text-2xl font-bold text-slate-900">
+                                Software Engineer
+                            </h3>
+
+                            <p
+                                class="mt-1 text-indigo-600 font-semibold">
+                                CitiusTech
+                            </p>
+
+                        </div>
+
+                        <div
+                            class="text-sm font-medium text-slate-500 lg:text-right">
+
+                            Oct 2019 — Apr 2021
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        class="mt-6 space-y-3 text-slate-600 leading-relaxed">
+
+                        <p>
+                            • Contributed to enterprise healthcare platforms
+                            including H-Scale and IBC Migration projects.
+                        </p>
+
+                        <p>
+                            • Improved code quality and maintainability
+                            using SonarQube integration.
+                        </p>
+
+                        <p>
+                            • Built scalable frontend systems using
+                            Angular and Node.js.
                         </p>
 
                     </div>
 
                     <div
-                        class="text-sm font-medium text-slate-500 lg:text-right">
+                        class="mt-6 flex flex-wrap gap-2">
 
-                        Oct 2019 — Apr 2021
+                        <span class="px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-xs font-medium hover:scale-105 transition">
+                            Angular
+                        </span>
+
+                        <span class="px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-xs font-medium hover:scale-105 transition">
+                            Node.js
+                        </span>
+
+                        <span class="px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-xs font-medium hover:scale-105 transition">
+                            SonarQube
+                        </span>
 
                     </div>
-
-                </div>
-
-                <div
-                    class="mt-6 space-y-3 text-slate-600 leading-relaxed">
-
-                    <p>
-                        • Contributed to enterprise healthcare platforms
-                        including H-Scale and IBC Migration projects.
-                    </p>
-
-                    <p>
-                        • Improved code quality and maintainability
-                        using SonarQube integration.
-                    </p>
-
-                    <p>
-                        • Built scalable frontend systems using
-                        Angular and Node.js.
-                    </p>
-
-                </div>
-
-                <div
-                    class="mt-6 flex flex-wrap gap-2">
-
-                    <span
-                        class="px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-xs font-medium">
-                        Angular
-                    </span>
-
-                    <span
-                        class="px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-xs font-medium">
-                        Node.js
-                    </span>
-
-                    <span
-                        class="px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-xs font-medium">
-                        SonarQube
-                    </span>
 
                 </div>
 
             </div>
 
             <!-- EXPERIENCE ITEM -->
-            <div class="relative pl-10">
+            <div class="relative pl-10 group"
+                data-aos="fade-left"
+                data-aos-delay="250"
+                data-aos-duration="1000">
 
                 <div
-                    class="absolute -left-[11px] top-2 w-5 h-5 rounded-full bg-violet-500 border-4 border-white shadow">
+                    class="absolute -left-[11px] top-2 w-5 h-5 rounded-full bg-violet-500 border-4 border-white shadow-lg group-hover:scale-125 transition duration-500">
                 </div>
 
                 <div
-                    class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
+                    class="bg-white rounded-3xl p-7 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 border border-slate-100">
 
-                    <div>
+                    <div
+                        class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
 
-                        <h3
-                            class="text-2xl font-bold text-slate-900">
-                            Software Engineer
-                        </h3>
+                        <div>
 
-                        <p
-                            class="mt-1 text-violet-600 font-semibold">
-                            AvenDATA GmbH
+                            <h3
+                                class="text-2xl font-bold text-slate-900">
+                                Software Engineer
+                            </h3>
+
+                            <p
+                                class="mt-1 text-violet-600 font-semibold">
+                                AvenDATA GmbH
+                            </p>
+
+                        </div>
+
+                        <div
+                            class="text-sm font-medium text-slate-500 lg:text-right">
+
+                            Sep 2017 — Oct 2019
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        class="mt-6 space-y-3 text-slate-600 leading-relaxed">
+
+                        <p>
+                            • Progressed into Team Lead role managing
+                            development and project delivery.
+                        </p>
+
+                        <p>
+                            • Led full stack development using Python,
+                            Django, React.js and Node.js.
+                        </p>
+
+                        <p>
+                            • Migrated legacy Python 2 applications
+                            to modern scalable systems.
+                        </p>
+
+                        <p>
+                            • Developed NFC-based mobile applications
+                            using Ionic framework.
                         </p>
 
                     </div>
 
                     <div
-                        class="text-sm font-medium text-slate-500 lg:text-right">
+                        class="mt-6 flex flex-wrap gap-2">
 
-                        Sep 2017 — Oct 2019
+                        <span class="px-3 py-1 rounded-full bg-violet-50 text-violet-700 text-xs font-medium hover:scale-105 transition">
+                            Python
+                        </span>
+
+                        <span class="px-3 py-1 rounded-full bg-violet-50 text-violet-700 text-xs font-medium hover:scale-105 transition">
+                            Django
+                        </span>
+
+                        <span class="px-3 py-1 rounded-full bg-violet-50 text-violet-700 text-xs font-medium hover:scale-105 transition">
+                            React.js
+                        </span>
+
+                        <span class="px-3 py-1 rounded-full bg-violet-50 text-violet-700 text-xs font-medium hover:scale-105 transition">
+                            Ionic
+                        </span>
 
                     </div>
-
-                </div>
-
-                <div
-                    class="mt-6 space-y-3 text-slate-600 leading-relaxed">
-
-                    <p>
-                        • Progressed into Team Lead role managing
-                        development and project delivery.
-                    </p>
-
-                    <p>
-                        • Led full stack development using Python,
-                        Django, React.js and Node.js.
-                    </p>
-
-                    <p>
-                        • Migrated legacy Python 2 applications
-                        to modern scalable systems.
-                    </p>
-
-                    <p>
-                        • Developed NFC-based mobile applications
-                        using Ionic framework.
-                    </p>
-
-                </div>
-
-                <div
-                    class="mt-6 flex flex-wrap gap-2">
-
-                    <span
-                        class="px-3 py-1 rounded-full bg-violet-50 text-violet-700 text-xs font-medium">
-                        Python
-                    </span>
-
-                    <span
-                        class="px-3 py-1 rounded-full bg-violet-50 text-violet-700 text-xs font-medium">
-                        Django
-                    </span>
-
-                    <span
-                        class="px-3 py-1 rounded-full bg-violet-50 text-violet-700 text-xs font-medium">
-                        React.js
-                    </span>
-
-                    <span
-                        class="px-3 py-1 rounded-full bg-violet-50 text-violet-700 text-xs font-medium">
-                        Ionic
-                    </span>
 
                 </div>
 
@@ -1207,6 +1387,17 @@
     </div>
 
 </section>
+
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+    AOS.init({
+        once: true,
+        offset: 100,
+        easing: 'ease-in-out',
+    });
+</script>
 
 <!-- ========================================= -->
 <!-- 🏆 ACHIEVEMENTS GALLERY WITH SWIPER JS -->
@@ -1267,125 +1458,92 @@
         <!-- ACADEMICS CATEGORY -->
         <div class="swiper-slide achievement-slide" data-achievement-category="academics">
           <div class="relative h-[300px] md:h-[400px] lg:h-[520px] overflow-hidden group cursor-pointer rounded-2xl">
-            <img src="https://ik.imagekit.io/iuiy6mihw/image1.webp" alt="Academic Achievement 1" class="achievement-img w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+            <img src="https://ik.imagekit.io/iuiy6mihw/image1.webp" alt="Academic Achievement 1" loading="lazy" class="achievement-img w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div class="absolute inset-0 flex flex-col justify-end p-4 md:p-6">
-              <h3 class="text-white text-base md:text-xl font-bold">Academic Excellence</h3>
-              <p class="text-cyan-300 text-xs md:text-sm mt-1">MCA Certificate</p>
-            </div>
+    
           </div>
         </div>
 
         <div class="swiper-slide achievement-slide" data-achievement-category="academics">
           <div class="relative h-[300px] md:h-[400px] lg:h-[520px] overflow-hidden group cursor-pointer rounded-2xl">
-            <img src="https://ik.imagekit.io/iuiy6mihw/image3.webp" alt="Academic Achievement 2" class="achievement-img w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+            <img src="https://ik.imagekit.io/iuiy6mihw/image3.webp" alt="Academic Achievement 2" loading="lazy" class="achievement-img w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div class="absolute inset-0 flex flex-col justify-end p-4 md:p-6">
-              <h3 class="text-white text-base md:text-xl font-bold">Learning Milestone</h3>
-              <p class="text-cyan-300 text-xs md:text-sm mt-1">University Recognition</p>
-            </div>
+           
           </div>
         </div>
 
         <div class="swiper-slide achievement-slide" data-achievement-category="academics">
           <div class="relative h-[300px] md:h-[400px] lg:h-[520px] overflow-hidden group cursor-pointer rounded-2xl">
-            <img src="https://ik.imagekit.io/iuiy6mihw/image9.webp" alt="Academic Achievement 3" class="achievement-img w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+            <img src="https://ik.imagekit.io/iuiy6mihw/image9.webp" alt="Academic Achievement 3" loading="lazy" class="achievement-img w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div class="absolute inset-0 flex flex-col justify-end p-4 md:p-6">
-              <h3 class="text-white text-base md:text-xl font-bold">Certification</h3>
-              <p class="text-cyan-300 text-xs md:text-sm mt-1">Professional Growth</p>
-            </div>
+           
           </div>
         </div>
 
         <!-- APPRECIATION CATEGORY -->
         <div class="swiper-slide achievement-slide" data-achievement-category="appreciation">
           <div class="relative h-[300px] md:h-[400px] lg:h-[520px] overflow-hidden group cursor-pointer rounded-2xl">
-            <img src="https://ik.imagekit.io/iuiy6mihw/image5.webp" alt="Appreciation 1" class="achievement-img w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+            <img src="https://ik.imagekit.io/iuiy6mihw/image5.webp" alt="Appreciation 1" loading="lazy" class="achievement-img w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div class="absolute inset-0 flex flex-col justify-end p-4 md:p-6">
-              <h3 class="text-white text-base md:text-xl font-bold">Team Appreciation</h3>
-              <p class="text-blue-300 text-xs md:text-sm mt-1">Recognition Award</p>
-            </div>
+            
           </div>
         </div>
 
         <div class="swiper-slide achievement-slide" data-achievement-category="appreciation">
           <div class="relative h-[300px] md:h-[400px] lg:h-[520px] overflow-hidden group cursor-pointer rounded-2xl">
-            <img src="https://ik.imagekit.io/iuiy6mihw/image4.webp" alt="Appreciation 2" class="achievement-img w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+            <img src="https://ik.imagekit.io/iuiy6mihw/image4.webp" alt="Appreciation 2" loading="lazy" class="achievement-img w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div class="absolute inset-0 flex flex-col justify-end p-4 md:p-6">
-              <h3 class="text-white text-base md:text-xl font-bold">Special Recognition</h3>
-              <p class="text-blue-300 text-xs md:text-sm mt-1">Contribution Award</p>
-            </div>
+            
           </div>
         </div>
 
         <!-- HONOUR CATEGORY -->
         <div class="swiper-slide achievement-slide" data-achievement-category="honour">
           <div class="relative h-[300px] md:h-[400px] lg:h-[520px] overflow-hidden group cursor-pointer rounded-2xl">
-            <img src="https://ik.imagekit.io/iuiy6mihw/image6.webp" alt="Honours 1" class="achievement-img w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+            <img src="https://ik.imagekit.io/iuiy6mihw/image6.webp" alt="Honours 1" loading="lazy" class="achievement-img w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div class="absolute inset-0 flex flex-col justify-end p-4 md:p-6">
-              <h3 class="text-white text-base md:text-xl font-bold">Premium Honours</h3>
-              <p class="text-purple-300 text-xs md:text-sm mt-1">Excellence Award</p>
-            </div>
+           
           </div>
         </div>
 
         <div class="swiper-slide achievement-slide" data-achievement-category="honour">
           <div class="relative h-[300px] md:h-[400px] lg:h-[520px] overflow-hidden group cursor-pointer rounded-2xl">
-            <img src="https://ik.imagekit.io/iuiy6mihw/image7.webp" alt="Honours 2" class="achievement-img w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+            <img src="https://ik.imagekit.io/iuiy6mihw/image7.webp" alt="Honours 2" loading="lazy" class="achievement-img w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div class="absolute inset-0 flex flex-col justify-end p-4 md:p-6">
-              <h3 class="text-white text-base md:text-xl font-bold">Special Achievement</h3>
-              <p class="text-purple-300 text-xs md:text-sm mt-1">Distinguished Award</p>
-            </div>
+           
           </div>
         </div>
 
         <div class="swiper-slide achievement-slide" data-achievement-category="honour">
           <div class="relative h-[300px] md:h-[400px] lg:h-[520px] overflow-hidden group cursor-pointer rounded-2xl">
-            <img src="https://ik.imagekit.io/iuiy6mihw/image8.webp" alt="Honours 3" class="achievement-img w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+            <img src="https://ik.imagekit.io/iuiy6mihw/image8.webp" alt="Honours 3" loading="lazy" class="achievement-img w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div class="absolute inset-0 flex flex-col justify-end p-4 md:p-6">
-              <h3 class="text-white text-base md:text-xl font-bold">Excellence Recognition</h3>
-              <p class="text-purple-300 text-xs md:text-sm mt-1">Premium Recognition</p>
-            </div>
+            
           </div>
         </div>
 
         <!-- LATEST WORK CATEGORY -->
         <div class="swiper-slide achievement-slide" data-achievement-category="work">
           <div class="relative h-[300px] md:h-[400px] lg:h-[520px] overflow-hidden group cursor-pointer rounded-2xl">
-            <img src="https://ik.imagekit.io/iuiy6mihw/ignou2.jpeg" alt="Latest Work 1" class="achievement-img w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+            <img src="https://ik.imagekit.io/iuiy6mihw/ignou2.jpeg" alt="Latest Work 1" loading="lazy" class="achievement-img w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div class="absolute inset-0 flex flex-col justify-end p-4 md:p-6">
-              <h3 class="text-white text-base md:text-xl font-bold">Project Showcase</h3>
-              <p class="text-pink-300 text-xs md:text-sm mt-1">Latest Innovation</p>
-            </div>
+          
           </div>
         </div>
 
         <div class="swiper-slide achievement-slide" data-achievement-category="work">
           <div class="relative h-[300px] md:h-[400px] lg:h-[520px] overflow-hidden group cursor-pointer rounded-2xl">
-            <img src="https://ik.imagekit.io/iuiy6mihw/ignou1.jpeg" alt="Latest Work 2" class="achievement-img w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+            <img src="https://ik.imagekit.io/iuiy6mihw/ignou1.jpeg" alt="Latest Work 2" loading="lazy" class="achievement-img w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div class="absolute inset-0 flex flex-col justify-end p-4 md:p-6">
-              <h3 class="text-white text-base md:text-xl font-bold">Cutting Edge Work</h3>
-              <p class="text-pink-300 text-xs md:text-sm mt-1">Current Projects</p>
-            </div>
+            
           </div>
         </div>
 
         <div class="swiper-slide achievement-slide" data-achievement-category="work">
           <div class="relative h-[300px] md:h-[400px] lg:h-[520px] overflow-hidden group cursor-pointer rounded-2xl">
-            <img src="https://ik.imagekit.io/iuiy6mihw/ignou3.jpeg" alt="Latest Work 3" class="achievement-img w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+            <img src="https://ik.imagekit.io/iuiy6mihw/ignou3.jpeg" alt="Latest Work 3" loading="lazy" class="achievement-img w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div class="absolute inset-0 flex flex-col justify-end p-4 md:p-6">
-              <h3 class="text-white text-base md:text-xl font-bold">Professional Showcase</h3>
-              <p class="text-pink-300 text-xs md:text-sm mt-1">Portfolio Work</p>
-            </div>
+          
           </div>
         </div>
 
@@ -1605,6 +1763,10 @@
 
 
 <!-- ==================== CASE STUDIES SECTION ==================== -->
+<!-- AOS CSS -->
+<link rel="stylesheet"
+    href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
 <section id="case-studies"
     class="relative bg-[#F8FAFC] py-20 overflow-hidden">
 
@@ -1612,11 +1774,15 @@
     <div class="absolute inset-0">
 
         <div
-            class="absolute top-0 right-0 w-[350px] h-[350px] bg-cyan-100 blur-3xl rounded-full opacity-40">
+            class="absolute top-0 right-0 w-[350px] h-[350px] bg-cyan-100 blur-3xl rounded-full opacity-40"
+            data-aos="fade-left"
+            data-aos-duration="1500">
         </div>
 
         <div
-            class="absolute bottom-0 left-0 w-[300px] h-[300px] bg-blue-100 blur-3xl rounded-full opacity-40">
+            class="absolute bottom-0 left-0 w-[300px] h-[300px] bg-blue-100 blur-3xl rounded-full opacity-40"
+            data-aos="fade-right"
+            data-aos-duration="1500">
         </div>
 
     </div>
@@ -1625,7 +1791,9 @@
         class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
 
         <!-- HEADER -->
-        <div class="max-w-3xl">
+        <div class="max-w-3xl"
+            data-aos="fade-up"
+            data-aos-duration="1200">
 
             <p
                 class="text-sm uppercase tracking-[0.25em] font-semibold text-blue-600">
@@ -1657,177 +1825,197 @@
 
             <!-- CASE STUDY 1 -->
             <div
-    class="group bg-white border border-slate-200 rounded-[32px] p-8 lg:p-10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500">
+                class="group bg-white border border-slate-200 rounded-[32px] p-8 lg:p-10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500"
+                data-aos="fade-up"
+                data-aos-delay="100"
+                data-aos-duration="1200">
 
-    <!-- TOP -->
-    <div
-        class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
+                <!-- TOP -->
+                <div
+                    class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
 
-        <div>
+                    <div
+                        data-aos="fade-right"
+                        data-aos-delay="200">
 
-            <div
-                class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-50 border border-cyan-100 text-cyan-700 text-xs font-semibold">
+                        <div
+                            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-50 border border-cyan-100 text-cyan-700 text-xs font-semibold">
 
-                Enterprise E-Commerce Platform
+                            Enterprise E-Commerce Platform
+
+                        </div>
+
+                        <h3
+                            class="mt-5 text-3xl font-black text-slate-900 tracking-tight">
+
+                            Scalable Multi-Vendor Commerce System
+
+                        </h3>
+
+                        <p
+                            class="mt-4 text-slate-600 leading-relaxed max-w-3xl">
+
+                            Developed and optimized a large-scale e-commerce ecosystem
+                            using modern frontend and backend technologies with focus on
+                            scalability, performance, secure APIs, seller onboarding,
+                            and high-volume product management inspired by real-world
+                            enterprise commerce platforms.
+
+                        </p>
+
+                    </div>
+
+                    <!-- METRIC -->
+                    <div
+                        class="min-w-[140px] rounded-2xl bg-slate-900 text-white p-5 hover:scale-105 transition duration-500"
+                        data-aos="zoom-in"
+                        data-aos-delay="300">
+
+                        <p
+                            class="text-slate-400 text-xs uppercase tracking-wider">
+                            Platform Scale
+                        </p>
+
+                        <h4
+                            class="mt-2 text-4xl font-black">
+                            1M+
+                        </h4>
+
+                        <span
+                            class="text-sm text-slate-400">
+                            Product Listings
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <!-- GRID -->
+                <div
+                    class="mt-10 grid md:grid-cols-3 gap-6">
+
+                    <!-- PROBLEM -->
+                    <div
+                        class="rounded-2xl border border-slate-200 p-6 hover:shadow-xl hover:-translate-y-1 transition duration-500"
+                        data-aos="flip-left"
+                        data-aos-delay="100">
+
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-red-50 flex items-center justify-center text-red-500">
+
+                            <i class="fas fa-database"></i>
+
+                        </div>
+
+                        <h4
+                            class="mt-5 text-lg font-bold text-slate-900">
+                            Challenge
+                        </h4>
+
+                        <p
+                            class="mt-3 text-slate-600 leading-relaxed text-sm">
+
+                            Managing massive product inventories, vendor operations,
+                            advanced search functionality, and high concurrent traffic
+                            while maintaining smooth customer experience and fast loading speeds.
+
+                        </p>
+
+                    </div>
+
+                    <!-- SOLUTION -->
+                    <div
+                        class="rounded-2xl border border-slate-200 p-6 hover:shadow-xl hover:-translate-y-1 transition duration-500"
+                        data-aos="flip-left"
+                        data-aos-delay="250">
+
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-cyan-50 flex items-center justify-center text-cyan-600">
+
+                            <i class="fas fa-code"></i>
+
+                        </div>
+
+                        <h4
+                            class="mt-5 text-lg font-bold text-slate-900">
+                            Solution
+                        </h4>
+
+                        <p
+                            class="mt-3 text-slate-600 leading-relaxed text-sm">
+
+                            Engineered scalable architecture using Next.js,
+                            Python, Django, Redis, RabbitMQ, and Elasticsearch
+                            with asynchronous processing, optimized APIs,
+                            and responsive UI/UX for modern commerce operations.
+
+                        </p>
+
+                    </div>
+
+                    <!-- RESULT -->
+                    <div
+                        class="rounded-2xl border border-slate-200 p-6 hover:shadow-xl hover:-translate-y-1 transition duration-500"
+                        data-aos="flip-left"
+                        data-aos-delay="400">
+
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-green-50 flex items-center justify-center text-green-600">
+
+                            <i class="fas fa-chart-line"></i>
+
+                        </div>
+
+                        <h4
+                            class="mt-5 text-lg font-bold text-slate-900">
+                            Impact
+                        </h4>
+
+                        <p
+                            class="mt-3 text-slate-600 leading-relaxed text-sm">
+
+                            Improved platform scalability, faster product discovery,
+                            seamless multi-vendor management, enhanced search relevance,
+                            and reliable performance for enterprise-level traffic handling.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- TECH STACK -->
+                <div
+                    class="mt-8 flex flex-wrap gap-3"
+                    data-aos="fade-up"
+                    data-aos-delay="500">
+
+                    <span class="case-study-skill">Next.js</span>
+                    <span class="case-study-skill">React.js</span>
+                    <span class="case-study-skill">Python</span>
+                    <span class="case-study-skill">Django</span>
+                    <span class="case-study-skill">Redis</span>
+                    <span class="case-study-skill">RabbitMQ</span>
+                    <span class="case-study-skill">Elasticsearch</span>
+                    <span class="case-study-skill">AWS</span>
+
+                </div>
 
             </div>
-
-            <h3
-                class="mt-5 text-3xl font-black text-slate-900 tracking-tight">
-
-                Scalable Multi-Vendor Commerce System
-
-            </h3>
-
-            <p
-                class="mt-4 text-slate-600 leading-relaxed max-w-3xl">
-
-                Developed and optimized a large-scale e-commerce ecosystem
-                using modern frontend and backend technologies with focus on
-                scalability, performance, secure APIs, seller onboarding,
-                and high-volume product management inspired by real-world
-                enterprise commerce platforms.
-
-            </p>
-
-        </div>
-
-        <!-- METRIC -->
-        <div
-            class="min-w-[140px] rounded-2xl bg-slate-900 text-white p-5">
-
-            <p
-                class="text-slate-400 text-xs uppercase tracking-wider">
-                Platform Scale
-            </p>
-
-            <h4
-                class="mt-2 text-4xl font-black">
-                1M+
-            </h4>
-
-            <span
-                class="text-sm text-slate-400">
-                Product Listings
-            </span>
-
-        </div>
-
-    </div>
-
-    <!-- GRID -->
-    <div
-        class="mt-10 grid md:grid-cols-3 gap-6">
-
-        <!-- PROBLEM -->
-        <div
-            class="rounded-2xl border border-slate-200 p-6">
-
-            <div
-                class="w-12 h-12 rounded-2xl bg-red-50 flex items-center justify-center text-red-500">
-
-                <i class="fas fa-database"></i>
-
-            </div>
-
-            <h4
-                class="mt-5 text-lg font-bold text-slate-900">
-                Challenge
-            </h4>
-
-            <p
-                class="mt-3 text-slate-600 leading-relaxed text-sm">
-
-                Managing massive product inventories, vendor operations,
-                advanced search functionality, and high concurrent traffic
-                while maintaining smooth customer experience and fast loading speeds.
-
-            </p>
-
-        </div>
-
-        <!-- SOLUTION -->
-        <div
-            class="rounded-2xl border border-slate-200 p-6">
-
-            <div
-                class="w-12 h-12 rounded-2xl bg-cyan-50 flex items-center justify-center text-cyan-600">
-
-                <i class="fas fa-code"></i>
-
-            </div>
-
-            <h4
-                class="mt-5 text-lg font-bold text-slate-900">
-                Solution
-            </h4>
-
-            <p
-                class="mt-3 text-slate-600 leading-relaxed text-sm">
-
-                Engineered scalable architecture using Next.js,
-                Python, Django, Redis, RabbitMQ, and Elasticsearch
-                with asynchronous processing, optimized APIs,
-                and responsive UI/UX for modern commerce operations.
-
-            </p>
-
-        </div>
-
-        <!-- RESULT -->
-        <div
-            class="rounded-2xl border border-slate-200 p-6">
-
-            <div
-                class="w-12 h-12 rounded-2xl bg-green-50 flex items-center justify-center text-green-600">
-
-                <i class="fas fa-chart-line"></i>
-
-            </div>
-
-            <h4
-                class="mt-5 text-lg font-bold text-slate-900">
-                Impact
-            </h4>
-
-            <p
-                class="mt-3 text-slate-600 leading-relaxed text-sm">
-
-                Improved platform scalability, faster product discovery,
-                seamless multi-vendor management, enhanced search relevance,
-                and reliable performance for enterprise-level traffic handling.
-
-            </p>
-
-        </div>
-
-    </div>
-
-    <!-- TECH STACK -->
-    <div
-        class="mt-8 flex flex-wrap gap-3">
-
-        <span class="case-study-skill">Next.js</span>
-        <span class="case-study-skill">React.js</span>
-        <span class="case-study-skill">Python</span>
-        <span class="case-study-skill">Django</span>
-        <span class="case-study-skill">Redis</span>
-        <span class="case-study-skill">RabbitMQ</span>
-        <span class="case-study-skill">Elasticsearch</span>
-        <span class="case-study-skill">AWS</span>
-
-    </div>
-
-</div>
 
             <!-- CASE STUDY 2 -->
             <div
-                class="group bg-white border border-slate-200 rounded-[32px] p-8 lg:p-10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500">
+                class="group bg-white border border-slate-200 rounded-[32px] p-8 lg:p-10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500"
+                data-aos="fade-up"
+                data-aos-delay="150"
+                data-aos-duration="1200">
 
                 <div
                     class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
 
-                    <div>
+                    <div
+                        data-aos="fade-right"
+                        data-aos-delay="200">
 
                         <div
                             class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-xs font-semibold">
@@ -1856,7 +2044,9 @@
                     </div>
 
                     <div
-                        class="min-w-[140px] rounded-2xl bg-slate-900 text-white p-5">
+                        class="min-w-[140px] rounded-2xl bg-slate-900 text-white p-5 hover:scale-105 transition duration-500"
+                        data-aos="zoom-in"
+                        data-aos-delay="300">
 
                         <p
                             class="text-slate-400 text-xs uppercase tracking-wider">
@@ -1882,7 +2072,9 @@
                     class="mt-10 grid md:grid-cols-3 gap-6">
 
                     <div
-                        class="rounded-2xl border border-slate-200 p-6">
+                        class="rounded-2xl border border-slate-200 p-6 hover:shadow-xl hover:-translate-y-1 transition duration-500"
+                        data-aos="flip-up"
+                        data-aos-delay="100">
 
                         <div
                             class="w-12 h-12 rounded-2xl bg-red-50 flex items-center justify-center text-red-500">
@@ -1907,7 +2099,9 @@
                     </div>
 
                     <div
-                        class="rounded-2xl border border-slate-200 p-6">
+                        class="rounded-2xl border border-slate-200 p-6 hover:shadow-xl hover:-translate-y-1 transition duration-500"
+                        data-aos="flip-up"
+                        data-aos-delay="250">
 
                         <div
                             class="w-12 h-12 rounded-2xl bg-cyan-50 flex items-center justify-center text-cyan-600">
@@ -1933,7 +2127,9 @@
                     </div>
 
                     <div
-                        class="rounded-2xl border border-slate-200 p-6">
+                        class="rounded-2xl border border-slate-200 p-6 hover:shadow-xl hover:-translate-y-1 transition duration-500"
+                        data-aos="flip-up"
+                        data-aos-delay="400">
 
                         <div
                             class="w-12 h-12 rounded-2xl bg-green-50 flex items-center justify-center text-green-600">
@@ -1962,7 +2158,9 @@
 
                 <!-- STACK -->
                 <div
-                    class="mt-8 flex flex-wrap gap-3">
+                    class="mt-8 flex flex-wrap gap-3"
+                    data-aos="fade-up"
+                    data-aos-delay="500">
 
                     <span class="case-study-skill">Elasticsearch</span>
                     <span class="case-study-skill">Python</span>
@@ -1979,6 +2177,18 @@
     </div>
 
 </section>
+
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+    AOS.init({
+        once: true,
+        duration: 1000,
+        offset: 120,
+        easing: 'ease-in-out',
+    });
+</script>
 
 
 
@@ -2002,113 +2212,331 @@
 </style>
 
 <!-- system architecture -->
-<section id="architecture" class="bg-[#0B1220] text-white py-20 relative overflow-hidden">
+<!-- AOS CSS -->
+<link rel="stylesheet"
+    href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
 
-    <!-- Background glow -->
+<section id="architecture"
+    class="bg-[#0B1220] text-white py-20 relative overflow-hidden">
+
+    <!-- Animated Background Glow -->
     <div class="absolute inset-0">
-        <div class="absolute top-0 left-0 w-[300px] h-[300px] bg-blue-500/10 blur-3xl rounded-full"></div>
-        <div class="absolute bottom-0 right-0 w-[300px] h-[300px] bg-cyan-400/10 blur-3xl rounded-full"></div>
+
+        <div
+            class="absolute top-0 left-0 w-[320px] h-[320px] bg-blue-500/10 blur-3xl rounded-full animate-pulse"
+            data-aos="fade-right"
+            data-aos-duration="1500">
+        </div>
+
+        <div
+            class="absolute bottom-0 right-0 w-[320px] h-[320px] bg-cyan-400/10 blur-3xl rounded-full animate-pulse"
+            data-aos="fade-left"
+            data-aos-duration="1500">
+        </div>
+
+        <!-- Grid -->
+        <div
+            class="absolute inset-0 opacity-[0.03]"
+            style="background-image:linear-gradient(to_right,white_1px,transparent_1px),linear-gradient(to_bottom,white_1px,transparent_1px);background-size:70px_70px;">
+        </div>
+
     </div>
 
     <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
 
         <!-- Header -->
-        <div class="max-w-3xl">
-            <h2 class="text-4xl md:text-5xl font-black tracking-tight">
-                Scalable <span class="text-cyan-400">System Architecture</span>
+        <div class="max-w-3xl"
+            data-aos="fade-up"
+            data-aos-duration="1200">
+
+            <p
+                class="uppercase tracking-[0.3em] text-cyan-400 text-xs md:text-sm mb-4 font-semibold">
+                Architecture • Scalability • Performance
+            </p>
+
+            <h2
+                class="text-4xl md:text-5xl font-black tracking-tight leading-tight">
+
+                Scalable
+                <span
+                    class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                    System Architecture
+                </span>
+
             </h2>
 
-            <p class="mt-5 text-gray-300 leading-relaxed">
-                Real production architectures designed across e-commerce, search systems,
-                and high-traffic enterprise platforms with focus on performance, scalability and reliability.
+            <p
+                class="mt-5 text-gray-300 leading-relaxed text-lg">
+
+                Real production architectures designed across e-commerce,
+                search systems, and high-traffic enterprise platforms
+                with focus on scalability, distributed systems,
+                reliability, and performance optimization.
+
             </p>
+
+            <!-- Divider -->
+            <div
+                class="w-28 h-[3px] bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full mt-8">
+            </div>
+
         </div>
 
         <!-- Grid -->
-        <div class="mt-14 grid md:grid-cols-2 gap-8">
+        <div
+            class="mt-16 grid md:grid-cols-2 gap-8">
 
             <!-- SEARCH ARCHITECTURE -->
-            <div class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl">
+            <div
+                class="group relative bg-white/[0.04] border border-white/10 rounded-[32px] p-8 backdrop-blur-2xl overflow-hidden hover:border-cyan-400/30 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(0,255,255,0.08)] transition-all duration-700"
+                data-aos="fade-right"
+                data-aos-delay="100"
+                data-aos-duration="1200">
 
-                <h3 class="text-xl font-bold text-white flex items-center gap-2">
-                    <i class="fas fa-search text-cyan-400"></i>
+                <!-- Glow -->
+                <div
+                    class="absolute top-0 right-0 w-40 h-40 bg-cyan-400/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition duration-700">
+                </div>
+
+                <h3
+                    class="text-2xl font-bold text-white flex items-center gap-3">
+
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-cyan-400/10 border border-cyan-400/20 flex items-center justify-center text-cyan-400 text-lg group-hover:scale-110 transition duration-500">
+
+                        <i class="fas fa-search"></i>
+
+                    </div>
+
                     Elasticsearch Search Architecture
+
                 </h3>
 
-                <p class="mt-4 text-gray-300 text-sm leading-relaxed">
-                    Designed and optimized search systems for high-traffic e-commerce platforms handling large product catalogs
-                    with focus on relevance tuning and low-latency query performance.
+                <p
+                    class="mt-5 text-gray-300 text-sm leading-relaxed">
+
+                    Designed and optimized search systems for high-traffic
+                    e-commerce platforms handling massive product catalogs
+                    with focus on relevance tuning, indexing optimization
+                    and ultra-fast low-latency query performance.
+
                 </p>
 
                 <!-- Flow -->
-                <div class="mt-6 space-y-3 text-sm">
+                <div
+                    class="mt-8 space-y-4 text-sm">
 
-                    <div class="bg-black/30 border border-white/10 p-4 rounded-xl">
-                        <strong class="text-cyan-300">Ingestion Layer</strong><br>
+                    <div
+                        class="bg-black/30 border border-white/10 p-5 rounded-2xl hover:border-cyan-400/30 transition duration-500"
+                        data-aos="zoom-in"
+                        data-aos-delay="150">
+
+                        <strong class="text-cyan-300">
+                            Ingestion Layer
+                        </strong>
+
+                        <br>
+
                         APIs / ETL / Batch Indexing (Product Data Sync)
+
                     </div>
 
-                    <div class="bg-black/30 border border-white/10 p-4 rounded-xl">
-                        <strong class="text-cyan-300">Search Engine</strong><br>
-                        Elasticsearch Cluster (Indexing + Relevance + Query Optimization)
+                    <div
+                        class="flex justify-center text-cyan-400 text-xl animate-bounce">
+                        ↓
                     </div>
 
-                    <div class="bg-black/30 border border-white/10 p-4 rounded-xl">
-                        <strong class="text-cyan-300">Client Layer</strong><br>
+                    <div
+                        class="bg-black/30 border border-white/10 p-5 rounded-2xl hover:border-cyan-400/30 transition duration-500"
+                        data-aos="zoom-in"
+                        data-aos-delay="250">
+
+                        <strong class="text-cyan-300">
+                            Search Engine
+                        </strong>
+
+                        <br>
+
+                        Elasticsearch Cluster
+                        (Indexing + Relevance + Query Optimization)
+
+                    </div>
+
+                    <div
+                        class="flex justify-center text-cyan-400 text-xl animate-bounce">
+                        ↓
+                    </div>
+
+                    <div
+                        class="bg-black/30 border border-white/10 p-5 rounded-2xl hover:border-cyan-400/30 transition duration-500"
+                        data-aos="zoom-in"
+                        data-aos-delay="350">
+
+                        <strong class="text-cyan-300">
+                            Client Layer
+                        </strong>
+
+                        <br>
+
                         Next.js / React UI with fast search & filtering experience
+
                     </div>
 
                 </div>
 
                 <!-- Tech -->
-                <div class="mt-6 flex flex-wrap gap-2 text-xs">
-                    <span class="px-3 py-1 bg-white/10 rounded-full">Elasticsearch</span>
-                    <span class="px-3 py-1 bg-white/10 rounded-full">Python</span>
-                    <span class="px-3 py-1 bg-white/10 rounded-full">AWS</span>
-                    <span class="px-3 py-1 bg-white/10 rounded-full">Redis</span>
+                <div
+                    class="mt-8 flex flex-wrap gap-3"
+                    data-aos="fade-up"
+                    data-aos-delay="450">
+
+                    <span
+                        class="px-3 py-1 bg-white/10 rounded-full text-xs hover:bg-cyan-400/20 transition">
+                        Elasticsearch
+                    </span>
+
+                    <span
+                        class="px-3 py-1 bg-white/10 rounded-full text-xs hover:bg-cyan-400/20 transition">
+                        Python
+                    </span>
+
+                    <span
+                        class="px-3 py-1 bg-white/10 rounded-full text-xs hover:bg-cyan-400/20 transition">
+                        AWS
+                    </span>
+
+                    <span
+                        class="px-3 py-1 bg-white/10 rounded-full text-xs hover:bg-cyan-400/20 transition">
+                        Redis
+                    </span>
+
                 </div>
 
             </div>
 
             <!-- ASYNC ARCHITECTURE -->
-            <div class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl">
+            <div
+                class="group relative bg-white/[0.04] border border-white/10 rounded-[32px] p-8 backdrop-blur-2xl overflow-hidden hover:border-blue-400/30 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(59,130,246,0.10)] transition-all duration-700"
+                data-aos="fade-left"
+                data-aos-delay="200"
+                data-aos-duration="1200">
 
-                <h3 class="text-xl font-bold text-white flex items-center gap-2">
-                    <i class="fas fa-bolt text-cyan-400"></i>
+                <!-- Glow -->
+                <div
+                    class="absolute bottom-0 left-0 w-40 h-40 bg-blue-500/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition duration-700">
+                </div>
+
+                <h3
+                    class="text-2xl font-bold text-white flex items-center gap-3">
+
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-blue-500/10 border border-blue-400/20 flex items-center justify-center text-blue-400 text-lg group-hover:scale-110 transition duration-500">
+
+                        <i class="fas fa-bolt"></i>
+
+                    </div>
+
                     Async & Scalable Processing System
+
                 </h3>
 
-                <p class="mt-4 text-gray-300 text-sm leading-relaxed">
-                    Built distributed backend systems to handle high-volume workloads using
-                    queue-based architecture and background processing.
+                <p
+                    class="mt-5 text-gray-300 text-sm leading-relaxed">
+
+                    Built distributed backend systems to process
+                    high-volume workloads using queue-based architecture,
+                    background workers, asynchronous processing,
+                    and scalable cloud-native services.
+
                 </p>
 
                 <!-- Flow -->
-                <div class="mt-6 space-y-3 text-sm">
+                <div
+                    class="mt-8 space-y-4 text-sm">
 
-                    <div class="bg-black/30 border border-white/10 p-4 rounded-xl">
-                        <strong class="text-cyan-300">API Layer</strong><br>
+                    <div
+                        class="bg-black/30 border border-white/10 p-5 rounded-2xl hover:border-blue-400/30 transition duration-500"
+                        data-aos="zoom-in"
+                        data-aos-delay="200">
+
+                        <strong class="text-cyan-300">
+                            API Layer
+                        </strong>
+
+                        <br>
+
                         Fast APIs handling user requests with minimal latency
+
                     </div>
 
-                    <div class="bg-black/30 border border-white/10 p-4 rounded-xl">
-                        <strong class="text-cyan-300">Queue System</strong><br>
+                    <div
+                        class="flex justify-center text-blue-400 text-xl animate-bounce">
+                        ↓
+                    </div>
+
+                    <div
+                        class="bg-black/30 border border-white/10 p-5 rounded-2xl hover:border-blue-400/30 transition duration-500"
+                        data-aos="zoom-in"
+                        data-aos-delay="300">
+
+                        <strong class="text-cyan-300">
+                            Queue System
+                        </strong>
+
+                        <br>
+
                         Celery + RabbitMQ for async task processing
+
                     </div>
 
-                    <div class="bg-black/30 border border-white/10 p-4 rounded-xl">
-                        <strong class="text-cyan-300">Worker Layer</strong><br>
+                    <div
+                        class="flex justify-center text-blue-400 text-xl animate-bounce">
+                        ↓
+                    </div>
+
+                    <div
+                        class="bg-black/30 border border-white/10 p-5 rounded-2xl hover:border-blue-400/30 transition duration-500"
+                        data-aos="zoom-in"
+                        data-aos-delay="400">
+
+                        <strong class="text-cyan-300">
+                            Worker Layer
+                        </strong>
+
+                        <br>
+
                         Background jobs for indexing, processing & heavy operations
+
                     </div>
 
                 </div>
 
                 <!-- Tech -->
-                <div class="mt-6 flex flex-wrap gap-2 text-xs">
-                    <span class="px-3 py-1 bg-white/10 rounded-full">Celery</span>
-                    <span class="px-3 py-1 bg-white/10 rounded-full">RabbitMQ</span>
-                    <span class="px-3 py-1 bg-white/10 rounded-full">Django</span>
-                    <span class="px-3 py-1 bg-white/10 rounded-full">Docker</span>
+                <div
+                    class="mt-8 flex flex-wrap gap-3"
+                    data-aos="fade-up"
+                    data-aos-delay="500">
+
+                    <span
+                        class="px-3 py-1 bg-white/10 rounded-full text-xs hover:bg-blue-400/20 transition">
+                        Celery
+                    </span>
+
+                    <span
+                        class="px-3 py-1 bg-white/10 rounded-full text-xs hover:bg-blue-400/20 transition">
+                        RabbitMQ
+                    </span>
+
+                    <span
+                        class="px-3 py-1 bg-white/10 rounded-full text-xs hover:bg-blue-400/20 transition">
+                        Django
+                    </span>
+
+                    <span
+                        class="px-3 py-1 bg-white/10 rounded-full text-xs hover:bg-blue-400/20 transition">
+                        Docker
+                    </span>
+
                 </div>
 
             </div>
@@ -2116,50 +2544,454 @@
         </div>
 
         <!-- FOOT NOTE -->
-        <div class="mt-12 text-center text-gray-400 text-sm">
-            Designed from real production systems: 1M+ catalog scale, enterprise search, and cloud deployments on AWS.
+        <div
+            class="mt-16 text-center"
+            data-aos="fade-up"
+            data-aos-delay="300">
+
+            <div
+                class="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-white/10 bg-white/[0.04] backdrop-blur-xl text-gray-300 text-sm">
+
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+
+                Designed from real production systems:
+                1M+ catalog scale, enterprise search,
+                and cloud deployments on AWS.
+
+            </div>
+
         </div>
 
     </div>
 
 </section>
 
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+    AOS.init({
+        once: true,
+        duration: 1000,
+        offset: 120,
+        easing: 'ease-in-out',
+    });
+</script>
+
 
     <!-- ==================== BLOGS FROM MEDIUM (Linked ES6 & AI themed) ==================== -->
-    <section id="blogs" class="bg-gray-100 section-padding">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-10"><h2 class="text-3xl font-bold">Latest Tech <span class="ai-gradient-text">Insights</span></h2><p class="text-gray-600">From ES6 to AI Agents — exploring the future of development on Medium</p></div>
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- blog 1 from medium content -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover-lift blog-card border-l-4 border-blue-500"><div class="p-6"><div class="flex items-center gap-3 text-sm text-blue-600 mb-2"><i class="fab fa-medium"></i><span>medium.com</span></div><h3 class="text-xl font-bold mb-2">What are the features of ES6?</h3><p class="text-gray-600 mb-4">ES6 introduced const, let, arrow functions, template literals, destructuring, modules, and powerful enhancements that shaped modern JavaScript.</p><a href="https://hiteshmishra708.medium.com/" target="_blank" class="inline-flex items-center text-blue-600 font-medium">Read full story <i class="fas fa-arrow-right ml-1"></i></a></div></div>
-                <!-- additional AI blog generated from LinkedIn's post about Full Stack + AI -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover-lift blog-card border-l-4 border-indigo-400"><div class="p-6"><div class="flex items-center gap-3 text-sm text-indigo-600 mb-2"><i class="fas fa-brain"></i><span>Future Full Stack</span></div><h3 class="text-xl font-bold mb-2">The Rise of Intelligent Apps: AI is Now Full Stack</h3><p class="text-gray-600 mb-4">Modern full stack isn't just UI + DB — it’s about integrating AI agents, embeddings, and LLM APIs. How I'm building smart dashboards and copilots.</p><a href="https://hiteshmishra708.medium.com/" target="_blank" class="inline-flex items-center text-indigo-600 font-medium">Read on Medium →</a></div></div>
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover-lift blog-card"><div class="p-6"><i class="fab fa-linkedin text-blue-500 text-xl mb-2 block"></i><h3 class="text-xl font-bold">Why Full Stack Devs Must Learn AI in 2026</h3><p class="text-gray-600 mt-2">Sharing insights from my viral LinkedIn post: "From CRUD to intelligent systems — the developer mindset shift".</p><a href="https://www.linkedin.com/in/hiteshmishra708" target="_blank" class="mt-3 inline-block text-blue-600 text-sm font-medium">Discuss on LinkedIn →</a></div></div>
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover-lift blog-card"><div class="p-6"><h3 class="text-xl font-bold">OpenAI vs Indian IT: The Value of Intelligence</h3><p class="text-gray-600 mt-2">A thought provoking comparison: OpenAI valuation vs traditional IT workforce. Embracing AI-driven building blocks.</p><a href="https://hiteshmishra708.medium.com/" target="_blank" class="mt-3 inline-block text-blue-600 text-sm font-medium">Explore more →</a></div></div>
-            </div>
-            <div class="text-center mt-10"><a href="https://hiteshmishra708.medium.com/" target="_blank" class="bg-gray-900 hover:bg-blue-800 text-white px-6 py-3 rounded-full inline-flex items-center gap-2 transition">Visit all blogs <i class="fab fa-medium"></i></a></div>
+   <!-- AOS CSS -->
+<link rel="stylesheet"
+    href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+<section id="blogs"
+    class="relative bg-[#F8FAFC] section-padding py-24 overflow-hidden">
+
+    <!-- BACKGROUND GLOW -->
+    <div class="absolute inset-0">
+
+        <div
+            class="absolute top-0 left-0 w-[320px] h-[320px] bg-blue-400/10 blur-[120px] rounded-full animate-pulse">
         </div>
-    </section>
+
+        <div
+            class="absolute bottom-0 right-0 w-[320px] h-[320px] bg-cyan-400/10 blur-[120px] rounded-full animate-pulse">
+        </div>
+
+        <!-- Grid -->
+        <div
+            class="absolute inset-0 opacity-[0.03]"
+            style="background-image:linear-gradient(to_right,#0f172a_1px,transparent_1px),linear-gradient(to_bottom,#0f172a_1px,transparent_1px);background-size:70px_70px;">
+        </div>
+
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+
+        <!-- HEADER -->
+        <div class="text-center mb-16 max-w-3xl mx-auto"
+            data-aos="fade-up"
+            data-aos-duration="1200">
+
+            <p
+                class="uppercase tracking-[0.3em] text-blue-600 text-xs md:text-sm font-semibold mb-4">
+                Articles • AI • Development
+            </p>
+
+            <h2
+                class="text-4xl md:text-5xl font-black text-slate-900 leading-tight">
+
+                Latest Tech
+                <span
+                    class="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                    Insights
+                </span>
+
+            </h2>
+
+            <p
+                class="text-slate-600 text-lg mt-6 leading-relaxed">
+                From ES6 to AI Agents — exploring modern development,
+                scalable systems, AI-powered applications,
+                and the future of full stack engineering.
+            </p>
+
+            <!-- Divider -->
+            <div
+                class="w-28 h-[3px] bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full mx-auto mt-8">
+            </div>
+
+        </div>
+
+        <!-- BLOG GRID -->
+        <div class="grid md:grid-cols-2 gap-8">
+
+            <!-- BLOG 1 -->
+            <div
+                class="group relative bg-white rounded-[28px] shadow-md overflow-hidden border border-slate-200 hover:shadow-2xl hover:-translate-y-2 transition-all duration-700"
+                data-aos="fade-up"
+                data-aos-delay="100">
+
+                <!-- Glow -->
+                <div
+                    class="absolute top-0 right-0 w-40 h-40 bg-blue-500/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition duration-700">
+                </div>
+
+                <!-- TOP BAR -->
+                <div
+                    class="h-1.5 bg-gradient-to-r from-blue-500 to-cyan-400">
+                </div>
+
+                <div class="p-7 relative z-10">
+
+                    <div
+                        class="flex items-center gap-3 text-sm text-blue-600 mb-4">
+
+                        <div
+                            class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center">
+
+                            <i class="fab fa-medium text-lg"></i>
+
+                        </div>
+
+                        <span class="font-semibold">
+                            medium.com
+                        </span>
+
+                    </div>
+
+                    <h3
+                        class="text-2xl font-black text-slate-900 leading-snug">
+
+                        What are the features of ES6?
+
+                    </h3>
+
+                    <p
+                        class="text-slate-600 mt-4 leading-relaxed">
+
+                        ES6 introduced const, let, arrow functions,
+                        template literals, destructuring, modules,
+                        and modern JavaScript capabilities
+                        that transformed frontend development.
+
+                    </p>
+
+                    <a href="https://hiteshmishra708.medium.com/"
+                        target="_blank"
+                        class="mt-6 inline-flex items-center gap-2 text-blue-600 font-semibold hover:gap-3 transition-all">
+
+                        Read full story
+
+                        <i class="fas fa-arrow-right text-sm"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- BLOG 2 -->
+            <div
+                class="group relative bg-white rounded-[28px] shadow-md overflow-hidden border border-slate-200 hover:shadow-2xl hover:-translate-y-2 transition-all duration-700"
+                data-aos="fade-up"
+                data-aos-delay="200">
+
+                <div
+                    class="absolute top-0 right-0 w-40 h-40 bg-indigo-500/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition duration-700">
+                </div>
+
+                <div
+                    class="h-1.5 bg-gradient-to-r from-indigo-500 to-blue-500">
+                </div>
+
+                <div class="p-7 relative z-10">
+
+                    <div
+                        class="flex items-center gap-3 text-sm text-indigo-600 mb-4">
+
+                        <div
+                            class="w-10 h-10 rounded-xl bg-indigo-50 flex items-center justify-center">
+
+                            <i class="fas fa-brain text-lg"></i>
+
+                        </div>
+
+                        <span class="font-semibold">
+                            Future Full Stack
+                        </span>
+
+                    </div>
+
+                    <h3
+                        class="text-2xl font-black text-slate-900 leading-snug">
+
+                        The Rise of Intelligent Apps:
+                        AI is Now Full Stack
+
+                    </h3>
+
+                    <p
+                        class="text-slate-600 mt-4 leading-relaxed">
+
+                        Modern full stack development now includes
+                        AI agents, embeddings, vector databases,
+                        and LLM-powered workflows for building
+                        intelligent user experiences.
+
+                    </p>
+
+                    <a href="https://hiteshmishra708.medium.com/"
+                        target="_blank"
+                        class="mt-6 inline-flex items-center gap-2 text-indigo-600 font-semibold hover:gap-3 transition-all">
+
+                        Read on Medium
+
+                        <i class="fas fa-arrow-right text-sm"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- BLOG 3 -->
+            <div
+                class="group relative bg-white rounded-[28px] shadow-md overflow-hidden border border-slate-200 hover:shadow-2xl hover:-translate-y-2 transition-all duration-700"
+                data-aos="fade-up"
+                data-aos-delay="300">
+
+                <div
+                    class="absolute top-0 left-0 w-40 h-40 bg-cyan-500/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition duration-700">
+                </div>
+
+                <div
+                    class="h-1.5 bg-gradient-to-r from-cyan-500 to-blue-500">
+                </div>
+
+                <div class="p-7 relative z-10">
+
+                    <div
+                        class="flex items-center gap-3 text-sm text-blue-600 mb-4">
+
+                        <div
+                            class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center">
+
+                            <i class="fab fa-linkedin text-lg"></i>
+
+                        </div>
+
+                        <span class="font-semibold">
+                            LinkedIn Insights
+                        </span>
+
+                    </div>
+
+                    <h3
+                        class="text-2xl font-black text-slate-900 leading-snug">
+
+                        Why Full Stack Developers
+                        Must Learn AI in 2026
+
+                    </h3>
+
+                    <p
+                        class="text-slate-600 mt-4 leading-relaxed">
+
+                        From CRUD applications to intelligent systems —
+                        the modern developer mindset is shifting toward
+                        automation, copilots and AI-driven architecture.
+
+                    </p>
+
+                    <a href="https://www.linkedin.com/in/hiteshmishra708"
+                        target="_blank"
+                        class="mt-6 inline-flex items-center gap-2 text-blue-600 font-semibold hover:gap-3 transition-all">
+
+                        Discuss on LinkedIn
+
+                        <i class="fas fa-arrow-right text-sm"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- BLOG 4 -->
+            <div
+                class="group relative bg-white rounded-[28px] shadow-md overflow-hidden border border-slate-200 hover:shadow-2xl hover:-translate-y-2 transition-all duration-700"
+                data-aos="fade-up"
+                data-aos-delay="400">
+
+                <div
+                    class="absolute bottom-0 right-0 w-40 h-40 bg-violet-500/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition duration-700">
+                </div>
+
+                <div
+                    class="h-1.5 bg-gradient-to-r from-violet-500 to-cyan-500">
+                </div>
+
+                <div class="p-7 relative z-10">
+
+                    <div
+                        class="flex items-center gap-3 text-sm text-violet-600 mb-4">
+
+                        <div
+                            class="w-10 h-10 rounded-xl bg-violet-50 flex items-center justify-center">
+
+                            <i class="fas fa-chart-line text-lg"></i>
+
+                        </div>
+
+                        <span class="font-semibold">
+                            AI & Innovation
+                        </span>
+
+                    </div>
+
+                    <h3
+                        class="text-2xl font-black text-slate-900 leading-snug">
+
+                        OpenAI vs Indian IT:
+                        The Value of Intelligence
+
+                    </h3>
+
+                    <p
+                        class="text-slate-600 mt-4 leading-relaxed">
+
+                        Exploring the transformation of software engineering,
+                        AI-driven platforms, and how intelligent systems
+                        are reshaping the global tech landscape.
+
+                    </p>
+
+                    <a href="https://hiteshmishra708.medium.com/"
+                        target="_blank"
+                        class="mt-6 inline-flex items-center gap-2 text-violet-600 font-semibold hover:gap-3 transition-all">
+
+                        Explore more
+
+                        <i class="fas fa-arrow-right text-sm"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- BUTTON -->
+        <div class="text-center mt-14"
+            data-aos="zoom-in"
+            data-aos-delay="500">
+
+            <a href="https://hiteshmishra708.medium.com/"
+                target="_blank"
+                class="group inline-flex items-center gap-3 bg-slate-900 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold shadow-xl transition-all duration-500 hover:scale-105">
+
+                Visit All Blogs
+
+                <i
+                    class="fab fa-medium text-lg group-hover:rotate-12 transition duration-500"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+    AOS.init({
+        once: true,
+        duration: 1000,
+        offset: 120,
+        easing: 'ease-in-out',
+    });
+</script>
 
     <!-- ==================== GITHUB PROJECTS (REDESIGNED) ==================== -->
-<section id="github" class="py-20 bg-[#050816] text-white">
+<!-- AOS CSS -->
+<link rel="stylesheet"
+    href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
 
-  <div class="max-w-6xl mx-auto px-6">
+<section id="github"
+    class="relative py-20 bg-[#050816] text-white overflow-hidden">
+
+  <!-- Background Glow -->
+  <div class="absolute inset-0">
+
+    <div
+      class="absolute top-0 left-0 w-[320px] h-[320px] bg-cyan-500/10 blur-[120px] rounded-full animate-pulse">
+    </div>
+
+    <div
+      class="absolute bottom-0 right-0 w-[320px] h-[320px] bg-blue-500/10 blur-[120px] rounded-full animate-pulse">
+    </div>
+
+    <!-- Grid -->
+    <div
+      class="absolute inset-0 opacity-[0.03]"
+      style="background-image:linear-gradient(to_right,white_1px,transparent_1px),linear-gradient(to_bottom,white_1px,transparent_1px);background-size:70px_70px;">
+    </div>
+
+  </div>
+
+  <div class="relative z-10 max-w-6xl mx-auto px-6">
 
     <!-- Heading -->
-    <div class="text-center mb-14">
+    <div class="text-center mb-14"
+      data-aos="fade-up"
+      data-aos-duration="1200">
 
       <p class="text-cyan-400 uppercase tracking-[0.3em] text-xs mb-3">
         Engineering Work
       </p>
 
-      <h2 class="text-3xl md:text-5xl font-black">
-        GitHub & Technical Projects
+      <h2 class="text-3xl md:text-5xl font-black leading-tight">
+        GitHub &
+        <span
+          class="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+          Technical Projects
+        </span>
       </h2>
 
-      <p class="mt-4 text-gray-400 max-w-2xl mx-auto">
-        Production-oriented backend systems, search architectures, and Python-based engineering solutions.
+      <p class="mt-4 text-gray-400 max-w-2xl mx-auto leading-relaxed">
+        Production-oriented backend systems, search architectures,
+        and Python-based engineering solutions.
       </p>
+
+      <!-- Divider -->
+      <div
+        class="w-28 h-[3px] bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto mt-7 rounded-full">
+      </div>
 
     </div>
 
@@ -2167,76 +2999,166 @@
     <div class="grid md:grid-cols-3 gap-8">
 
       <!-- Project 1 -->
-      <div class="p-6 rounded-2xl border border-white/10 bg-white/5 hover:border-cyan-400/30 transition">
+      <div
+        class="group relative p-6 rounded-[28px] border border-white/10 bg-white/[0.04] backdrop-blur-xl hover:border-cyan-400/40 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(6,182,212,0.15)] transition-all duration-700 overflow-hidden"
+        data-aos="fade-up"
+        data-aos-delay="100">
 
-        <h3 class="text-lg font-bold mb-2">
+        <!-- Glow -->
+        <div
+          class="absolute top-0 right-0 w-40 h-40 bg-cyan-500/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition duration-700">
+        </div>
+
+        <!-- Icon -->
+        <div
+          class="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-400/20 flex items-center justify-center text-cyan-400 text-2xl mb-5">
+
+          <i class="fas fa-robot"></i>
+
+        </div>
+
+        <h3 class="text-xl font-bold mb-3">
           Python Chatbot System
         </h3>
 
-        <p class="text-sm text-gray-400 mb-4 leading-relaxed">
+        <p class="text-sm text-gray-400 mb-5 leading-relaxed">
           Python-based conversational system with automated response handling and modular architecture.
         </p>
 
-        <div class="flex flex-wrap gap-2 text-xs mb-5">
-          <span class="px-3 py-1 rounded-full bg-white/10">Python</span>
-          <span class="px-3 py-1 rounded-full bg-white/10">AI</span>
-          <span class="px-3 py-1 rounded-full bg-white/10">Automation</span>
+        <div class="flex flex-wrap gap-2 text-xs mb-6">
+
+          <span class="px-3 py-1 rounded-full bg-white/10">
+            Python
+          </span>
+
+          <span class="px-3 py-1 rounded-full bg-white/10">
+            AI
+          </span>
+
+          <span class="px-3 py-1 rounded-full bg-white/10">
+            Automation
+          </span>
+
         </div>
 
         <a href="https://github.com/hiteshmishra708/python-chatbot"
-           target="_blank"
-           class="text-cyan-400 text-sm hover:underline">
-          View Repository →
+          target="_blank"
+          class="inline-flex items-center gap-2 text-cyan-400 text-sm font-semibold hover:gap-3 transition-all duration-300">
+
+          View Repository
+
+          <i class="fas fa-arrow-right text-xs"></i>
+
         </a>
 
       </div>
 
       <!-- Project 2 -->
-      <div class="p-6 rounded-2xl border border-white/10 bg-white/5 hover:border-blue-400/30 transition">
+      <div
+        class="group relative p-6 rounded-[28px] border border-white/10 bg-white/[0.04] backdrop-blur-xl hover:border-blue-400/40 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(59,130,246,0.15)] transition-all duration-700 overflow-hidden"
+        data-aos="fade-up"
+        data-aos-delay="200">
 
-        <h3 class="text-lg font-bold mb-2">
+        <!-- Glow -->
+        <div
+          class="absolute top-0 right-0 w-40 h-40 bg-blue-500/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition duration-700">
+        </div>
+
+        <!-- Icon -->
+        <div
+          class="w-14 h-14 rounded-2xl bg-blue-500/10 border border-blue-400/20 flex items-center justify-center text-blue-400 text-2xl mb-5">
+
+          <i class="fas fa-code"></i>
+
+        </div>
+
+        <h3 class="text-xl font-bold mb-3">
           Python Engineering Toolkit
         </h3>
 
-        <p class="text-sm text-gray-400 mb-4 leading-relaxed">
+        <p class="text-sm text-gray-400 mb-5 leading-relaxed">
           Collection of algorithms, logic building programs, and backend utility scripts.
         </p>
 
-        <div class="flex flex-wrap gap-2 text-xs mb-5">
-          <span class="px-3 py-1 rounded-full bg-white/10">Python</span>
-          <span class="px-3 py-1 rounded-full bg-white/10">DSA</span>
-          <span class="px-3 py-1 rounded-full bg-white/10">Backend</span>
+        <div class="flex flex-wrap gap-2 text-xs mb-6">
+
+          <span class="px-3 py-1 rounded-full bg-white/10">
+            Python
+          </span>
+
+          <span class="px-3 py-1 rounded-full bg-white/10">
+            DSA
+          </span>
+
+          <span class="px-3 py-1 rounded-full bg-white/10">
+            Backend
+          </span>
+
         </div>
 
         <a href="https://github.com/hiteshmishra708/python-programs"
-           target="_blank"
-           class="text-blue-400 text-sm hover:underline">
-          View Repository →
+          target="_blank"
+          class="inline-flex items-center gap-2 text-blue-400 text-sm font-semibold hover:gap-3 transition-all duration-300">
+
+          View Repository
+
+          <i class="fas fa-arrow-right text-xs"></i>
+
         </a>
 
       </div>
 
       <!-- Project 3 -->
-      <div class="p-6 rounded-2xl border border-white/10 bg-white/5 hover:border-sky-400/30 transition">
+      <div
+        class="group relative p-6 rounded-[28px] border border-white/10 bg-white/[0.04] backdrop-blur-xl hover:border-sky-400/40 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(14,165,233,0.15)] transition-all duration-700 overflow-hidden"
+        data-aos="fade-up"
+        data-aos-delay="300">
 
-        <h3 class="text-lg font-bold mb-2">
+        <!-- Glow -->
+        <div
+          class="absolute top-0 right-0 w-40 h-40 bg-sky-500/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition duration-700">
+        </div>
+
+        <!-- Icon -->
+        <div
+          class="w-14 h-14 rounded-2xl bg-sky-500/10 border border-sky-400/20 flex items-center justify-center text-sky-400 text-2xl mb-5">
+
+          <i class="fas fa-search"></i>
+
+        </div>
+
+        <h3 class="text-xl font-bold mb-3">
           Django Search Engine Integration
         </h3>
 
-        <p class="text-sm text-gray-400 mb-4 leading-relaxed">
+        <p class="text-sm text-gray-400 mb-5 leading-relaxed">
           Scalable search system using Django + Elasticsearch for optimized query performance.
         </p>
 
-        <div class="flex flex-wrap gap-2 text-xs mb-5">
-          <span class="px-3 py-1 rounded-full bg-white/10">Django</span>
-          <span class="px-3 py-1 rounded-full bg-white/10">Elasticsearch</span>
-          <span class="px-3 py-1 rounded-full bg-white/10">System Design</span>
+        <div class="flex flex-wrap gap-2 text-xs mb-6">
+
+          <span class="px-3 py-1 rounded-full bg-white/10">
+            Django
+          </span>
+
+          <span class="px-3 py-1 rounded-full bg-white/10">
+            Elasticsearch
+          </span>
+
+          <span class="px-3 py-1 rounded-full bg-white/10">
+            System Design
+          </span>
+
         </div>
 
         <a href="https://github.com/hiteshmishra708/django-elasticsearch"
-           target="_blank"
-           class="text-sky-400 text-sm hover:underline">
-          View Repository →
+          target="_blank"
+          class="inline-flex items-center gap-2 text-sky-400 text-sm font-semibold hover:gap-3 transition-all duration-300">
+
+          View Repository
+
+          <i class="fas fa-arrow-right text-xs"></i>
+
         </a>
 
       </div>
@@ -2246,6 +3168,18 @@
   </div>
 
 </section>
+
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+  AOS.init({
+    once: true,
+    duration: 1000,
+    easing: 'ease-in-out',
+    offset: 100,
+  });
+</script>
     
 
     <!-- ==================== TESTIMONIALS (from referindia data) ==================== -->
@@ -2718,97 +3652,195 @@
 </script>
 
    <!-- ==================== CONTACT (PREMIUM) ==================== -->
-<section id="contact" class="relative py-24 bg-[#050816] text-white overflow-hidden">
+<!-- AOS CSS -->
+<link rel="stylesheet"
+    href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+<section id="contact"
+    class="relative py-24 bg-[#050816] text-white overflow-hidden">
 
   <!-- Glow Background -->
   <div class="absolute inset-0">
-    <div class="absolute top-0 left-0 w-[320px] h-[320px] bg-blue-500/10 blur-[140px] rounded-full"></div>
-    <div class="absolute bottom-0 right-0 w-[320px] h-[320px] bg-cyan-500/10 blur-[140px] rounded-full"></div>
+
+    <div
+      class="absolute top-0 left-0 w-[320px] h-[320px] bg-blue-500/10 blur-[140px] rounded-full animate-pulse">
+    </div>
+
+    <div
+      class="absolute bottom-0 right-0 w-[320px] h-[320px] bg-cyan-500/10 blur-[140px] rounded-full animate-pulse">
+    </div>
+
+    <!-- Grid -->
+    <div
+      class="absolute inset-0 opacity-[0.03]"
+      style="background-image:linear-gradient(to_right,white_1px,transparent_1px),linear-gradient(to_bottom,white_1px,transparent_1px);background-size:70px_70px;">
+    </div>
+
   </div>
 
-  <div class="relative max-w-5xl mx-auto px-6 text-center">
+  <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+
+    <!-- Small Badge -->
+    <div
+      class="inline-flex items-center gap-2 border border-white/10 bg-white/[0.04] backdrop-blur-xl px-5 py-2 rounded-full text-xs tracking-[0.2em] uppercase text-cyan-300 mb-8 shadow-lg"
+      data-aos="zoom-in">
+
+      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+
+      Open For Opportunities
+
+    </div>
 
     <!-- Heading -->
-    <h2 class="text-3xl md:text-5xl font-black tracking-tight">
-      Let’s Build AI-Driven & Scalable Systems
+    <h2
+      class="text-3xl md:text-5xl font-black tracking-tight leading-tight"
+      data-aos="fade-up"
+      data-aos-duration="1200">
+
+      Let’s Build
+      <span
+        class="bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
+        AI-Driven
+      </span>
+
+      & Scalable Systems
+
     </h2>
 
-    <p class="mt-5 text-gray-400 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+    <p
+      class="mt-5 text-gray-400 text-base md:text-lg max-w-2xl mx-auto leading-relaxed"
+      data-aos="fade-up"
+      data-aos-delay="150">
+
       Open to collaborations, system design discussions, and engineering opportunities focused on backend scalability,
       AI systems, and distributed architecture.
+
     </p>
 
+    <!-- Divider -->
+    <div
+      class="w-28 h-[3px] bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full mx-auto mt-8"
+      data-aos="zoom-in"
+      data-aos-delay="250">
+    </div>
+
     <!-- CTA Buttons -->
-    <div class="mt-10 flex flex-wrap justify-center gap-4">
+    <div
+      class="mt-12 flex flex-wrap justify-center gap-4"
+      data-aos="fade-up"
+      data-aos-delay="300">
 
       <!-- Email -->
-  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hiteshmishra708@gmail.com"
-   target="_blank"
-   class="px-7 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 transition font-semibold flex items-center gap-2 shadow-lg shadow-blue-600/20">
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hiteshmishra708@gmail.com"
+        target="_blank"
+        class="group px-7 py-3.5 rounded-2xl bg-blue-600 hover:bg-blue-500 transition-all duration-500 font-semibold flex items-center gap-3 shadow-[0_10px_30px_rgba(37,99,235,0.35)] hover:scale-105">
 
-    <i class="fas fa-envelope"></i>
-    Email
-</a>
+        <i
+          class="fas fa-envelope group-hover:rotate-12 transition duration-500"></i>
+
+        Email
+
+      </a>
 
       <!-- Phone -->
       <a href="tel:+918286651155"
-         class="px-7 py-3.5 rounded-xl border border-white/10 bg-white/5 hover:border-blue-400 hover:text-blue-300 transition font-semibold flex items-center gap-2">
+        class="group px-7 py-3.5 rounded-2xl border border-white/10 bg-white/[0.05] backdrop-blur-xl hover:border-blue-400 hover:text-blue-300 hover:bg-blue-500/10 transition-all duration-500 font-semibold flex items-center gap-3 hover:scale-105">
 
-        <i class="fas fa-phone"></i>
+        <i
+          class="fas fa-phone group-hover:rotate-12 transition duration-500"></i>
+
         Call
+
       </a>
 
       <!-- LinkedIn -->
       <a href="https://linkedin.com/in/hiteshmishra708"
-         target="_blank"
-         class="px-7 py-3.5 rounded-xl border border-white/10 bg-white/5 hover:border-cyan-400 hover:text-cyan-300 transition font-semibold flex items-center gap-2">
+        target="_blank"
+        class="group px-7 py-3.5 rounded-2xl border border-white/10 bg-white/[0.05] backdrop-blur-xl hover:border-cyan-400 hover:text-cyan-300 hover:bg-cyan-500/10 transition-all duration-500 font-semibold flex items-center gap-3 hover:scale-105">
 
-        <i class="fab fa-linkedin"></i>
+        <i
+          class="fab fa-linkedin group-hover:scale-125 transition duration-500"></i>
+
         LinkedIn
+
       </a>
 
       <!-- GitHub -->
       <a href="https://github.com/hiteshmishra708"
-         target="_blank"
-         class="px-7 py-3.5 rounded-xl border border-white/10 bg-white/5 hover:border-gray-300 hover:text-gray-200 transition font-semibold flex items-center gap-2">
+        target="_blank"
+        class="group px-7 py-3.5 rounded-2xl border border-white/10 bg-white/[0.05] backdrop-blur-xl hover:border-gray-300 hover:text-gray-200 hover:bg-white/10 transition-all duration-500 font-semibold flex items-center gap-3 hover:scale-105">
 
-        <i class="fab fa-github"></i>
+        <i
+          class="fab fa-github group-hover:rotate-12 transition duration-500"></i>
+
         GitHub
+
       </a>
 
       <!-- Medium -->
       <a href="https://hiteshmishra708.medium.com/"
-         target="_blank"
-         class="px-7 py-3.5 rounded-xl border border-white/10 bg-white/5 hover:border-green-400 hover:text-green-300 transition font-semibold flex items-center gap-2">
+        target="_blank"
+        class="group px-7 py-3.5 rounded-2xl border border-white/10 bg-white/[0.05] backdrop-blur-xl hover:border-green-400 hover:text-green-300 hover:bg-green-500/10 transition-all duration-500 font-semibold flex items-center gap-3 hover:scale-105">
 
-        <i class="fab fa-medium"></i>
+        <i
+          class="fab fa-medium group-hover:scale-125 transition duration-500"></i>
+
         Articles
+
       </a>
 
     </div>
 
     <!-- Info Strip -->
-    <div class="mt-14 pt-8 border-t border-white/10 flex flex-wrap justify-center gap-x-10 gap-y-3 text-sm text-gray-400">
+    <div
+      class="mt-16 pt-8 border-t border-white/10 flex flex-wrap justify-center gap-x-10 gap-y-4 text-sm text-gray-400"
+      data-aos="fade-up"
+      data-aos-delay="500">
 
-      <span class="flex items-center gap-2">
+      <span
+        class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.03] border border-white/10 hover:border-blue-400/40 transition">
+
         <i class="fas fa-map-marker-alt text-blue-400"></i>
+
         Mumbai, Maharashtra
+
       </span>
 
-      <span class="flex items-center gap-2">
+      <span
+        class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.03] border border-white/10 hover:border-cyan-400/40 transition">
+
         <i class="fas fa-code text-cyan-400"></i>
+
         Python • AI • Scalable Systems • Full Stack
+
       </span>
 
-      <span class="flex items-center gap-2">
+      <span
+        class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.03] border border-white/10 hover:border-blue-400/40 transition">
+
         <i class="fas fa-layer-group text-blue-400"></i>
+
         9+ Years Experience
+
       </span>
 
     </div>
 
   </div>
+
 </section>
+
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+  AOS.init({
+    once: true,
+    duration: 1000,
+    easing: 'ease-in-out',
+    offset: 100,
+  });
+</script>
 
 <!-- ==================== FOOTER ==================== -->
 <footer class="bg-[#030615] border-t border-white/10 py-6 text-center text-gray-500 text-xs">
